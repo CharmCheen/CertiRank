@@ -1,0 +1,66 @@
+# ================================================================================
+# RUNTIME PROVIDER CONFIG — the single file you edit to retarget every experiment.
+#
+# Anything you change here takes effect on the next run of every Gate 1/1B/2/2B/2-3
+# script. No code edits needed. Priority when both exist:
+#     CLI flags  >  environment variables (ORACLE_*)  >  THIS FILE  >  built-in defaults
+#
+# Full field reference: experiments/lotus_nondeterminism/oracle/config.py (DEFAULTS,
+# ENV_VARS, _flatten_yaml). Quick reference for the fields you are most likely to touch:
+#
+#   api.base_url        e.g. https://api.deepseek.com | https://openrouter.ai/api/v1
+#                       | https://api.siliconflow.cn/v1 | http://localhost:8000/v1
+#   api.api_key_env     name of the env var holding the key (NOT the key itself).
+#                       Put the actual key in lotus-code/.env.oracle (git-ignored):
+#                           DEEPSEEK_API_KEY=sk-...
+#   model.name          e.g. deepseek-flash | deepseek/deepseek-chat | qwen/qwen3-32b
+#   model.prefix        optional litellm routing prefix (e.g. "openai"); auto-derived
+#                       when the name already contains "/".
+#   model.thinking_mode disabled | enabled | null (null = endpoint has no toggle)
+#   model.thinking_control.style
+#                       extra_body_thinking (DeepSeek-style {"thinking":{"type":...}})
+#                       | reasoning_effort (OpenRouter-style) | none
+#   generation.*        sampling parameters; null means "do not send the field at all"
+#                       (P0 protocol requires temperature/top_p/penalties to stay null)
+#
+# NOTE ON THE FROZEN PROTOCOL: the original Gate 1B/2 P0 condition is
+#     deepseek-flash @ https://api.deepseek.com, thinking disabled, max_tokens 128.
+# Changing url/model here deviates from that frozen condition. The experiment will
+# still run and every trace row will faithfully record what was actually used, but:
+#   1. request hashes change (model + host are hash inputs) -> rebuild the Gate 2
+#      workload after changing model/base_url:
+#          python -m experiments.lotus_nondeterminism.scripts.build_gate2_workload
+#   2. the run must be reported as a new condition, not as the original P0.
+# ================================================================================
+
+provider: openai_compatible
+
+api:
+  base_url: "https://llmapi.paratera.com"
+  api_key_env: "ORACLE_API_KEY"
+  api_key_env_fallbacks:
+    - "ORACLE_API_KEY"
+  timeout_seconds: 120
+  max_retries: 3
+  allow_missing_api_key: false
+
+model:
+  name: "DeepSeek-V4.1-Flash"
+  thinking_mode: disabled
+  reasoning_effort: null
+  thinking_control:
+    style: extra_body_thinking
+
+generation:
+  # All sampling controls null -> fields absent from the request body (P0 semantics).
+  temperature: null
+  top_p: null
+  presence_penalty: null
+  frequency_penalty: null
+  max_tokens: 128
+
+transport:
+  concurrency: 1
+
+experiment:
+  cache_enabled: false

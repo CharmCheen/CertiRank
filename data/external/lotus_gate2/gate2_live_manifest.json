@@ -1,0 +1,51 @@
+{
+  "substudy": "Gate2-NondeterminismPropagation",
+  "started_at_utc": "2026-10-14T13:24:55.566079+00:00",
+  "finished_at_utc": "2026-10-14T19:09:19.241102+00:00",
+  "selection": {
+    "queries": [
+      "636",
+      "327",
+      "51"
+    ],
+    "repetitions": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "planned_calls_this_invocation": 420
+  },
+  "max_physical_attempts": 570,
+  "budget": {
+    "files": [
+      "experiments\\lotus_nondeterminism\\gate2\\artifacts\\live_pilot_20261014T132233Z\\gate2_live_calls.jsonl",
+      "experiments\\lotus_nondeterminism\\gate2\\artifacts\\live_smoke_20261014T131841Z\\gate2_live_smoke_calls.jsonl"
+    ],
+    "max_cumulative_attempts": 490,
+    "max_cumulative_cost_usd": 0.5,
+    "cumulative_attempts_after": 448,
+    "cumulative_cost_after": {
+      "off_peak": {
+        "cache_miss_input_usd": 0.01363,
+        "cache_hit_input_usd": 0.000786,
+        "output_usd": 0.000806,
+        "total_usd": 0.015223
+      },
+      "peak": {
+        "cache_miss_input_usd": 0.02726,
+        "cache_hit_input_usd": 0.001572,
+        "output_usd": 0.001613,
+        "total_usd": 0.030445
+      }
+    },
+    "stop_reason": null
+  },
+  "runs_recorded": 15,
+  "failed_runs": 0,
+  "execution_order": "repetitions outer, workload query order inner",
+  "calls_path": "experiments\\lotus_nondeterminism\\gate2\\artifacts\\live_pilot_20261014T132233Z\\gate2_live_calls.jsonl",
+  "runs_path": "experiments\\lotus_nondeterminism\\gate2\\artifacts\\live_pilot_20261014T132233Z\\gate2_live_runs.jsonl",
+  "runs_remaining_unexecuted": 0
+}

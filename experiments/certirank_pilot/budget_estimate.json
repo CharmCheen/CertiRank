@@ -1,0 +1,156 @@
+{
+  "generated_utc": "2026-10-15T05:09:15Z",
+  "generated_by": "scripts/pilot_budget.py",
+  "source_run": "live_pilot_20261014T132233Z",
+  "source_files": [
+    "data/external/lotus_gate2/gate2_live_pair_calls.jsonl",
+    "data/external/lotus_gate2/gate2_live_query_results.jsonl"
+  ],
+  "per_call": {
+    "n": 420,
+    "prompt_tokens": {
+      "sum": 327530,
+      "mean": 779.8,
+      "median": 748,
+      "p95": 1113,
+      "max": 1145
+    },
+    "cached_prompt_tokens": {
+      "sum": 262016,
+      "ratio": 0.8
+    },
+    "completion_tokens": {
+      "sum": 1260,
+      "mean": 3
+    },
+    "api_latency_seconds": {
+      "median": 0.779,
+      "p95": 5.008,
+      "mean_all": 49.196,
+      "mean_excl_suspended": 1.253,
+      "max": 20137.3
+    },
+    "transport_attempts_observed": [
+      1
+    ],
+    "transport_retries_sum": 0
+  },
+  "per_query_mean_prompt_tokens": {
+    "327": 665.8,
+    "51": 768.2,
+    "636": 905.5
+  },
+  "token_profiles_per_call": {
+    "low": 665.8,
+    "mid": 779.8,
+    "high": 905.5
+  },
+  "prices_usd_per_token": {
+    "off_peak": {
+      "cache_miss_input": 1.5006150061500616e-07,
+      "cache_hit_input": 2.998310810810811e-09,
+      "output": 5.952380952380953e-07
+    },
+    "peak": {
+      "cache_miss_input": 2.998805256869773e-07,
+      "cache_hit_input": 5.996621621621622e-09,
+      "output": 1.2023809523809525e-06
+    }
+  },
+  "price_validation": {
+    "runs_checked": 30,
+    "max_abs_err_usd": 2.27e-06
+  },
+  "blocks": [
+    {
+      "block": "开发集",
+      "spec": "6 query × 28 pair × 12 次",
+      "calls": 2016,
+      "prompt_tokens_mid": 1572144,
+      "cost_usd": {
+        "off_peak": {
+          "low": 0.047105,
+          "mid": 0.05456,
+          "high": 0.062772
+        },
+        "peak": {
+          "low": 0.094217,
+          "mid": 0.109116,
+          "high": 0.125528
+        }
+      }
+    },
+    {
+      "block": "查询留出集",
+      "spec": "12 query × 28 pair × 12 次",
+      "calls": 4032,
+      "prompt_tokens_mid": 3144288,
+      "cost_usd": {
+        "off_peak": {
+          "low": 0.09421,
+          "mid": 0.109121,
+          "high": 0.125545
+        },
+        "peak": {
+          "low": 0.188435,
+          "mid": 0.218233,
+          "high": 0.251056
+        }
+      }
+    },
+    {
+      "block": "N=16 扩展（可选）",
+      "spec": "4 query × 120 pair × 12 次",
+      "calls": 5760,
+      "prompt_tokens_mid": 4491840,
+      "cost_usd": {
+        "off_peak": {
+          "low": 0.134586,
+          "mid": 0.155887,
+          "high": 0.17935
+        },
+        "peak": {
+          "low": 0.269193,
+          "mid": 0.311761,
+          "high": 0.358652
+        }
+      }
+    },
+    {
+      "block": "核心合计（开发 + 留出）",
+      "spec": "—",
+      "calls": 6048,
+      "prompt_tokens_mid": 4716432,
+      "cost_usd": {
+        "off_peak": {
+          "low": 0.141315,
+          "mid": 0.163681,
+          "high": 0.188317
+        },
+        "peak": {
+          "low": 0.282652,
+          "mid": 0.327349,
+          "high": 0.376584
+        }
+      }
+    },
+    {
+      "block": "全量合计（含 N=16 扩展）",
+      "spec": "—",
+      "calls": 11808,
+      "prompt_tokens_mid": 9208272,
+      "cost_usd": {
+        "off_peak": {
+          "low": 0.275901,
+          "mid": 0.319568,
+          "high": 0.367667
+        },
+        "peak": {
+          "low": 0.551845,
+          "mid": 0.63911,
+          "high": 0.735236
+        }
+      }
+    }
+  ]
+}

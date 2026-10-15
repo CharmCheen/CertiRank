@@ -1,0 +1,1156 @@
+{
+  "substudy": "Gate2-NondeterminismPropagation",
+  "gate": "G2B",
+  "sources": {
+    "calls": "gate2_live_smoke_calls.jsonl",
+    "runs": "gate2_live_smoke_runs.jsonl"
+  },
+  "replay_gate": {
+    "runs_checked": 1,
+    "all_pass": true,
+    "per_run": [
+      {
+        "run_id": "G2-636-r0",
+        "query_id": "636",
+        "repetition": 0,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      }
+    ]
+  },
+  "counterfactual_scope_note": "Single-point flips are deterministic relation-level analysis on one fixed run's verdict matrix (others held fixed); they are not provider probabilities.",
+  "multi_point_scope_note": "Multi-point propagation compares only REAL verdict vectors observed across repetitions; no synthetic combination was constructed.",
+  "joint_emergent_run_pairs": 0,
+  "cancelling_run_pairs": 0,
+  "per_query": [
+    {
+      "query_id": "636",
+      "base_repetition": 0,
+      "base_valid_pair_count": 28,
+      "single_point_counterfactuals": [
+        {
+          "pair_position": 0,
+          "pair_id": "636|24294572|42708716",
+          "document_1_id": "24294572",
+          "document_2_id": "42708716",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "42708716": 1
+          },
+          "rank_shift": {
+            "24294572": 1,
+            "42708716": -1
+          }
+        },
+        {
+          "pair_position": 1,
+          "pair_id": "636|24294572|14328288",
+          "document_1_id": "24294572",
+          "document_2_id": "14328288",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "14328288": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 2,
+          "pair_id": "636|24294572|19752008",
+          "document_1_id": "24294572",
+          "document_2_id": "19752008",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "19752008": 1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 3,
+          "pair_id": "636|24294572|1910120",
+          "document_1_id": "24294572",
+          "document_2_id": "1910120",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "1910120": 1
+          },
+          "rank_shift": {
+            "1910120": -1,
+            "13794374": 1
+          }
+        },
+        {
+          "pair_position": 4,
+          "pair_id": "636|24294572|15113221",
+          "document_1_id": "24294572",
+          "document_2_id": "15113221",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "15113221": 1
+          },
+          "rank_shift": {
+            "14328288": 1,
+            "15113221": -1
+          }
+        },
+        {
+          "pair_position": 5,
+          "pair_id": "636|24294572|22025252",
+          "document_1_id": "24294572",
+          "document_2_id": "22025252",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "22025252": 1
+          },
+          "rank_shift": {
+            "19752008": 1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 6,
+          "pair_id": "636|24294572|13794374",
+          "document_1_id": "24294572",
+          "document_2_id": "13794374",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "13794374": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 7,
+          "pair_id": "636|42708716|14328288",
+          "document_1_id": "42708716",
+          "document_2_id": "14328288",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "14328288": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 8,
+          "pair_id": "636|42708716|19752008",
+          "document_1_id": "42708716",
+          "document_2_id": "19752008",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "19752008": 1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 9,
+          "pair_id": "636|42708716|1910120",
+          "document_1_id": "42708716",
+          "document_2_id": "1910120",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "1910120": 1
+          },
+          "rank_shift": {
+            "1910120": -1,
+            "13794374": 1
+          }
+        },
+        {
+          "pair_position": 10,
+          "pair_id": "636|42708716|15113221",
+          "document_1_id": "42708716",
+          "document_2_id": "15113221",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "15113221": 1
+          },
+          "rank_shift": {
+            "14328288": 1,
+            "15113221": -1
+          }
+        },
+        {
+          "pair_position": 11,
+          "pair_id": "636|42708716|22025252",
+          "document_1_id": "42708716",
+          "document_2_id": "22025252",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "22025252": 1
+          },
+          "rank_shift": {
+            "19752008": 1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 12,
+          "pair_id": "636|42708716|13794374",
+          "document_1_id": "42708716",
+          "document_2_id": "13794374",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "13794374": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 13,
+          "pair_id": "636|14328288|19752008",
+          "document_1_id": "14328288",
+          "document_2_id": "19752008",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14328288": -1,
+            "19752008": 1
+          },
+          "rank_shift": {
+            "14328288": 2,
+            "19752008": -2
+          }
+        },
+        {
+          "pair_position": 14,
+          "pair_id": "636|14328288|1910120",
+          "document_1_id": "14328288",
+          "document_2_id": "1910120",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14328288": -1,
+            "1910120": 1
+          },
+          "rank_shift": {
+            "14328288": 1,
+            "1910120": -1,
+            "15113221": -1,
+            "13794374": 1
+          }
+        },
+        {
+          "pair_position": 15,
+          "pair_id": "636|14328288|15113221",
+          "document_1_id": "14328288",
+          "document_2_id": "15113221",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "14328288": 1,
+            "15113221": -1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 16,
+          "pair_id": "636|14328288|22025252",
+          "document_1_id": "14328288",
+          "document_2_id": "22025252",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14328288": -1,
+            "22025252": 1
+          },
+          "rank_shift": {
+            "14328288": 2,
+            "19752008": 1,
+            "15113221": -1,
+            "22025252": -2
+          }
+        },
+        {
+          "pair_position": 17,
+          "pair_id": "636|14328288|13794374",
+          "document_1_id": "14328288",
+          "document_2_id": "13794374",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14328288": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "14328288": 1,
+            "15113221": -1
+          }
+        },
+        {
+          "pair_position": 18,
+          "pair_id": "636|19752008|1910120",
+          "document_1_id": "19752008",
+          "document_2_id": "1910120",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "19752008": -1,
+            "1910120": 1
+          },
+          "rank_shift": {
+            "19752008": 1,
+            "1910120": -1,
+            "22025252": -1,
+            "13794374": 1
+          }
+        },
+        {
+          "pair_position": 19,
+          "pair_id": "636|19752008|15113221",
+          "document_1_id": "19752008",
+          "document_2_id": "15113221",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "19752008": 1,
+            "15113221": -1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 20,
+          "pair_id": "636|19752008|22025252",
+          "document_1_id": "19752008",
+          "document_2_id": "22025252",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "19752008": -1,
+            "22025252": 1
+          },
+          "rank_shift": {
+            "19752008": 1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 21,
+          "pair_id": "636|19752008|13794374",
+          "document_1_id": "19752008",
+          "document_2_id": "13794374",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "19752008": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "19752008": 1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 22,
+          "pair_id": "636|1910120|15113221",
+          "document_1_id": "1910120",
+          "document_2_id": "15113221",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "1910120": 1,
+            "15113221": -1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "1910120": -1,
+            "15113221": 1,
+            "13794374": 1
+          }
+        },
+        {
+          "pair_position": 23,
+          "pair_id": "636|1910120|22025252",
+          "document_1_id": "1910120",
+          "document_2_id": "22025252",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "1910120": 1,
+            "22025252": -1
+          },
+          "rank_shift": {
+            "1910120": -1,
+            "13794374": 1
+          }
+        },
+        {
+          "pair_position": 24,
+          "pair_id": "636|1910120|13794374",
+          "document_1_id": "1910120",
+          "document_2_id": "13794374",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "1910120": 1,
+            "13794374": -1
+          },
+          "rank_shift": {
+            "1910120": -1,
+            "13794374": 1
+          }
+        },
+        {
+          "pair_position": 25,
+          "pair_id": "636|15113221|22025252",
+          "document_1_id": "15113221",
+          "document_2_id": "22025252",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "15113221": 1,
+            "22025252": -1
+          },
+          "rank_shift": {
+            "14328288": 1,
+            "15113221": -1
+          }
+        },
+        {
+          "pair_position": 26,
+          "pair_id": "636|15113221|13794374",
+          "document_1_id": "15113221",
+          "document_2_id": "13794374",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "15113221": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 27,
+          "pair_id": "636|22025252|13794374",
+          "document_1_id": "22025252",
+          "document_2_id": "13794374",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "22025252": -1,
+            "13794374": 1
+          },
+          "rank_shift": {}
+        }
+      ],
+      "single_point_counts": {
+        "none": 5,
+        "below_topk": 15,
+        "topk_order": 1,
+        "topk_set": 7
+      },
+      "multi_point": {
+        "run_count": 1,
+        "run_pair_reports": [],
+        "distinct_topk_ordered": 1,
+        "distinct_topk_sets": 1
+      },
+      "impact_concentration": {
+        "pairs_total": 28,
+        "flip_eligible_pairs": 28,
+        "flip_excluded_positions": [],
+        "single_flip_effect_counts": {
+          "none": 5,
+          "below_topk": 15,
+          "topk_order": 1,
+          "topk_set": 7
+        },
+        "single_flip_topk_set_share": 0.25,
+        "single_flip_order_only_share": 0.035714,
+        "single_flip_below_topk_share": 0.535714,
+        "single_flip_inert_share": 0.178571,
+        "below_topk_pair_positions": [
+          2,
+          3,
+          5,
+          8,
+          9,
+          11,
+          15,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          26
+        ],
+        "ever_flipped_pair_positions": [],
+        "ever_flipped_count": 0,
+        "high_impact_pair_positions": [
+          0,
+          4,
+          10,
+          13,
+          14,
+          16,
+          17,
+          25
+        ],
+        "overlap_ever_flipped_and_high_impact": [],
+        "overlap_ever_flipped_and_topk_set": [],
+        "unstable_but_inert_pair_positions": [],
+        "stable_but_material_pair_positions": [
+          0,
+          4,
+          10,
+          13,
+          14,
+          16,
+          17,
+          25
+        ],
+        "per_pair": [
+          {
+            "pair_position": 0,
+            "pair_id": "636|24294572|42708716",
+            "document_1_id": "24294572",
+            "document_2_id": "42708716",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "42708716": 1
+            },
+            "rank_shift": {
+              "24294572": 1,
+              "42708716": -1
+            }
+          },
+          {
+            "pair_position": 1,
+            "pair_id": "636|24294572|14328288",
+            "document_1_id": "24294572",
+            "document_2_id": "14328288",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "14328288": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 2,
+            "pair_id": "636|24294572|19752008",
+            "document_1_id": "24294572",
+            "document_2_id": "19752008",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "19752008": 1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 3,
+            "pair_id": "636|24294572|1910120",
+            "document_1_id": "24294572",
+            "document_2_id": "1910120",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "1910120": 1
+            },
+            "rank_shift": {
+              "1910120": -1,
+              "13794374": 1
+            }
+          },
+          {
+            "pair_position": 4,
+            "pair_id": "636|24294572|15113221",
+            "document_1_id": "24294572",
+            "document_2_id": "15113221",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "15113221": 1
+            },
+            "rank_shift": {
+              "14328288": 1,
+              "15113221": -1
+            }
+          },
+          {
+            "pair_position": 5,
+            "pair_id": "636|24294572|22025252",
+            "document_1_id": "24294572",
+            "document_2_id": "22025252",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "22025252": 1
+            },
+            "rank_shift": {
+              "19752008": 1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 6,
+            "pair_id": "636|24294572|13794374",
+            "document_1_id": "24294572",
+            "document_2_id": "13794374",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "13794374": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 7,
+            "pair_id": "636|42708716|14328288",
+            "document_1_id": "42708716",
+            "document_2_id": "14328288",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "14328288": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 8,
+            "pair_id": "636|42708716|19752008",
+            "document_1_id": "42708716",
+            "document_2_id": "19752008",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "19752008": 1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 9,
+            "pair_id": "636|42708716|1910120",
+            "document_1_id": "42708716",
+            "document_2_id": "1910120",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "1910120": 1
+            },
+            "rank_shift": {
+              "1910120": -1,
+              "13794374": 1
+            }
+          },
+          {
+            "pair_position": 10,
+            "pair_id": "636|42708716|15113221",
+            "document_1_id": "42708716",
+            "document_2_id": "15113221",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "15113221": 1
+            },
+            "rank_shift": {
+              "14328288": 1,
+              "15113221": -1
+            }
+          },
+          {
+            "pair_position": 11,
+            "pair_id": "636|42708716|22025252",
+            "document_1_id": "42708716",
+            "document_2_id": "22025252",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "22025252": 1
+            },
+            "rank_shift": {
+              "19752008": 1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 12,
+            "pair_id": "636|42708716|13794374",
+            "document_1_id": "42708716",
+            "document_2_id": "13794374",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "13794374": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 13,
+            "pair_id": "636|14328288|19752008",
+            "document_1_id": "14328288",
+            "document_2_id": "19752008",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14328288": -1,
+              "19752008": 1
+            },
+            "rank_shift": {
+              "14328288": 2,
+              "19752008": -2
+            }
+          },
+          {
+            "pair_position": 14,
+            "pair_id": "636|14328288|1910120",
+            "document_1_id": "14328288",
+            "document_2_id": "1910120",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14328288": -1,
+              "1910120": 1
+            },
+            "rank_shift": {
+              "14328288": 1,
+              "1910120": -1,
+              "15113221": -1,
+              "13794374": 1
+            }
+          },
+          {
+            "pair_position": 15,
+            "pair_id": "636|14328288|15113221",
+            "document_1_id": "14328288",
+            "document_2_id": "15113221",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "14328288": 1,
+              "15113221": -1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 16,
+            "pair_id": "636|14328288|22025252",
+            "document_1_id": "14328288",
+            "document_2_id": "22025252",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14328288": -1,
+              "22025252": 1
+            },
+            "rank_shift": {
+              "14328288": 2,
+              "19752008": 1,
+              "15113221": -1,
+              "22025252": -2
+            }
+          },
+          {
+            "pair_position": 17,
+            "pair_id": "636|14328288|13794374",
+            "document_1_id": "14328288",
+            "document_2_id": "13794374",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14328288": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "14328288": 1,
+              "15113221": -1
+            }
+          },
+          {
+            "pair_position": 18,
+            "pair_id": "636|19752008|1910120",
+            "document_1_id": "19752008",
+            "document_2_id": "1910120",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "19752008": -1,
+              "1910120": 1
+            },
+            "rank_shift": {
+              "19752008": 1,
+              "1910120": -1,
+              "22025252": -1,
+              "13794374": 1
+            }
+          },
+          {
+            "pair_position": 19,
+            "pair_id": "636|19752008|15113221",
+            "document_1_id": "19752008",
+            "document_2_id": "15113221",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "19752008": 1,
+              "15113221": -1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 20,
+            "pair_id": "636|19752008|22025252",
+            "document_1_id": "19752008",
+            "document_2_id": "22025252",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "19752008": -1,
+              "22025252": 1
+            },
+            "rank_shift": {
+              "19752008": 1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 21,
+            "pair_id": "636|19752008|13794374",
+            "document_1_id": "19752008",
+            "document_2_id": "13794374",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "19752008": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "19752008": 1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 22,
+            "pair_id": "636|1910120|15113221",
+            "document_1_id": "1910120",
+            "document_2_id": "15113221",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "1910120": 1,
+              "15113221": -1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "1910120": -1,
+              "15113221": 1,
+              "13794374": 1
+            }
+          },
+          {
+            "pair_position": 23,
+            "pair_id": "636|1910120|22025252",
+            "document_1_id": "1910120",
+            "document_2_id": "22025252",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "1910120": 1,
+              "22025252": -1
+            },
+            "rank_shift": {
+              "1910120": -1,
+              "13794374": 1
+            }
+          },
+          {
+            "pair_position": 24,
+            "pair_id": "636|1910120|13794374",
+            "document_1_id": "1910120",
+            "document_2_id": "13794374",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "1910120": 1,
+              "13794374": -1
+            },
+            "rank_shift": {
+              "1910120": -1,
+              "13794374": 1
+            }
+          },
+          {
+            "pair_position": 25,
+            "pair_id": "636|15113221|22025252",
+            "document_1_id": "15113221",
+            "document_2_id": "22025252",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "15113221": 1,
+              "22025252": -1
+            },
+            "rank_shift": {
+              "14328288": 1,
+              "15113221": -1
+            }
+          },
+          {
+            "pair_position": 26,
+            "pair_id": "636|15113221|13794374",
+            "document_1_id": "15113221",
+            "document_2_id": "13794374",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "15113221": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 27,
+            "pair_id": "636|22025252|13794374",
+            "document_1_id": "22025252",
+            "document_2_id": "13794374",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "22025252": -1,
+              "13794374": 1
+            },
+            "rank_shift": {}
+          }
+        ]
+      }
+    }
+  ]
+}

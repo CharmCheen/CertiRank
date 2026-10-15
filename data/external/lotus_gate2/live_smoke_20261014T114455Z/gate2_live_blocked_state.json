@@ -1,0 +1,56 @@
+{
+  "run_id": "live_smoke_20261014T114455Z",
+  "date_utc": "2026-10-14T11:46:17Z",
+  "status": "BLOCKED_PROVIDER_CREDENTIAL_INVALID",
+  "planned_calls_this_invocation": 28,
+  "selection": {"queries": ["636"], "repetitions": [0]},
+  "execution_outcome": {
+    "model_completions": 0,
+    "physical_http_attempts": 1,
+    "provider_errors": 1,
+    "error_class": "OracleAuthError",
+    "error_preserved": "oracle authentication failed (status=400): litellm.BadRequestError: OpenAIException - Authentication Fails, Your api key: ****c424 is invalid",
+    "tokens": 0,
+    "estimated_cost_usd": 0.0
+  },
+  "diagnosis": {
+    "conclusion": "the DEEPSEEK_API_KEY frozen in .env.oracle (sk- + 32 hex, last4 c424) is rejected by api.deepseek.com with 401 invalid-key; it is a well-formed DeepSeek key that worked on 2026-09-18 (Gate 1B: 150/150 calls ok; Gate 0 probe PROBE_PASS) and has since been revoked/deleted/expired provider-side",
+    "probes": [
+      {"method": "raw urllib GET https://api.deepseek.com/models with Bearer key", "result": "HTTP 401 Authentication Fails, api key ****c424 is invalid"},
+      {"method": "litellm.completion openai/deepseek-flash @ api.deepseek.com", "result": "400 Authentication Fails (same message)"},
+      {"method": "openai client models.list @ api.deepseek.com", "result": "401 Authentication Fails (same message)"},
+      {"method": "key shape inspection", "result": "sk-[0-9a-f]{32} exactly, ASCII, no whitespace — genuine format, not corrupted"}
+    ],
+    "alternatives_checked": [
+      {"path": "OpenCode Go gateway (agent credential OPENCODE_API_KEY)", "result": "models list 200 incl. deepseek-flash, but chat completions 403 'An active OpenCode Go subscription is required'; also protocol-forbidden as an oracle source"},
+      {"path": "OPENROUTER_API_KEY", "result": "not present in any .env or the shell environment"},
+      {"path": "other credentials in repo/git history", "result": "none found"}
+    ]
+  },
+  "phase_status": {
+    "phase_0_preflight_audit": "PASS (with one CLI gap found and fixed: subset selection did not exist; the old README smoke command --max-physical-attempts 84 could never pass the runner's own pre-check)",
+    "phase_1_live_smoke_28_calls": "BLOCKED at first API call",
+    "phase_2_pilot_420_calls": "BLOCKED (depends on Phase 1)",
+    "phase_3_gate2a_analysis": "BLOCKED (depends on Phase 2)",
+    "phase_4_gate2b_propagation": "BLOCKED (depends on Phase 2)"
+  },
+  "verification_at_block_time": {
+    "full_test_suite": "461 passed (447 pre-existing + 14 new for subset selection and cumulative budget guardrails)",
+    "offline_smoke": "SMOKE_PASS 15/15 runs, 420/420 comparisons, request hashes all match",
+    "artifact_verification": "ALL PASS",
+    "git_diff_lotus": "empty",
+    "gate1_artifacts_sha256_prefix": {
+      "gate1b_retrieval_candidates.jsonl": "652afb02b5a96cbe",
+      "gate1b_pairset_manifest.json": "b322116994b00133"
+    },
+    "secrets_in_artifacts": "none (scan for 'sk-' negative)"
+  },
+  "git_revision": "136ae4f4a344a2f75d89f811e516dfcb0de30e46",
+  "recovery": {
+    "required_user_action": "provide a valid DeepSeek official API key (platform.deepseek.com) in lotus-code/.env.oracle as DEEPSEEK_API_KEY=sk-...",
+    "zero_cost_validity_check": "GET https://api.deepseek.com/models with Authorization: Bearer <key> must return 200",
+    "then_phase1_command": "run_gate2_topk --env-file .env.oracle --queries 636 --repetitions 0 --calls-out <fresh run dir>/calls.jsonl --runs-out <fresh run dir>/runs.jsonl --confirm-live 28 --max-physical-attempts 38",
+    "then_phase2_command": "run_gate2_topk --env-file .env.oracle --confirm-live 420 --budget-calls <smoke calls> --max-cumulative-attempts 490 --max-cumulative-cost-usd 0.50 --max-physical-attempts 490",
+    "note": "the blocked run record is preserved in this directory as evidence; the retry must use a fresh run-id directory (the runner's resume treats any recorded run, including a failed one, as done)"
+  }
+}

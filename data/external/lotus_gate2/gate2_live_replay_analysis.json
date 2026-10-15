@@ -1,0 +1,4418 @@
+{
+  "substudy": "Gate2-NondeterminismPropagation",
+  "gate": "G2B",
+  "sources": {
+    "calls": "gate2_live_calls.jsonl",
+    "runs": "gate2_live_runs.jsonl"
+  },
+  "replay_gate": {
+    "runs_checked": 15,
+    "all_pass": true,
+    "per_run": [
+      {
+        "run_id": "G2-636-r0",
+        "query_id": "636",
+        "repetition": 0,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-327-r0",
+        "query_id": "327",
+        "repetition": 0,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-51-r0",
+        "query_id": "51",
+        "repetition": 0,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-636-r1",
+        "query_id": "636",
+        "repetition": 1,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-327-r1",
+        "query_id": "327",
+        "repetition": 1,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-51-r1",
+        "query_id": "51",
+        "repetition": 1,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-636-r2",
+        "query_id": "636",
+        "repetition": 2,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-327-r2",
+        "query_id": "327",
+        "repetition": 2,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-51-r2",
+        "query_id": "51",
+        "repetition": 2,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-636-r3",
+        "query_id": "636",
+        "repetition": 3,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-327-r3",
+        "query_id": "327",
+        "repetition": 3,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-51-r3",
+        "query_id": "51",
+        "repetition": 3,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-636-r4",
+        "query_id": "636",
+        "repetition": 4,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-327-r4",
+        "query_id": "327",
+        "repetition": 4,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      },
+      {
+        "run_id": "G2-51-r4",
+        "query_id": "51",
+        "repetition": 4,
+        "replay_topk_ok": true,
+        "recorded_replay_flag": true,
+        "agree": true
+      }
+    ]
+  },
+  "counterfactual_scope_note": "Single-point flips are deterministic relation-level analysis on one fixed run's verdict matrix (others held fixed); they are not provider probabilities.",
+  "multi_point_scope_note": "Multi-point propagation compares only REAL verdict vectors observed across repetitions; no synthetic combination was constructed.",
+  "joint_emergent_run_pairs": 0,
+  "cancelling_run_pairs": 6,
+  "per_query": [
+    {
+      "query_id": "636",
+      "base_repetition": 0,
+      "base_valid_pair_count": 28,
+      "single_point_counterfactuals": [
+        {
+          "pair_position": 0,
+          "pair_id": "636|24294572|42708716",
+          "document_1_id": "24294572",
+          "document_2_id": "42708716",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "42708716": 1
+          },
+          "rank_shift": {
+            "42708716": -1,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 1,
+          "pair_id": "636|24294572|14328288",
+          "document_1_id": "24294572",
+          "document_2_id": "14328288",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "14328288": 1
+          },
+          "rank_shift": {
+            "42708716": 1,
+            "14328288": -2,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 2,
+          "pair_id": "636|24294572|19752008",
+          "document_1_id": "24294572",
+          "document_2_id": "19752008",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "19752008": 1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "22025252": 1
+          }
+        },
+        {
+          "pair_position": 3,
+          "pair_id": "636|24294572|1910120",
+          "document_1_id": "24294572",
+          "document_2_id": "1910120",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "1910120": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 4,
+          "pair_id": "636|24294572|15113221",
+          "document_1_id": "24294572",
+          "document_2_id": "15113221",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "15113221": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 5,
+          "pair_id": "636|24294572|22025252",
+          "document_1_id": "24294572",
+          "document_2_id": "22025252",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "22025252": 1
+          },
+          "rank_shift": {
+            "42708716": 1,
+            "14328288": 1,
+            "22025252": -2
+          }
+        },
+        {
+          "pair_position": 6,
+          "pair_id": "636|24294572|13794374",
+          "document_1_id": "24294572",
+          "document_2_id": "13794374",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24294572": -1,
+            "13794374": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 7,
+          "pair_id": "636|42708716|14328288",
+          "document_1_id": "42708716",
+          "document_2_id": "14328288",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "42708716": 1,
+            "14328288": -1
+          },
+          "rank_shift": {
+            "42708716": -1,
+            "14328288": 1,
+            "15113221": 1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 8,
+          "pair_id": "636|42708716|19752008",
+          "document_1_id": "42708716",
+          "document_2_id": "19752008",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "19752008": 1
+          },
+          "rank_shift": {
+            "42708716": 3,
+            "14328288": -1,
+            "19752008": -2
+          }
+        },
+        {
+          "pair_position": 9,
+          "pair_id": "636|42708716|1910120",
+          "document_1_id": "42708716",
+          "document_2_id": "1910120",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "1910120": 1
+          },
+          "rank_shift": {
+            "42708716": 2,
+            "14328288": -1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 10,
+          "pair_id": "636|42708716|15113221",
+          "document_1_id": "42708716",
+          "document_2_id": "15113221",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "42708716": 1,
+            "15113221": -1
+          },
+          "rank_shift": {
+            "42708716": -1,
+            "14328288": -1,
+            "15113221": 2
+          }
+        },
+        {
+          "pair_position": 11,
+          "pair_id": "636|42708716|22025252",
+          "document_1_id": "42708716",
+          "document_2_id": "22025252",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "22025252": 1
+          },
+          "rank_shift": {
+            "42708716": 2,
+            "22025252": -2
+          }
+        },
+        {
+          "pair_position": 12,
+          "pair_id": "636|42708716|13794374",
+          "document_1_id": "42708716",
+          "document_2_id": "13794374",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "42708716": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "42708716": 2,
+            "14328288": -1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 13,
+          "pair_id": "636|14328288|19752008",
+          "document_1_id": "14328288",
+          "document_2_id": "19752008",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "14328288": 1,
+            "19752008": -1
+          },
+          "rank_shift": {
+            "42708716": 1,
+            "14328288": -2,
+            "15113221": 1
+          }
+        },
+        {
+          "pair_position": 14,
+          "pair_id": "636|14328288|1910120",
+          "document_1_id": "14328288",
+          "document_2_id": "1910120",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14328288": -1,
+            "1910120": 1
+          },
+          "rank_shift": {
+            "14328288": 1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 15,
+          "pair_id": "636|14328288|15113221",
+          "document_1_id": "14328288",
+          "document_2_id": "15113221",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "14328288": 1,
+            "15113221": -1
+          },
+          "rank_shift": {
+            "14328288": -2,
+            "15113221": 2
+          }
+        },
+        {
+          "pair_position": 16,
+          "pair_id": "636|14328288|22025252",
+          "document_1_id": "14328288",
+          "document_2_id": "22025252",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14328288": -1,
+            "22025252": 1
+          },
+          "rank_shift": {
+            "42708716": 1,
+            "14328288": 1,
+            "22025252": -2
+          }
+        },
+        {
+          "pair_position": 17,
+          "pair_id": "636|14328288|13794374",
+          "document_1_id": "14328288",
+          "document_2_id": "13794374",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14328288": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "14328288": 1,
+            "22025252": -1
+          }
+        },
+        {
+          "pair_position": 18,
+          "pair_id": "636|19752008|1910120",
+          "document_1_id": "19752008",
+          "document_2_id": "1910120",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "19752008": -1,
+            "1910120": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 19,
+          "pair_id": "636|19752008|15113221",
+          "document_1_id": "19752008",
+          "document_2_id": "15113221",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "19752008": 1,
+            "15113221": -1
+          },
+          "rank_shift": {
+            "42708716": -1,
+            "14328288": -1,
+            "19752008": -2,
+            "15113221": 3,
+            "22025252": 1
+          }
+        },
+        {
+          "pair_position": 20,
+          "pair_id": "636|19752008|22025252",
+          "document_1_id": "19752008",
+          "document_2_id": "22025252",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "19752008": 1,
+            "22025252": -1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "22025252": 1
+          }
+        },
+        {
+          "pair_position": 21,
+          "pair_id": "636|19752008|13794374",
+          "document_1_id": "19752008",
+          "document_2_id": "13794374",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "19752008": -1,
+            "13794374": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 22,
+          "pair_id": "636|1910120|15113221",
+          "document_1_id": "1910120",
+          "document_2_id": "15113221",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "1910120": 1,
+            "15113221": -1
+          },
+          "rank_shift": {
+            "42708716": -1,
+            "14328288": -1,
+            "15113221": 2
+          }
+        },
+        {
+          "pair_position": 23,
+          "pair_id": "636|1910120|22025252",
+          "document_1_id": "1910120",
+          "document_2_id": "22025252",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "1910120": 1,
+            "22025252": -1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "22025252": 1
+          }
+        },
+        {
+          "pair_position": 24,
+          "pair_id": "636|1910120|13794374",
+          "document_1_id": "1910120",
+          "document_2_id": "13794374",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "1910120": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "1910120": 1,
+            "13794374": -1
+          }
+        },
+        {
+          "pair_position": 25,
+          "pair_id": "636|15113221|22025252",
+          "document_1_id": "15113221",
+          "document_2_id": "22025252",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "15113221": 1,
+            "22025252": -1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "22025252": 1
+          }
+        },
+        {
+          "pair_position": 26,
+          "pair_id": "636|15113221|13794374",
+          "document_1_id": "15113221",
+          "document_2_id": "13794374",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "15113221": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "42708716": -1,
+            "14328288": -1,
+            "15113221": 2
+          }
+        },
+        {
+          "pair_position": 27,
+          "pair_id": "636|22025252|13794374",
+          "document_1_id": "22025252",
+          "document_2_id": "13794374",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "22025252": -1,
+            "13794374": 1
+          },
+          "rank_shift": {
+            "19752008": -1,
+            "22025252": 1
+          }
+        }
+      ],
+      "single_point_counts": {
+        "none": 5,
+        "below_topk": 8,
+        "topk_order": 2,
+        "topk_set": 13
+      },
+      "multi_point": {
+        "run_count": 5,
+        "run_pair_reports": [
+          {
+            "run_a": "r0",
+            "run_b": "r1",
+            "differing_pair_positions": [
+              7,
+              10,
+              11,
+              20
+            ],
+            "differing_pair_count": 4,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_set",
+              "topk_set",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 3,
+            "single_flip_material_count": 3,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r2",
+            "differing_pair_positions": [
+              7,
+              10,
+              13,
+              19,
+              20
+            ],
+            "differing_pair_count": 5,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_set",
+              "topk_set",
+              "topk_set",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 4,
+            "single_flip_material_count": 4,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              7,
+              8,
+              13,
+              24
+            ],
+            "differing_pair_count": 4,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_set",
+              "topk_set",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 3,
+            "single_flip_material_count": 3,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": true
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              7,
+              10,
+              13
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_set",
+              "topk_set"
+            ],
+            "single_flip_answer_impact_count": 3,
+            "single_flip_material_count": 3,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r2",
+            "differing_pair_positions": [
+              11,
+              13,
+              19
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "below_topk",
+              "topk_set",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              8,
+              10,
+              11,
+              13,
+              20,
+              24
+            ],
+            "differing_pair_count": 6,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_set",
+              "below_topk",
+              "topk_set",
+              "topk_set",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 4,
+            "single_flip_material_count": 4,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              11,
+              13,
+              20
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "below_topk",
+              "topk_set",
+              "topk_set"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r2",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              8,
+              10,
+              19,
+              20,
+              24
+            ],
+            "differing_pair_count": 5,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "none",
+              "below_topk",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r2",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              19,
+              20
+            ],
+            "differing_pair_count": 2,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 0,
+            "single_flip_material_count": 0,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r3",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              8,
+              10,
+              24
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_set",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          }
+        ],
+        "distinct_topk_ordered": 3,
+        "distinct_topk_sets": 3
+      },
+      "impact_concentration": {
+        "pairs_total": 28,
+        "flip_eligible_pairs": 28,
+        "flip_excluded_positions": [],
+        "single_flip_effect_counts": {
+          "none": 5,
+          "below_topk": 8,
+          "topk_order": 2,
+          "topk_set": 13
+        },
+        "single_flip_topk_set_share": 0.464286,
+        "single_flip_order_only_share": 0.071429,
+        "single_flip_below_topk_share": 0.285714,
+        "single_flip_inert_share": 0.178571,
+        "below_topk_pair_positions": [
+          2,
+          14,
+          17,
+          20,
+          23,
+          24,
+          25,
+          27
+        ],
+        "ever_flipped_pair_positions": [
+          7,
+          8,
+          10,
+          11,
+          13,
+          19,
+          20,
+          24
+        ],
+        "ever_flipped_count": 8,
+        "high_impact_pair_positions": [
+          0,
+          1,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          19,
+          22,
+          26
+        ],
+        "overlap_ever_flipped_and_high_impact": [
+          7,
+          8,
+          10,
+          11,
+          13,
+          19
+        ],
+        "overlap_ever_flipped_and_topk_set": [
+          8,
+          10,
+          11,
+          13,
+          19
+        ],
+        "unstable_but_inert_pair_positions": [
+          20,
+          24
+        ],
+        "stable_but_material_pair_positions": [
+          0,
+          1,
+          5,
+          9,
+          12,
+          15,
+          16,
+          22,
+          26
+        ],
+        "per_pair": [
+          {
+            "pair_position": 0,
+            "pair_id": "636|24294572|42708716",
+            "document_1_id": "24294572",
+            "document_2_id": "42708716",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "42708716": 1
+            },
+            "rank_shift": {
+              "42708716": -1,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 1,
+            "pair_id": "636|24294572|14328288",
+            "document_1_id": "24294572",
+            "document_2_id": "14328288",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "14328288": 1
+            },
+            "rank_shift": {
+              "42708716": 1,
+              "14328288": -2,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 2,
+            "pair_id": "636|24294572|19752008",
+            "document_1_id": "24294572",
+            "document_2_id": "19752008",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "19752008": 1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "22025252": 1
+            }
+          },
+          {
+            "pair_position": 3,
+            "pair_id": "636|24294572|1910120",
+            "document_1_id": "24294572",
+            "document_2_id": "1910120",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "1910120": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 4,
+            "pair_id": "636|24294572|15113221",
+            "document_1_id": "24294572",
+            "document_2_id": "15113221",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "15113221": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 5,
+            "pair_id": "636|24294572|22025252",
+            "document_1_id": "24294572",
+            "document_2_id": "22025252",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "22025252": 1
+            },
+            "rank_shift": {
+              "42708716": 1,
+              "14328288": 1,
+              "22025252": -2
+            }
+          },
+          {
+            "pair_position": 6,
+            "pair_id": "636|24294572|13794374",
+            "document_1_id": "24294572",
+            "document_2_id": "13794374",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24294572": -1,
+              "13794374": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 7,
+            "pair_id": "636|42708716|14328288",
+            "document_1_id": "42708716",
+            "document_2_id": "14328288",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "42708716": 1,
+              "14328288": -1
+            },
+            "rank_shift": {
+              "42708716": -1,
+              "14328288": 1,
+              "15113221": 1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 8,
+            "pair_id": "636|42708716|19752008",
+            "document_1_id": "42708716",
+            "document_2_id": "19752008",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "19752008": 1
+            },
+            "rank_shift": {
+              "42708716": 3,
+              "14328288": -1,
+              "19752008": -2
+            }
+          },
+          {
+            "pair_position": 9,
+            "pair_id": "636|42708716|1910120",
+            "document_1_id": "42708716",
+            "document_2_id": "1910120",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "1910120": 1
+            },
+            "rank_shift": {
+              "42708716": 2,
+              "14328288": -1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 10,
+            "pair_id": "636|42708716|15113221",
+            "document_1_id": "42708716",
+            "document_2_id": "15113221",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "42708716": 1,
+              "15113221": -1
+            },
+            "rank_shift": {
+              "42708716": -1,
+              "14328288": -1,
+              "15113221": 2
+            }
+          },
+          {
+            "pair_position": 11,
+            "pair_id": "636|42708716|22025252",
+            "document_1_id": "42708716",
+            "document_2_id": "22025252",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "22025252": 1
+            },
+            "rank_shift": {
+              "42708716": 2,
+              "22025252": -2
+            }
+          },
+          {
+            "pair_position": 12,
+            "pair_id": "636|42708716|13794374",
+            "document_1_id": "42708716",
+            "document_2_id": "13794374",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "42708716": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "42708716": 2,
+              "14328288": -1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 13,
+            "pair_id": "636|14328288|19752008",
+            "document_1_id": "14328288",
+            "document_2_id": "19752008",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "14328288": 1,
+              "19752008": -1
+            },
+            "rank_shift": {
+              "42708716": 1,
+              "14328288": -2,
+              "15113221": 1
+            }
+          },
+          {
+            "pair_position": 14,
+            "pair_id": "636|14328288|1910120",
+            "document_1_id": "14328288",
+            "document_2_id": "1910120",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14328288": -1,
+              "1910120": 1
+            },
+            "rank_shift": {
+              "14328288": 1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 15,
+            "pair_id": "636|14328288|15113221",
+            "document_1_id": "14328288",
+            "document_2_id": "15113221",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "14328288": 1,
+              "15113221": -1
+            },
+            "rank_shift": {
+              "14328288": -2,
+              "15113221": 2
+            }
+          },
+          {
+            "pair_position": 16,
+            "pair_id": "636|14328288|22025252",
+            "document_1_id": "14328288",
+            "document_2_id": "22025252",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14328288": -1,
+              "22025252": 1
+            },
+            "rank_shift": {
+              "42708716": 1,
+              "14328288": 1,
+              "22025252": -2
+            }
+          },
+          {
+            "pair_position": 17,
+            "pair_id": "636|14328288|13794374",
+            "document_1_id": "14328288",
+            "document_2_id": "13794374",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14328288": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "14328288": 1,
+              "22025252": -1
+            }
+          },
+          {
+            "pair_position": 18,
+            "pair_id": "636|19752008|1910120",
+            "document_1_id": "19752008",
+            "document_2_id": "1910120",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "19752008": -1,
+              "1910120": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 19,
+            "pair_id": "636|19752008|15113221",
+            "document_1_id": "19752008",
+            "document_2_id": "15113221",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "19752008": 1,
+              "15113221": -1
+            },
+            "rank_shift": {
+              "42708716": -1,
+              "14328288": -1,
+              "19752008": -2,
+              "15113221": 3,
+              "22025252": 1
+            }
+          },
+          {
+            "pair_position": 20,
+            "pair_id": "636|19752008|22025252",
+            "document_1_id": "19752008",
+            "document_2_id": "22025252",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "19752008": 1,
+              "22025252": -1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "22025252": 1
+            }
+          },
+          {
+            "pair_position": 21,
+            "pair_id": "636|19752008|13794374",
+            "document_1_id": "19752008",
+            "document_2_id": "13794374",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "19752008": -1,
+              "13794374": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 22,
+            "pair_id": "636|1910120|15113221",
+            "document_1_id": "1910120",
+            "document_2_id": "15113221",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "1910120": 1,
+              "15113221": -1
+            },
+            "rank_shift": {
+              "42708716": -1,
+              "14328288": -1,
+              "15113221": 2
+            }
+          },
+          {
+            "pair_position": 23,
+            "pair_id": "636|1910120|22025252",
+            "document_1_id": "1910120",
+            "document_2_id": "22025252",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "1910120": 1,
+              "22025252": -1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "22025252": 1
+            }
+          },
+          {
+            "pair_position": 24,
+            "pair_id": "636|1910120|13794374",
+            "document_1_id": "1910120",
+            "document_2_id": "13794374",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "1910120": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "1910120": 1,
+              "13794374": -1
+            }
+          },
+          {
+            "pair_position": 25,
+            "pair_id": "636|15113221|22025252",
+            "document_1_id": "15113221",
+            "document_2_id": "22025252",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "15113221": 1,
+              "22025252": -1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "22025252": 1
+            }
+          },
+          {
+            "pair_position": 26,
+            "pair_id": "636|15113221|13794374",
+            "document_1_id": "15113221",
+            "document_2_id": "13794374",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "15113221": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "42708716": -1,
+              "14328288": -1,
+              "15113221": 2
+            }
+          },
+          {
+            "pair_position": 27,
+            "pair_id": "636|22025252|13794374",
+            "document_1_id": "22025252",
+            "document_2_id": "13794374",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "22025252": -1,
+              "13794374": 1
+            },
+            "rank_shift": {
+              "19752008": -1,
+              "22025252": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "327",
+      "base_repetition": 0,
+      "base_valid_pair_count": 28,
+      "single_point_counterfactuals": [
+        {
+          "pair_position": 0,
+          "pair_id": "327|17997584|14380875",
+          "document_1_id": "17997584",
+          "document_2_id": "14380875",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "17997584": -1,
+            "14380875": 1
+          },
+          "rank_shift": {
+            "14380875": -2,
+            "22972632": 1,
+            "34469966": 1
+          }
+        },
+        {
+          "pair_position": 1,
+          "pair_id": "327|17997584|5922085",
+          "document_1_id": "17997584",
+          "document_2_id": "5922085",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "17997584": -1,
+            "5922085": 1
+          },
+          "rank_shift": {
+            "14380875": 1,
+            "5922085": -3,
+            "22972632": 1,
+            "34469966": 1
+          }
+        },
+        {
+          "pair_position": 2,
+          "pair_id": "327|17997584|364522",
+          "document_1_id": "17997584",
+          "document_2_id": "364522",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "17997584": -1,
+            "364522": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 3,
+          "pair_id": "327|17997584|1574014",
+          "document_1_id": "17997584",
+          "document_2_id": "1574014",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "17997584": -1,
+            "1574014": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 4,
+          "pair_id": "327|17997584|22972632",
+          "document_1_id": "17997584",
+          "document_2_id": "22972632",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "17997584": -1,
+            "22972632": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 5,
+          "pair_id": "327|17997584|34469966",
+          "document_1_id": "17997584",
+          "document_2_id": "34469966",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "17997584": -1,
+            "34469966": 1
+          },
+          "rank_shift": {
+            "22972632": 1,
+            "34469966": -1
+          }
+        },
+        {
+          "pair_position": 6,
+          "pair_id": "327|17997584|36180468",
+          "document_1_id": "17997584",
+          "document_2_id": "36180468",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "17997584": -1,
+            "36180468": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 7,
+          "pair_id": "327|14380875|5922085",
+          "document_1_id": "14380875",
+          "document_2_id": "5922085",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14380875": -1,
+            "5922085": 1
+          },
+          "rank_shift": {
+            "14380875": 1,
+            "5922085": -3,
+            "22972632": 1,
+            "34469966": 1
+          }
+        },
+        {
+          "pair_position": 8,
+          "pair_id": "327|14380875|364522",
+          "document_1_id": "14380875",
+          "document_2_id": "364522",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14380875": -1,
+            "364522": 1
+          },
+          "rank_shift": {
+            "14380875": 1,
+            "5922085": -1
+          }
+        },
+        {
+          "pair_position": 9,
+          "pair_id": "327|14380875|1574014",
+          "document_1_id": "14380875",
+          "document_2_id": "1574014",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14380875": -1,
+            "1574014": 1
+          },
+          "rank_shift": {
+            "14380875": 1,
+            "5922085": -1
+          }
+        },
+        {
+          "pair_position": 10,
+          "pair_id": "327|14380875|22972632",
+          "document_1_id": "14380875",
+          "document_2_id": "22972632",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "14380875": 1,
+            "22972632": -1
+          },
+          "rank_shift": {
+            "14380875": -2,
+            "5922085": -1,
+            "22972632": 3
+          }
+        },
+        {
+          "pair_position": 11,
+          "pair_id": "327|14380875|34469966",
+          "document_1_id": "14380875",
+          "document_2_id": "34469966",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "14380875": 1,
+            "34469966": -1
+          },
+          "rank_shift": {
+            "14380875": -2,
+            "5922085": -1,
+            "22972632": 1,
+            "34469966": 2
+          }
+        },
+        {
+          "pair_position": 12,
+          "pair_id": "327|14380875|36180468",
+          "document_1_id": "14380875",
+          "document_2_id": "36180468",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "14380875": -1,
+            "36180468": 1
+          },
+          "rank_shift": {
+            "14380875": 1,
+            "5922085": -1
+          }
+        },
+        {
+          "pair_position": 13,
+          "pair_id": "327|5922085|364522",
+          "document_1_id": "5922085",
+          "document_2_id": "364522",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "5922085": -1,
+            "364522": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 14,
+          "pair_id": "327|5922085|1574014",
+          "document_1_id": "5922085",
+          "document_2_id": "1574014",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "5922085": -1,
+            "1574014": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 15,
+          "pair_id": "327|5922085|22972632",
+          "document_1_id": "5922085",
+          "document_2_id": "22972632",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "5922085": 1,
+            "22972632": -1
+          },
+          "rank_shift": {
+            "5922085": -3,
+            "22972632": 3
+          }
+        },
+        {
+          "pair_position": 16,
+          "pair_id": "327|5922085|34469966",
+          "document_1_id": "5922085",
+          "document_2_id": "34469966",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "5922085": -1,
+            "34469966": 1
+          },
+          "rank_shift": {
+            "22972632": 1,
+            "34469966": -1
+          }
+        },
+        {
+          "pair_position": 17,
+          "pair_id": "327|5922085|36180468",
+          "document_1_id": "5922085",
+          "document_2_id": "36180468",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "5922085": -1,
+            "36180468": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 18,
+          "pair_id": "327|364522|1574014",
+          "document_1_id": "364522",
+          "document_2_id": "1574014",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "364522": -1,
+            "1574014": 1
+          },
+          "rank_shift": {
+            "364522": 1,
+            "1574014": -1
+          }
+        },
+        {
+          "pair_position": 19,
+          "pair_id": "327|364522|22972632",
+          "document_1_id": "364522",
+          "document_2_id": "22972632",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "364522": 1,
+            "22972632": -1
+          },
+          "rank_shift": {
+            "14380875": -1,
+            "5922085": -1,
+            "22972632": 3,
+            "34469966": -1
+          }
+        },
+        {
+          "pair_position": 20,
+          "pair_id": "327|364522|34469966",
+          "document_1_id": "364522",
+          "document_2_id": "34469966",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "364522": 1,
+            "34469966": -1
+          },
+          "rank_shift": {
+            "14380875": -1,
+            "5922085": -1,
+            "34469966": 2
+          }
+        },
+        {
+          "pair_position": 21,
+          "pair_id": "327|364522|36180468",
+          "document_1_id": "364522",
+          "document_2_id": "36180468",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "364522": -1,
+            "36180468": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 22,
+          "pair_id": "327|1574014|22972632",
+          "document_1_id": "1574014",
+          "document_2_id": "22972632",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "1574014": 1,
+            "22972632": -1
+          },
+          "rank_shift": {
+            "14380875": -1,
+            "5922085": -1,
+            "22972632": 3,
+            "34469966": -1
+          }
+        },
+        {
+          "pair_position": 23,
+          "pair_id": "327|1574014|34469966",
+          "document_1_id": "1574014",
+          "document_2_id": "34469966",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "1574014": 1,
+            "34469966": -1
+          },
+          "rank_shift": {
+            "14380875": -1,
+            "5922085": -1,
+            "34469966": 2
+          }
+        },
+        {
+          "pair_position": 24,
+          "pair_id": "327|1574014|36180468",
+          "document_1_id": "1574014",
+          "document_2_id": "36180468",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "1574014": -1,
+            "36180468": 1
+          },
+          "rank_shift": {
+            "1574014": 1,
+            "36180468": -1
+          }
+        },
+        {
+          "pair_position": 25,
+          "pair_id": "327|22972632|34469966",
+          "document_1_id": "22972632",
+          "document_2_id": "34469966",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "22972632": 1,
+            "34469966": -1
+          },
+          "rank_shift": {
+            "14380875": -1,
+            "5922085": -1,
+            "34469966": 2
+          }
+        },
+        {
+          "pair_position": 26,
+          "pair_id": "327|22972632|36180468",
+          "document_1_id": "22972632",
+          "document_2_id": "36180468",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "22972632": -1,
+            "36180468": 1
+          },
+          "rank_shift": {
+            "14380875": -1,
+            "5922085": -1,
+            "22972632": 3,
+            "34469966": -1
+          }
+        },
+        {
+          "pair_position": 27,
+          "pair_id": "327|34469966|36180468",
+          "document_1_id": "34469966",
+          "document_2_id": "36180468",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "34469966": -1,
+            "36180468": 1
+          },
+          "rank_shift": {
+            "14380875": -1,
+            "5922085": -1,
+            "34469966": 2
+          }
+        }
+      ],
+      "single_point_counts": {
+        "none": 8,
+        "below_topk": 5,
+        "topk_order": 2,
+        "topk_set": 13
+      },
+      "multi_point": {
+        "run_count": 5,
+        "run_pair_reports": [
+          {
+            "run_a": "r0",
+            "run_b": "r1",
+            "differing_pair_positions": [
+              7,
+              14,
+              18,
+              20,
+              23,
+              25
+            ],
+            "differing_pair_count": 6,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "none",
+              "below_topk",
+              "topk_set",
+              "topk_set",
+              "topk_set"
+            ],
+            "single_flip_answer_impact_count": 4,
+            "single_flip_material_count": 4,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r2",
+            "differing_pair_positions": [
+              7,
+              11,
+              23
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "topk_set",
+              "topk_set"
+            ],
+            "single_flip_answer_impact_count": 3,
+            "single_flip_material_count": 3,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              8,
+              19,
+              25
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "below_topk",
+              "topk_set",
+              "topk_set"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              7,
+              14,
+              25
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": false,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "none",
+              "topk_set"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": false,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r2",
+            "differing_pair_positions": [
+              11,
+              14,
+              18,
+              20,
+              25
+            ],
+            "differing_pair_count": 5,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "below_topk",
+              "below_topk",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              7,
+              8,
+              14,
+              18,
+              19,
+              20,
+              23
+            ],
+            "differing_pair_count": 7,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "below_topk",
+              "below_topk",
+              "below_topk",
+              "none",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": true
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              18,
+              20,
+              23
+            ],
+            "differing_pair_count": 3,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "below_topk",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 0,
+            "single_flip_material_count": 0,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r2",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              7,
+              8,
+              11,
+              19,
+              23,
+              25
+            ],
+            "differing_pair_count": 6,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "below_topk",
+              "below_topk",
+              "topk_set",
+              "none",
+              "topk_order"
+            ],
+            "single_flip_answer_impact_count": 3,
+            "single_flip_material_count": 3,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r2",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              11,
+              14,
+              23,
+              25
+            ],
+            "differing_pair_count": 4,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "below_topk",
+              "topk_set",
+              "none",
+              "topk_order"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r3",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              7,
+              8,
+              14,
+              19
+            ],
+            "differing_pair_count": 4,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_set",
+              "topk_set",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 3,
+            "single_flip_material_count": 3,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": true
+          }
+        ],
+        "distinct_topk_ordered": 3,
+        "distinct_topk_sets": 2
+      },
+      "impact_concentration": {
+        "pairs_total": 28,
+        "flip_eligible_pairs": 28,
+        "flip_excluded_positions": [],
+        "single_flip_effect_counts": {
+          "none": 8,
+          "below_topk": 5,
+          "topk_order": 2,
+          "topk_set": 13
+        },
+        "single_flip_topk_set_share": 0.464286,
+        "single_flip_order_only_share": 0.071429,
+        "single_flip_below_topk_share": 0.178571,
+        "single_flip_inert_share": 0.285714,
+        "below_topk_pair_positions": [
+          8,
+          9,
+          12,
+          18,
+          24
+        ],
+        "ever_flipped_pair_positions": [
+          7,
+          8,
+          11,
+          14,
+          18,
+          19,
+          20,
+          23,
+          25
+        ],
+        "ever_flipped_count": 9,
+        "high_impact_pair_positions": [
+          0,
+          1,
+          5,
+          7,
+          10,
+          11,
+          15,
+          16,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          27
+        ],
+        "overlap_ever_flipped_and_high_impact": [
+          7,
+          11,
+          19,
+          20,
+          23,
+          25
+        ],
+        "overlap_ever_flipped_and_topk_set": [
+          7,
+          11,
+          19,
+          20,
+          23,
+          25
+        ],
+        "unstable_but_inert_pair_positions": [
+          8,
+          14,
+          18
+        ],
+        "stable_but_material_pair_positions": [
+          0,
+          1,
+          5,
+          10,
+          15,
+          16,
+          22,
+          26,
+          27
+        ],
+        "per_pair": [
+          {
+            "pair_position": 0,
+            "pair_id": "327|17997584|14380875",
+            "document_1_id": "17997584",
+            "document_2_id": "14380875",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "17997584": -1,
+              "14380875": 1
+            },
+            "rank_shift": {
+              "14380875": -2,
+              "22972632": 1,
+              "34469966": 1
+            }
+          },
+          {
+            "pair_position": 1,
+            "pair_id": "327|17997584|5922085",
+            "document_1_id": "17997584",
+            "document_2_id": "5922085",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "17997584": -1,
+              "5922085": 1
+            },
+            "rank_shift": {
+              "14380875": 1,
+              "5922085": -3,
+              "22972632": 1,
+              "34469966": 1
+            }
+          },
+          {
+            "pair_position": 2,
+            "pair_id": "327|17997584|364522",
+            "document_1_id": "17997584",
+            "document_2_id": "364522",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "17997584": -1,
+              "364522": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 3,
+            "pair_id": "327|17997584|1574014",
+            "document_1_id": "17997584",
+            "document_2_id": "1574014",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "17997584": -1,
+              "1574014": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 4,
+            "pair_id": "327|17997584|22972632",
+            "document_1_id": "17997584",
+            "document_2_id": "22972632",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "17997584": -1,
+              "22972632": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 5,
+            "pair_id": "327|17997584|34469966",
+            "document_1_id": "17997584",
+            "document_2_id": "34469966",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "17997584": -1,
+              "34469966": 1
+            },
+            "rank_shift": {
+              "22972632": 1,
+              "34469966": -1
+            }
+          },
+          {
+            "pair_position": 6,
+            "pair_id": "327|17997584|36180468",
+            "document_1_id": "17997584",
+            "document_2_id": "36180468",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "17997584": -1,
+              "36180468": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 7,
+            "pair_id": "327|14380875|5922085",
+            "document_1_id": "14380875",
+            "document_2_id": "5922085",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14380875": -1,
+              "5922085": 1
+            },
+            "rank_shift": {
+              "14380875": 1,
+              "5922085": -3,
+              "22972632": 1,
+              "34469966": 1
+            }
+          },
+          {
+            "pair_position": 8,
+            "pair_id": "327|14380875|364522",
+            "document_1_id": "14380875",
+            "document_2_id": "364522",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14380875": -1,
+              "364522": 1
+            },
+            "rank_shift": {
+              "14380875": 1,
+              "5922085": -1
+            }
+          },
+          {
+            "pair_position": 9,
+            "pair_id": "327|14380875|1574014",
+            "document_1_id": "14380875",
+            "document_2_id": "1574014",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14380875": -1,
+              "1574014": 1
+            },
+            "rank_shift": {
+              "14380875": 1,
+              "5922085": -1
+            }
+          },
+          {
+            "pair_position": 10,
+            "pair_id": "327|14380875|22972632",
+            "document_1_id": "14380875",
+            "document_2_id": "22972632",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "14380875": 1,
+              "22972632": -1
+            },
+            "rank_shift": {
+              "14380875": -2,
+              "5922085": -1,
+              "22972632": 3
+            }
+          },
+          {
+            "pair_position": 11,
+            "pair_id": "327|14380875|34469966",
+            "document_1_id": "14380875",
+            "document_2_id": "34469966",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "14380875": 1,
+              "34469966": -1
+            },
+            "rank_shift": {
+              "14380875": -2,
+              "5922085": -1,
+              "22972632": 1,
+              "34469966": 2
+            }
+          },
+          {
+            "pair_position": 12,
+            "pair_id": "327|14380875|36180468",
+            "document_1_id": "14380875",
+            "document_2_id": "36180468",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "14380875": -1,
+              "36180468": 1
+            },
+            "rank_shift": {
+              "14380875": 1,
+              "5922085": -1
+            }
+          },
+          {
+            "pair_position": 13,
+            "pair_id": "327|5922085|364522",
+            "document_1_id": "5922085",
+            "document_2_id": "364522",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "5922085": -1,
+              "364522": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 14,
+            "pair_id": "327|5922085|1574014",
+            "document_1_id": "5922085",
+            "document_2_id": "1574014",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "5922085": -1,
+              "1574014": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 15,
+            "pair_id": "327|5922085|22972632",
+            "document_1_id": "5922085",
+            "document_2_id": "22972632",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "5922085": 1,
+              "22972632": -1
+            },
+            "rank_shift": {
+              "5922085": -3,
+              "22972632": 3
+            }
+          },
+          {
+            "pair_position": 16,
+            "pair_id": "327|5922085|34469966",
+            "document_1_id": "5922085",
+            "document_2_id": "34469966",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "5922085": -1,
+              "34469966": 1
+            },
+            "rank_shift": {
+              "22972632": 1,
+              "34469966": -1
+            }
+          },
+          {
+            "pair_position": 17,
+            "pair_id": "327|5922085|36180468",
+            "document_1_id": "5922085",
+            "document_2_id": "36180468",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "5922085": -1,
+              "36180468": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 18,
+            "pair_id": "327|364522|1574014",
+            "document_1_id": "364522",
+            "document_2_id": "1574014",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "364522": -1,
+              "1574014": 1
+            },
+            "rank_shift": {
+              "364522": 1,
+              "1574014": -1
+            }
+          },
+          {
+            "pair_position": 19,
+            "pair_id": "327|364522|22972632",
+            "document_1_id": "364522",
+            "document_2_id": "22972632",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "364522": 1,
+              "22972632": -1
+            },
+            "rank_shift": {
+              "14380875": -1,
+              "5922085": -1,
+              "22972632": 3,
+              "34469966": -1
+            }
+          },
+          {
+            "pair_position": 20,
+            "pair_id": "327|364522|34469966",
+            "document_1_id": "364522",
+            "document_2_id": "34469966",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "364522": 1,
+              "34469966": -1
+            },
+            "rank_shift": {
+              "14380875": -1,
+              "5922085": -1,
+              "34469966": 2
+            }
+          },
+          {
+            "pair_position": 21,
+            "pair_id": "327|364522|36180468",
+            "document_1_id": "364522",
+            "document_2_id": "36180468",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "364522": -1,
+              "36180468": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 22,
+            "pair_id": "327|1574014|22972632",
+            "document_1_id": "1574014",
+            "document_2_id": "22972632",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "1574014": 1,
+              "22972632": -1
+            },
+            "rank_shift": {
+              "14380875": -1,
+              "5922085": -1,
+              "22972632": 3,
+              "34469966": -1
+            }
+          },
+          {
+            "pair_position": 23,
+            "pair_id": "327|1574014|34469966",
+            "document_1_id": "1574014",
+            "document_2_id": "34469966",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "1574014": 1,
+              "34469966": -1
+            },
+            "rank_shift": {
+              "14380875": -1,
+              "5922085": -1,
+              "34469966": 2
+            }
+          },
+          {
+            "pair_position": 24,
+            "pair_id": "327|1574014|36180468",
+            "document_1_id": "1574014",
+            "document_2_id": "36180468",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "1574014": -1,
+              "36180468": 1
+            },
+            "rank_shift": {
+              "1574014": 1,
+              "36180468": -1
+            }
+          },
+          {
+            "pair_position": 25,
+            "pair_id": "327|22972632|34469966",
+            "document_1_id": "22972632",
+            "document_2_id": "34469966",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "22972632": 1,
+              "34469966": -1
+            },
+            "rank_shift": {
+              "14380875": -1,
+              "5922085": -1,
+              "34469966": 2
+            }
+          },
+          {
+            "pair_position": 26,
+            "pair_id": "327|22972632|36180468",
+            "document_1_id": "22972632",
+            "document_2_id": "36180468",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "22972632": -1,
+              "36180468": 1
+            },
+            "rank_shift": {
+              "14380875": -1,
+              "5922085": -1,
+              "22972632": 3,
+              "34469966": -1
+            }
+          },
+          {
+            "pair_position": 27,
+            "pair_id": "327|34469966|36180468",
+            "document_1_id": "34469966",
+            "document_2_id": "36180468",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "34469966": -1,
+              "36180468": 1
+            },
+            "rank_shift": {
+              "14380875": -1,
+              "5922085": -1,
+              "34469966": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "51",
+      "base_repetition": 0,
+      "base_valid_pair_count": 28,
+      "single_point_counterfactuals": [
+        {
+          "pair_position": 0,
+          "pair_id": "51|45638119|16734530",
+          "document_1_id": "45638119",
+          "document_2_id": "16734530",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "45638119": -1,
+            "16734530": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 1,
+          "pair_id": "51|45638119|24341590",
+          "document_1_id": "45638119",
+          "document_2_id": "24341590",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "45638119": -1,
+            "24341590": 1
+          },
+          "rank_shift": {
+            "16734530": 1,
+            "24341590": -1
+          }
+        },
+        {
+          "pair_position": 2,
+          "pair_id": "51|45638119|12737132",
+          "document_1_id": "45638119",
+          "document_2_id": "12737132",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "45638119": -1,
+            "12737132": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 3,
+          "pair_id": "51|45638119|5468807",
+          "document_1_id": "45638119",
+          "document_2_id": "5468807",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "45638119": -1,
+            "5468807": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 4,
+          "pair_id": "51|45638119|10169908",
+          "document_1_id": "45638119",
+          "document_2_id": "10169908",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "45638119": -1,
+            "10169908": 1
+          },
+          "rank_shift": {
+            "5468807": 1,
+            "10169908": -1
+          }
+        },
+        {
+          "pair_position": 5,
+          "pair_id": "51|45638119|9767444",
+          "document_1_id": "45638119",
+          "document_2_id": "9767444",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "45638119": -1,
+            "9767444": 1
+          },
+          "rank_shift": {
+            "5468807": 1,
+            "10169908": 1,
+            "9767444": -2
+          }
+        },
+        {
+          "pair_position": 6,
+          "pair_id": "51|45638119|29124963",
+          "document_1_id": "45638119",
+          "document_2_id": "29124963",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "45638119": -1,
+            "29124963": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 7,
+          "pair_id": "51|16734530|24341590",
+          "document_1_id": "16734530",
+          "document_2_id": "24341590",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "16734530": -1,
+            "24341590": 1
+          },
+          "rank_shift": {
+            "16734530": 1,
+            "24341590": -1
+          }
+        },
+        {
+          "pair_position": 8,
+          "pair_id": "51|16734530|12737132",
+          "document_1_id": "16734530",
+          "document_2_id": "12737132",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "16734530": -1,
+            "12737132": 1
+          },
+          "rank_shift": {
+            "16734530": 2,
+            "24341590": -1,
+            "12737132": -1
+          }
+        },
+        {
+          "pair_position": 9,
+          "pair_id": "51|16734530|5468807",
+          "document_1_id": "16734530",
+          "document_2_id": "5468807",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "16734530": -1,
+            "5468807": 1
+          },
+          "rank_shift": {
+            "16734530": 1,
+            "24341590": -1
+          }
+        },
+        {
+          "pair_position": 10,
+          "pair_id": "51|16734530|10169908",
+          "document_1_id": "16734530",
+          "document_2_id": "10169908",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "16734530": -1,
+            "10169908": 1
+          },
+          "rank_shift": {
+            "16734530": 1,
+            "24341590": -1,
+            "5468807": 1,
+            "10169908": -1
+          }
+        },
+        {
+          "pair_position": 11,
+          "pair_id": "51|16734530|9767444",
+          "document_1_id": "16734530",
+          "document_2_id": "9767444",
+          "effect_class": "topk_order",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "16734530": -1,
+            "9767444": 1
+          },
+          "rank_shift": {
+            "16734530": 1,
+            "24341590": -1,
+            "5468807": 1,
+            "10169908": 1,
+            "9767444": -2
+          }
+        },
+        {
+          "pair_position": 12,
+          "pair_id": "51|16734530|29124963",
+          "document_1_id": "16734530",
+          "document_2_id": "29124963",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "16734530": 1,
+            "29124963": -1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 13,
+          "pair_id": "51|24341590|12737132",
+          "document_1_id": "24341590",
+          "document_2_id": "12737132",
+          "effect_class": "topk_set",
+          "full_ranking_changed": true,
+          "topk_set_changed": true,
+          "topk_order_changed": true,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24341590": -1,
+            "12737132": 1
+          },
+          "rank_shift": {
+            "24341590": 1,
+            "12737132": -1
+          }
+        },
+        {
+          "pair_position": 14,
+          "pair_id": "51|24341590|5468807",
+          "document_1_id": "24341590",
+          "document_2_id": "5468807",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24341590": -1,
+            "5468807": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 15,
+          "pair_id": "51|24341590|10169908",
+          "document_1_id": "24341590",
+          "document_2_id": "10169908",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24341590": -1,
+            "10169908": 1
+          },
+          "rank_shift": {
+            "5468807": 1,
+            "10169908": -1
+          }
+        },
+        {
+          "pair_position": 16,
+          "pair_id": "51|24341590|9767444",
+          "document_1_id": "24341590",
+          "document_2_id": "9767444",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24341590": -1,
+            "9767444": 1
+          },
+          "rank_shift": {
+            "5468807": 1,
+            "10169908": 1,
+            "9767444": -2
+          }
+        },
+        {
+          "pair_position": 17,
+          "pair_id": "51|24341590|29124963",
+          "document_1_id": "24341590",
+          "document_2_id": "29124963",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "24341590": -1,
+            "29124963": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 18,
+          "pair_id": "51|12737132|5468807",
+          "document_1_id": "12737132",
+          "document_2_id": "5468807",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "12737132": -1,
+            "5468807": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 19,
+          "pair_id": "51|12737132|10169908",
+          "document_1_id": "12737132",
+          "document_2_id": "10169908",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "12737132": -1,
+            "10169908": 1
+          },
+          "rank_shift": {
+            "5468807": 1,
+            "10169908": -1
+          }
+        },
+        {
+          "pair_position": 20,
+          "pair_id": "51|12737132|9767444",
+          "document_1_id": "12737132",
+          "document_2_id": "9767444",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "12737132": -1,
+            "9767444": 1
+          },
+          "rank_shift": {
+            "5468807": 1,
+            "10169908": 1,
+            "9767444": -2
+          }
+        },
+        {
+          "pair_position": 21,
+          "pair_id": "51|12737132|29124963",
+          "document_1_id": "12737132",
+          "document_2_id": "29124963",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "12737132": -1,
+            "29124963": 1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 22,
+          "pair_id": "51|5468807|10169908",
+          "document_1_id": "5468807",
+          "document_2_id": "10169908",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "5468807": -1,
+            "10169908": 1
+          },
+          "rank_shift": {
+            "5468807": 2,
+            "10169908": -1,
+            "9767444": -1
+          }
+        },
+        {
+          "pair_position": 23,
+          "pair_id": "51|5468807|9767444",
+          "document_1_id": "5468807",
+          "document_2_id": "9767444",
+          "effect_class": "none",
+          "full_ranking_changed": false,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc2",
+          "win_count_delta": {
+            "5468807": 1,
+            "9767444": -1
+          },
+          "rank_shift": {}
+        },
+        {
+          "pair_position": 24,
+          "pair_id": "51|5468807|29124963",
+          "document_1_id": "5468807",
+          "document_2_id": "29124963",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "5468807": -1,
+            "29124963": 1
+          },
+          "rank_shift": {
+            "5468807": 3,
+            "10169908": -1,
+            "9767444": -1,
+            "29124963": -1
+          }
+        },
+        {
+          "pair_position": 25,
+          "pair_id": "51|10169908|9767444",
+          "document_1_id": "10169908",
+          "document_2_id": "9767444",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "10169908": -1,
+            "9767444": 1
+          },
+          "rank_shift": {
+            "5468807": 1,
+            "10169908": 1,
+            "9767444": -2
+          }
+        },
+        {
+          "pair_position": 26,
+          "pair_id": "51|10169908|29124963",
+          "document_1_id": "10169908",
+          "document_2_id": "29124963",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "10169908": -1,
+            "29124963": 1
+          },
+          "rank_shift": {
+            "10169908": 2,
+            "9767444": -1,
+            "29124963": -1
+          }
+        },
+        {
+          "pair_position": 27,
+          "pair_id": "51|9767444|29124963",
+          "document_1_id": "9767444",
+          "document_2_id": "29124963",
+          "effect_class": "below_topk",
+          "full_ranking_changed": true,
+          "topk_set_changed": false,
+          "topk_order_changed": false,
+          "winner_before": "doc1",
+          "win_count_delta": {
+            "9767444": -1,
+            "29124963": 1
+          },
+          "rank_shift": {
+            "9767444": 1,
+            "29124963": -1
+          }
+        }
+      ],
+      "single_point_counts": {
+        "none": 10,
+        "below_topk": 11,
+        "topk_order": 5,
+        "topk_set": 2
+      },
+      "multi_point": {
+        "run_count": 5,
+        "run_pair_reports": [
+          {
+            "run_a": "r0",
+            "run_b": "r1",
+            "differing_pair_positions": [
+              8,
+              12,
+              23,
+              25,
+              27
+            ],
+            "differing_pair_count": 5,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": true,
+            "single_flip_effects": [
+              "topk_set",
+              "none",
+              "none",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": true
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r2",
+            "differing_pair_positions": [
+              7,
+              12,
+              17,
+              19,
+              27
+            ],
+            "differing_pair_count": 5,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "none",
+              "none",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": true
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              7,
+              12,
+              19,
+              20,
+              22,
+              23
+            ],
+            "differing_pair_count": 6,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "none",
+              "below_topk",
+              "below_topk",
+              "below_topk",
+              "none"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r0",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              7,
+              23,
+              24,
+              26
+            ],
+            "differing_pair_count": 4,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "none",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r2",
+            "differing_pair_positions": [
+              7,
+              8,
+              17,
+              19,
+              23,
+              25
+            ],
+            "differing_pair_count": 6,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "none",
+              "topk_set",
+              "none",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": true
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              7,
+              8,
+              19,
+              20,
+              22,
+              25,
+              27
+            ],
+            "differing_pair_count": 7,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "none",
+              "none",
+              "below_topk",
+              "none",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r1",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              7,
+              8,
+              12,
+              24,
+              25,
+              26,
+              27
+            ],
+            "differing_pair_count": 7,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_set",
+              "none",
+              "topk_set",
+              "below_topk",
+              "below_topk",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r2",
+            "run_b": "r3",
+            "differing_pair_positions": [
+              17,
+              20,
+              22,
+              23,
+              27
+            ],
+            "differing_pair_count": 5,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "below_topk",
+              "below_topk",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 1,
+            "single_flip_material_count": 1,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r2",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              12,
+              17,
+              19,
+              23,
+              24,
+              26,
+              27
+            ],
+            "differing_pair_count": 7,
+            "topk_set_equal": true,
+            "topk_order_equal": false,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "topk_order",
+              "topk_order",
+              "below_topk",
+              "below_topk",
+              "below_topk",
+              "below_topk",
+              "below_topk"
+            ],
+            "single_flip_answer_impact_count": 2,
+            "single_flip_material_count": 2,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": true,
+            "joint_emergent": false,
+            "cancelling": false
+          },
+          {
+            "run_a": "r3",
+            "run_b": "r4",
+            "differing_pair_positions": [
+              12,
+              19,
+              20,
+              22,
+              24,
+              26
+            ],
+            "differing_pair_count": 6,
+            "topk_set_equal": true,
+            "topk_order_equal": true,
+            "full_ranking_equal": false,
+            "single_flip_effects": [
+              "none",
+              "below_topk",
+              "none",
+              "below_topk",
+              "below_topk",
+              "none"
+            ],
+            "single_flip_answer_impact_count": 0,
+            "single_flip_material_count": 0,
+            "combined_topk_set_equal": true,
+            "combined_answer_changed": false,
+            "joint_emergent": false,
+            "cancelling": false
+          }
+        ],
+        "distinct_topk_ordered": 2,
+        "distinct_topk_sets": 1
+      },
+      "impact_concentration": {
+        "pairs_total": 28,
+        "flip_eligible_pairs": 28,
+        "flip_excluded_positions": [],
+        "single_flip_effect_counts": {
+          "none": 10,
+          "below_topk": 11,
+          "topk_order": 5,
+          "topk_set": 2
+        },
+        "single_flip_topk_set_share": 0.071429,
+        "single_flip_order_only_share": 0.178571,
+        "single_flip_below_topk_share": 0.392857,
+        "single_flip_inert_share": 0.357143,
+        "below_topk_pair_positions": [
+          4,
+          5,
+          15,
+          16,
+          19,
+          20,
+          22,
+          24,
+          25,
+          26,
+          27
+        ],
+        "ever_flipped_pair_positions": [
+          7,
+          8,
+          12,
+          17,
+          19,
+          20,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "ever_flipped_count": 12,
+        "high_impact_pair_positions": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "overlap_ever_flipped_and_high_impact": [
+          7,
+          8
+        ],
+        "overlap_ever_flipped_and_topk_set": [
+          8
+        ],
+        "unstable_but_inert_pair_positions": [
+          12,
+          17,
+          19,
+          20,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "stable_but_material_pair_positions": [
+          1,
+          9,
+          10,
+          11,
+          13
+        ],
+        "per_pair": [
+          {
+            "pair_position": 0,
+            "pair_id": "51|45638119|16734530",
+            "document_1_id": "45638119",
+            "document_2_id": "16734530",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "45638119": -1,
+              "16734530": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 1,
+            "pair_id": "51|45638119|24341590",
+            "document_1_id": "45638119",
+            "document_2_id": "24341590",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "45638119": -1,
+              "24341590": 1
+            },
+            "rank_shift": {
+              "16734530": 1,
+              "24341590": -1
+            }
+          },
+          {
+            "pair_position": 2,
+            "pair_id": "51|45638119|12737132",
+            "document_1_id": "45638119",
+            "document_2_id": "12737132",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "45638119": -1,
+              "12737132": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 3,
+            "pair_id": "51|45638119|5468807",
+            "document_1_id": "45638119",
+            "document_2_id": "5468807",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "45638119": -1,
+              "5468807": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 4,
+            "pair_id": "51|45638119|10169908",
+            "document_1_id": "45638119",
+            "document_2_id": "10169908",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "45638119": -1,
+              "10169908": 1
+            },
+            "rank_shift": {
+              "5468807": 1,
+              "10169908": -1
+            }
+          },
+          {
+            "pair_position": 5,
+            "pair_id": "51|45638119|9767444",
+            "document_1_id": "45638119",
+            "document_2_id": "9767444",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "45638119": -1,
+              "9767444": 1
+            },
+            "rank_shift": {
+              "5468807": 1,
+              "10169908": 1,
+              "9767444": -2
+            }
+          },
+          {
+            "pair_position": 6,
+            "pair_id": "51|45638119|29124963",
+            "document_1_id": "45638119",
+            "document_2_id": "29124963",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "45638119": -1,
+              "29124963": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 7,
+            "pair_id": "51|16734530|24341590",
+            "document_1_id": "16734530",
+            "document_2_id": "24341590",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "16734530": -1,
+              "24341590": 1
+            },
+            "rank_shift": {
+              "16734530": 1,
+              "24341590": -1
+            }
+          },
+          {
+            "pair_position": 8,
+            "pair_id": "51|16734530|12737132",
+            "document_1_id": "16734530",
+            "document_2_id": "12737132",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "16734530": -1,
+              "12737132": 1
+            },
+            "rank_shift": {
+              "16734530": 2,
+              "24341590": -1,
+              "12737132": -1
+            }
+          },
+          {
+            "pair_position": 9,
+            "pair_id": "51|16734530|5468807",
+            "document_1_id": "16734530",
+            "document_2_id": "5468807",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "16734530": -1,
+              "5468807": 1
+            },
+            "rank_shift": {
+              "16734530": 1,
+              "24341590": -1
+            }
+          },
+          {
+            "pair_position": 10,
+            "pair_id": "51|16734530|10169908",
+            "document_1_id": "16734530",
+            "document_2_id": "10169908",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "16734530": -1,
+              "10169908": 1
+            },
+            "rank_shift": {
+              "16734530": 1,
+              "24341590": -1,
+              "5468807": 1,
+              "10169908": -1
+            }
+          },
+          {
+            "pair_position": 11,
+            "pair_id": "51|16734530|9767444",
+            "document_1_id": "16734530",
+            "document_2_id": "9767444",
+            "effect_class": "topk_order",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "16734530": -1,
+              "9767444": 1
+            },
+            "rank_shift": {
+              "16734530": 1,
+              "24341590": -1,
+              "5468807": 1,
+              "10169908": 1,
+              "9767444": -2
+            }
+          },
+          {
+            "pair_position": 12,
+            "pair_id": "51|16734530|29124963",
+            "document_1_id": "16734530",
+            "document_2_id": "29124963",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "16734530": 1,
+              "29124963": -1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 13,
+            "pair_id": "51|24341590|12737132",
+            "document_1_id": "24341590",
+            "document_2_id": "12737132",
+            "effect_class": "topk_set",
+            "full_ranking_changed": true,
+            "topk_set_changed": true,
+            "topk_order_changed": true,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24341590": -1,
+              "12737132": 1
+            },
+            "rank_shift": {
+              "24341590": 1,
+              "12737132": -1
+            }
+          },
+          {
+            "pair_position": 14,
+            "pair_id": "51|24341590|5468807",
+            "document_1_id": "24341590",
+            "document_2_id": "5468807",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24341590": -1,
+              "5468807": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 15,
+            "pair_id": "51|24341590|10169908",
+            "document_1_id": "24341590",
+            "document_2_id": "10169908",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24341590": -1,
+              "10169908": 1
+            },
+            "rank_shift": {
+              "5468807": 1,
+              "10169908": -1
+            }
+          },
+          {
+            "pair_position": 16,
+            "pair_id": "51|24341590|9767444",
+            "document_1_id": "24341590",
+            "document_2_id": "9767444",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24341590": -1,
+              "9767444": 1
+            },
+            "rank_shift": {
+              "5468807": 1,
+              "10169908": 1,
+              "9767444": -2
+            }
+          },
+          {
+            "pair_position": 17,
+            "pair_id": "51|24341590|29124963",
+            "document_1_id": "24341590",
+            "document_2_id": "29124963",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "24341590": -1,
+              "29124963": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 18,
+            "pair_id": "51|12737132|5468807",
+            "document_1_id": "12737132",
+            "document_2_id": "5468807",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "12737132": -1,
+              "5468807": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 19,
+            "pair_id": "51|12737132|10169908",
+            "document_1_id": "12737132",
+            "document_2_id": "10169908",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "12737132": -1,
+              "10169908": 1
+            },
+            "rank_shift": {
+              "5468807": 1,
+              "10169908": -1
+            }
+          },
+          {
+            "pair_position": 20,
+            "pair_id": "51|12737132|9767444",
+            "document_1_id": "12737132",
+            "document_2_id": "9767444",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "12737132": -1,
+              "9767444": 1
+            },
+            "rank_shift": {
+              "5468807": 1,
+              "10169908": 1,
+              "9767444": -2
+            }
+          },
+          {
+            "pair_position": 21,
+            "pair_id": "51|12737132|29124963",
+            "document_1_id": "12737132",
+            "document_2_id": "29124963",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "12737132": -1,
+              "29124963": 1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 22,
+            "pair_id": "51|5468807|10169908",
+            "document_1_id": "5468807",
+            "document_2_id": "10169908",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "5468807": -1,
+              "10169908": 1
+            },
+            "rank_shift": {
+              "5468807": 2,
+              "10169908": -1,
+              "9767444": -1
+            }
+          },
+          {
+            "pair_position": 23,
+            "pair_id": "51|5468807|9767444",
+            "document_1_id": "5468807",
+            "document_2_id": "9767444",
+            "effect_class": "none",
+            "full_ranking_changed": false,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc2",
+            "win_count_delta": {
+              "5468807": 1,
+              "9767444": -1
+            },
+            "rank_shift": {}
+          },
+          {
+            "pair_position": 24,
+            "pair_id": "51|5468807|29124963",
+            "document_1_id": "5468807",
+            "document_2_id": "29124963",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "5468807": -1,
+              "29124963": 1
+            },
+            "rank_shift": {
+              "5468807": 3,
+              "10169908": -1,
+              "9767444": -1,
+              "29124963": -1
+            }
+          },
+          {
+            "pair_position": 25,
+            "pair_id": "51|10169908|9767444",
+            "document_1_id": "10169908",
+            "document_2_id": "9767444",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "10169908": -1,
+              "9767444": 1
+            },
+            "rank_shift": {
+              "5468807": 1,
+              "10169908": 1,
+              "9767444": -2
+            }
+          },
+          {
+            "pair_position": 26,
+            "pair_id": "51|10169908|29124963",
+            "document_1_id": "10169908",
+            "document_2_id": "29124963",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "10169908": -1,
+              "29124963": 1
+            },
+            "rank_shift": {
+              "10169908": 2,
+              "9767444": -1,
+              "29124963": -1
+            }
+          },
+          {
+            "pair_position": 27,
+            "pair_id": "51|9767444|29124963",
+            "document_1_id": "9767444",
+            "document_2_id": "29124963",
+            "effect_class": "below_topk",
+            "full_ranking_changed": true,
+            "topk_set_changed": false,
+            "topk_order_changed": false,
+            "winner_before": "doc1",
+            "win_count_delta": {
+              "9767444": -1,
+              "29124963": 1
+            },
+            "rank_shift": {
+              "9767444": 1,
+              "29124963": -1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

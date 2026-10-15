@@ -1,0 +1,44 @@
+{
+  "substudy": "Gate2-NondeterminismPropagation",
+  "started_at_utc": "2026-10-14T11:46:16.989509+00:00",
+  "finished_at_utc": "2026-10-14T11:46:17.525694+00:00",
+  "selection": {
+    "queries": [
+      "636"
+    ],
+    "repetitions": [
+      0
+    ],
+    "planned_calls_this_invocation": 28
+  },
+  "max_physical_attempts": 38,
+  "budget": {
+    "files": [
+      "experiments\\lotus_nondeterminism\\gate2\\artifacts\\live_smoke_20261014T114455Z\\gate2_live_smoke_calls.jsonl"
+    ],
+    "max_cumulative_attempts": null,
+    "max_cumulative_cost_usd": null,
+    "cumulative_attempts_after": 0,
+    "cumulative_cost_after": {
+      "off_peak": {
+        "cache_miss_input_usd": 0.0,
+        "cache_hit_input_usd": 0.0,
+        "output_usd": 0.0,
+        "total_usd": 0.0
+      },
+      "peak": {
+        "cache_miss_input_usd": 0.0,
+        "cache_hit_input_usd": 0.0,
+        "output_usd": 0.0,
+        "total_usd": 0.0
+      }
+    },
+    "stop_reason": null
+  },
+  "runs_recorded": 1,
+  "failed_runs": 1,
+  "execution_order": "repetitions outer, workload query order inner",
+  "calls_path": "experiments\\lotus_nondeterminism\\gate2\\artifacts\\live_smoke_20261014T114455Z\\gate2_live_smoke_calls.jsonl",
+  "runs_path": "experiments\\lotus_nondeterminism\\gate2\\artifacts\\live_smoke_20261014T114455Z\\gate2_live_smoke_runs.jsonl",
+  "runs_remaining_unexecuted": 0
+}

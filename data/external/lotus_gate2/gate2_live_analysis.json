@@ -1,0 +1,386 @@
+{
+  "substudy": "Gate2-NondeterminismPropagation",
+  "gate": "G2",
+  "sources": {
+    "calls": "gate2_live_calls.jsonl",
+    "runs": "gate2_live_runs.jsonl"
+  },
+  "runs_total": 15,
+  "runs_expected": 15,
+  "comparisons_total": 420,
+  "comparisons_expected": 420,
+  "replay_gate_all_runs": true,
+  "per_query": [
+    {
+      "query_id": "636",
+      "operator": {
+        "pairs_total": 28,
+        "repetitions": 5,
+        "ever_flipped_pair_count": 8,
+        "ever_flipped_pair_ratio": 0.285714,
+        "never_valid_pair_count": 0,
+        "invalid_response_count": 0,
+        "invalid_response_rate": 0.0,
+        "run_pair_disagreements": [
+          {
+            "run_a": 0,
+            "run_b": 1,
+            "compared_pairs": 28,
+            "disagreed_pairs": 4,
+            "disagreement_rate": 0.142857
+          },
+          {
+            "run_a": 0,
+            "run_b": 2,
+            "compared_pairs": 28,
+            "disagreed_pairs": 5,
+            "disagreement_rate": 0.178571
+          },
+          {
+            "run_a": 0,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 4,
+            "disagreement_rate": 0.142857
+          },
+          {
+            "run_a": 0,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          },
+          {
+            "run_a": 1,
+            "run_b": 2,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          },
+          {
+            "run_a": 1,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 6,
+            "disagreement_rate": 0.214286
+          },
+          {
+            "run_a": 1,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          },
+          {
+            "run_a": 2,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 5,
+            "disagreement_rate": 0.178571
+          },
+          {
+            "run_a": 2,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 2,
+            "disagreement_rate": 0.071429
+          },
+          {
+            "run_a": 3,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          }
+        ],
+        "mean_run_pair_disagreement": 0.135714,
+        "run_pair_dependence_note": "the C(R,2) run pairs share runs and are NOT independent samples; values are descriptive only"
+      },
+      "query": {
+        "runs_total": 5,
+        "runs_ok": 5,
+        "run_pairs": 10,
+        "distinct_topk_ordered": 3,
+        "distinct_topk_sets": 3,
+        "topk_set_exact_agreement_rate": 0.2,
+        "topk_ordered_exact_agreement_rate": 0.2,
+        "mean_jaccard_at_k": 0.6,
+        "min_jaccard_at_k": 0.5,
+        "mean_kendall_tau_b_full_ranking": 0.742857,
+        "min_kendall_tau_b_full_ranking": 0.5714285714285714,
+        "ndcg_at_k_per_run": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ndcg_at_k_mean": 1.0,
+        "ndcg_at_k_range": [
+          1.0,
+          1.0
+        ],
+        "ground_truth_available": true,
+        "ever_topk_set_change": true,
+        "ever_topk_order_change": true,
+        "run_pair_dependence_note": "the C(R,2) run pairs share runs and are NOT independent samples; values are descriptive only"
+      }
+    },
+    {
+      "query_id": "327",
+      "operator": {
+        "pairs_total": 28,
+        "repetitions": 5,
+        "ever_flipped_pair_count": 9,
+        "ever_flipped_pair_ratio": 0.321429,
+        "never_valid_pair_count": 0,
+        "invalid_response_count": 0,
+        "invalid_response_rate": 0.0,
+        "run_pair_disagreements": [
+          {
+            "run_a": 0,
+            "run_b": 1,
+            "compared_pairs": 28,
+            "disagreed_pairs": 6,
+            "disagreement_rate": 0.214286
+          },
+          {
+            "run_a": 0,
+            "run_b": 2,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          },
+          {
+            "run_a": 0,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          },
+          {
+            "run_a": 0,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          },
+          {
+            "run_a": 1,
+            "run_b": 2,
+            "compared_pairs": 28,
+            "disagreed_pairs": 5,
+            "disagreement_rate": 0.178571
+          },
+          {
+            "run_a": 1,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 7,
+            "disagreement_rate": 0.25
+          },
+          {
+            "run_a": 1,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 3,
+            "disagreement_rate": 0.107143
+          },
+          {
+            "run_a": 2,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 6,
+            "disagreement_rate": 0.214286
+          },
+          {
+            "run_a": 2,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 4,
+            "disagreement_rate": 0.142857
+          },
+          {
+            "run_a": 3,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 4,
+            "disagreement_rate": 0.142857
+          }
+        ],
+        "mean_run_pair_disagreement": 0.157143,
+        "run_pair_dependence_note": "the C(R,2) run pairs share runs and are NOT independent samples; values are descriptive only"
+      },
+      "query": {
+        "runs_total": 5,
+        "runs_ok": 5,
+        "run_pairs": 10,
+        "distinct_topk_ordered": 3,
+        "distinct_topk_sets": 2,
+        "topk_set_exact_agreement_rate": 0.6,
+        "topk_ordered_exact_agreement_rate": 0.3,
+        "mean_jaccard_at_k": 0.8,
+        "min_jaccard_at_k": 0.5,
+        "mean_kendall_tau_b_full_ranking": 0.714286,
+        "min_kendall_tau_b_full_ranking": 0.5,
+        "ndcg_at_k_per_run": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ndcg_at_k_mean": 1.0,
+        "ndcg_at_k_range": [
+          1.0,
+          1.0
+        ],
+        "ground_truth_available": true,
+        "ever_topk_set_change": true,
+        "ever_topk_order_change": true,
+        "run_pair_dependence_note": "the C(R,2) run pairs share runs and are NOT independent samples; values are descriptive only"
+      }
+    },
+    {
+      "query_id": "51",
+      "operator": {
+        "pairs_total": 28,
+        "repetitions": 5,
+        "ever_flipped_pair_count": 12,
+        "ever_flipped_pair_ratio": 0.428571,
+        "never_valid_pair_count": 0,
+        "invalid_response_count": 0,
+        "invalid_response_rate": 0.0,
+        "run_pair_disagreements": [
+          {
+            "run_a": 0,
+            "run_b": 1,
+            "compared_pairs": 28,
+            "disagreed_pairs": 5,
+            "disagreement_rate": 0.178571
+          },
+          {
+            "run_a": 0,
+            "run_b": 2,
+            "compared_pairs": 28,
+            "disagreed_pairs": 5,
+            "disagreement_rate": 0.178571
+          },
+          {
+            "run_a": 0,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 6,
+            "disagreement_rate": 0.214286
+          },
+          {
+            "run_a": 0,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 4,
+            "disagreement_rate": 0.142857
+          },
+          {
+            "run_a": 1,
+            "run_b": 2,
+            "compared_pairs": 28,
+            "disagreed_pairs": 6,
+            "disagreement_rate": 0.214286
+          },
+          {
+            "run_a": 1,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 7,
+            "disagreement_rate": 0.25
+          },
+          {
+            "run_a": 1,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 7,
+            "disagreement_rate": 0.25
+          },
+          {
+            "run_a": 2,
+            "run_b": 3,
+            "compared_pairs": 28,
+            "disagreed_pairs": 5,
+            "disagreement_rate": 0.178571
+          },
+          {
+            "run_a": 2,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 7,
+            "disagreement_rate": 0.25
+          },
+          {
+            "run_a": 3,
+            "run_b": 4,
+            "compared_pairs": 28,
+            "disagreed_pairs": 6,
+            "disagreement_rate": 0.214286
+          }
+        ],
+        "mean_run_pair_disagreement": 0.207143,
+        "run_pair_dependence_note": "the C(R,2) run pairs share runs and are NOT independent samples; values are descriptive only"
+      },
+      "query": {
+        "runs_total": 5,
+        "runs_ok": 5,
+        "run_pairs": 10,
+        "distinct_topk_ordered": 2,
+        "distinct_topk_sets": 1,
+        "topk_set_exact_agreement_rate": 1.0,
+        "topk_ordered_exact_agreement_rate": 0.4,
+        "mean_jaccard_at_k": 1.0,
+        "min_jaccard_at_k": 1.0,
+        "mean_kendall_tau_b_full_ranking": 0.785714,
+        "min_kendall_tau_b_full_ranking": 0.6428571428571429,
+        "ndcg_at_k_per_run": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ndcg_at_k_mean": 1.0,
+        "ndcg_at_k_range": [
+          1.0,
+          1.0
+        ],
+        "ground_truth_available": true,
+        "ever_topk_set_change": false,
+        "ever_topk_order_change": true,
+        "run_pair_dependence_note": "the C(R,2) run pairs share runs and are NOT independent samples; values are descriptive only"
+      }
+    }
+  ],
+  "macro": {
+    "queries": 3,
+    "macro_ever_flipped_pair_ratio": 0.345238,
+    "macro_mean_run_pair_disagreement": 0.166667,
+    "macro_invalid_response_rate": 0.0,
+    "macro_topk_set_exact_agreement": 0.6,
+    "macro_topk_ordered_exact_agreement": 0.3,
+    "macro_mean_jaccard_at_k": 0.8,
+    "macro_mean_kendall_tau_b": 0.747619,
+    "macro_ndcg_at_k_mean": 1.0,
+    "macro_ndcg_at_k_range": [
+      1.0,
+      1.0
+    ]
+  },
+  "metric_definitions": {
+    "ever_flipped_pair_ratio": "pairs with >=2 distinct strict-valid verdicts across the R runs / all pairs",
+    "pairwise_run_disagreement": "per unordered run pair: disagreements / strict-valid-in-both pairs",
+    "invalid_response_rate": "trace rows whose strict parse is not valid / all trace rows",
+    "topk_set_exact_agreement": "run pairs whose Top-K *member sets* are identical",
+    "topk_ordered_exact_agreement": "run pairs whose Top-K *orders* are identical",
+    "jaccard_at_k": "|intersection| / |union| of two Top-K sets",
+    "kendall_tau_b": "tau over the full 8-document rankings",
+    "ndcg_at_k": "the paper's dcg(found)/dcg(sorted(gt)[:k]) formula, per run"
+  },
+  "statistical_caveat": "The C(5,2)=10 run pairs per query share runs and are dependent; all run-pair statistics are descriptive. No inferential test is computed from them here."
+}

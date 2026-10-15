@@ -1,0 +1,222 @@
+{
+  "manifest_version": 1,
+  "generated_at_utc": "2026-10-15T04:26:30+00:00",
+  "external_dir": "data/external/lotus_gate2",
+  "provenance": {
+    "source_project": "LOTUS nondeterminism study",
+    "source_repo_path_at_capture": "D:/FDU/Experiment/Lotus/lotus-code (checkout of lotus-data/lotus)",
+    "source_git_commit": "136ae4f4a344a2f75d89f811e516dfcb0de30e46",
+    "source_git_branch": "research/dynamic-semantic-maintenance",
+    "captured_at_utc_date": "2026-10-15",
+    "experiment": {
+      "substudy": "Gate2-NondeterminismPropagation",
+      "gate": "G2",
+      "condition": "P0 (retargeted endpoint, see report section A)",
+      "run_id": "live_pilot_20261014T132233Z",
+      "planned_calls": 420,
+      "runs": 15,
+      "model": "DeepSeek-V4.1-Flash via https://llmapi.paratera.com (thinking disabled, max_tokens 128)"
+    },
+    "secrets_policy": "No API keys, .env files, or non-public query content are stored here. provider_runtime.yaml contains environment-variable NAMES only."
+  },
+  "upstream_lineage": {
+    "gate1b_retrieval_candidates.jsonl": {
+      "sha256": "652afb02b5a96cbe8690cc7137214b383d3341bc582e835b239f3cedac02da5a",
+      "bytes": 7362299,
+      "note": "frozen Gate 1B retrieval; source of the Top-8 candidate lists (hash only, not copied)"
+    },
+    "gate1b_pairset_manifest.json": {
+      "sha256": "b322116994b00133066f61c6a4261764d68e2831224f4d666980238693287d2f",
+      "bytes": 5682,
+      "note": "Gate 1B pairset manifest; dataset lineage (BEIR/SciFact), hash only"
+    }
+  },
+  "files": [
+    {
+      "path": "gate2_live_analysis.json",
+      "sha256": "67a9c048404529cc21ec27baecc95b0040ddf8a3e4569ec365bd88c2ac7b9c30",
+      "bytes": 11835,
+      "role": "producer-side Gate 2A metrics (cross-check target)"
+    },
+    {
+      "path": "gate2_live_artifact_verification.json",
+      "sha256": "0600d14f168d2906be3ebc2bd8e3cfa6531c9de0ed8840bcae81fe2632efdada",
+      "bytes": 3126,
+      "role": "producer-side artifact verification result (second copy)"
+    },
+    {
+      "path": "gate2_live_manifest.json",
+      "sha256": "2918a6de3ba114897e3193965aafd06b53a4eaecf03e321b0bf74338c29a5036",
+      "bytes": 1624,
+      "role": "producer-side run/budget accounting"
+    },
+    {
+      "path": "gate2_live_pair_calls.jsonl",
+      "sha256": "363c68d877f4661b265439657b6c4dd1fca820483e7828a26288ae464d21cb3b",
+      "bytes": 708269,
+      "role": "primary raw data: 420 pair response records (== gate2_live_calls.jsonl)"
+    },
+    {
+      "path": "gate2_live_query_results.jsonl",
+      "sha256": "75d50026c565f97344c1f4190f919f19543dbd7eb15231fdd1761e18df37d49e",
+      "bytes": 53991,
+      "role": "primary raw data: 15 run records (== gate2_live_runs.jsonl)"
+    },
+    {
+      "path": "gate2_live_replay_analysis.json",
+      "sha256": "98a9127c9104779d16958d56d00aa8efed5976a8cb749e16a261f253b85d4e49",
+      "bytes": 133646,
+      "role": "producer-side Gate 2B propagation analysis (== gate2_live_propagation_analysis.json)"
+    },
+    {
+      "path": "gate2_live_report.md",
+      "sha256": "a32579358c2f2faae5ebdd63b98aa330e41f0b0b37634cc923db3c38f7e85747",
+      "bytes": 14766,
+      "role": "producer-side experiment report (numbers audited against)"
+    },
+    {
+      "path": "gate2_live_verification.json",
+      "sha256": "0600d14f168d2906be3ebc2bd8e3cfa6531c9de0ed8840bcae81fe2632efdada",
+      "bytes": 3126,
+      "role": "producer-side artifact verification result"
+    },
+    {
+      "path": "gate2_workload.json",
+      "sha256": "b53af1ea0e335d6f8655b246c2b8ee8b45f91911be37a6938c2c76eefffd7737",
+      "bytes": 32087,
+      "role": "frozen workload: pairs, pinned request hashes, candidate sets, qrels"
+    },
+    {
+      "path": "live_smoke_20261014T114455Z/gate2_live_blocked_state.json",
+      "sha256": "0c6e9db9055b3ad538992edeb4128aa933de9abb6fa3be44a021b57bdb337046",
+      "bytes": 3984,
+      "role": "blocked-state evidence for the endpoint deviation"
+    },
+    {
+      "path": "live_smoke_20261014T114455Z/gate2_live_report.md",
+      "sha256": "c5c03cf478c3d6a939b2e5c50e608e8514f97e5883cde24709ca57ed8d070ac5",
+      "bytes": 9378,
+      "role": "blocked-state evidence for the endpoint deviation"
+    },
+    {
+      "path": "live_smoke_20261014T114455Z/gate2_live_smoke_manifest.json",
+      "sha256": "427f9f968f40bc4e081c263b0e204e38f9236d7c0e49707ff7678f0349380e4e",
+      "bytes": 1413,
+      "role": "blocked-state evidence for the endpoint deviation"
+    },
+    {
+      "path": "live_smoke_20261014T114455Z/gate2_live_smoke_runs.jsonl",
+      "sha256": "8263ae1d1e9ddc082632920e090ae35194f04ea25710878e6b34b5138c4ec705",
+      "bytes": 1587,
+      "role": "blocked-state evidence for the endpoint deviation"
+    },
+    {
+      "path": "live_smoke_20261014T131841Z/gate2_live_smoke_calls.jsonl",
+      "sha256": "4e52070f8476d713dd8f2621d057a2bc4a78c9c177a87c11479eeff3063b397b",
+      "bytes": 47252,
+      "role": "pre-pilot live smoke (28 calls) that gated the pilot"
+    },
+    {
+      "path": "live_smoke_20261014T131841Z/gate2_live_smoke_manifest.json",
+      "sha256": "873b0e865eea6d21f88fd1c97e674adeafb31cb9480d9d88031cc7ec3110b228",
+      "bytes": 1441,
+      "role": "pre-pilot live smoke (28 calls) that gated the pilot"
+    },
+    {
+      "path": "live_smoke_20261014T131841Z/gate2_live_smoke_replay.json",
+      "sha256": "d34ead0737bdf7e6ba2563fcc9b78c399fbfffd9a84f8331c736474bb10fd92d",
+      "bytes": 35650,
+      "role": "pre-pilot live smoke (28 calls) that gated the pilot"
+    },
+    {
+      "path": "live_smoke_20261014T131841Z/gate2_live_smoke_runs.jsonl",
+      "sha256": "6ea5c8b676034f3be414ce35408a89476e664769e1fe45fa7f11531c849d31d4",
+      "bytes": 3593,
+      "role": "pre-pilot live smoke (28 calls) that gated the pilot"
+    },
+    {
+      "path": "live_smoke_20261014T131841Z/gate2_live_smoke_verification.json",
+      "sha256": "725605f98e4a5cf85febe4da2d565517e7b381816b15f6d9106a4f6b9b0ce5b2",
+      "bytes": 2988,
+      "role": "pre-pilot live smoke (28 calls) that gated the pilot"
+    },
+    {
+      "path": "lotus_scripts_reference/analyze_gate2_topk.py",
+      "sha256": "fe7d32a06fd7a33ac2d49df20827917954fe39c58c41fc552ec96566967a85b0",
+      "bytes": 5225,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/build_gate2_workload.py",
+      "sha256": "441e4583de8b01584b407e082b929ea3d4257afe8f4175e6f6efc495ff479e26",
+      "bytes": 3262,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/estimate_gate2_budget.py",
+      "sha256": "640ac0de38e3138534a66ebbdb46b4bfadcf99e7217143b1a3fff4f458d57efe",
+      "bytes": 6136,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/gate2_pkg/metrics.py",
+      "sha256": "3f4b352d21f628b5e32c0b6718bac6387a44cc7f9ed210e39f108443cc75f288",
+      "bytes": 10063,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/gate2_pkg/protocol.py",
+      "sha256": "973a9c2a54978ccbe1f53f77847e1acc8c9d26970b604d7502431c8e8d148b34",
+      "bytes": 5899,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/gate2_pkg/replay.py",
+      "sha256": "e736695c8f4e1e507eb970f5c7a0a5ccbf88fc1fbc856047ebda531ab94d4c4c",
+      "bytes": 16136,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/gate2_pkg/runner.py",
+      "sha256": "b6b08c0ca8b4e1e50fdf6c4da074abeeb2743c34da9f03282e61c62256e57421",
+      "bytes": 17185,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/gate2_pkg/workload.py",
+      "sha256": "1fbd91f2566425fd6463794a1dc1ce89106f0b14dfd5308e7f9596acd5951a43",
+      "bytes": 8455,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/replay_gate2.py",
+      "sha256": "6250693e8954f8fc344b5185ae873d84f6314a298cd619abb55c77ec3bfcdcff",
+      "bytes": 8832,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/run_gate2_topk.py",
+      "sha256": "64b8f70f49e3f9f7ed92ecb6ad20c040b673576b176b9b1604ebb202b6388e6e",
+      "bytes": 17839,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/smoke_gate2_offline.py",
+      "sha256": "588d0b7e7d16bf36ecc28fc2215569e70bedf2e19552d6cfd5fed89ec403464b",
+      "bytes": 7327,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "lotus_scripts_reference/verify_artifacts.py",
+      "sha256": "41e2218466ed9ac0b4d14e6f483b6163b6c3d524e706e0f38647bba6cf1f9740",
+      "bytes": 14165,
+      "role": "read-only provenance copies of the LOTUS scripts that produced the data"
+    },
+    {
+      "path": "provider_runtime.yaml",
+      "sha256": "dc48b2cbfa96492aeb5023cd7c5a2bc88c839a082c2126e85b55eb4ac86376b4",
+      "bytes": 3038,
+      "role": "endpoint/model config actually used (env-var names only, no secrets)"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment / secrets — must never be committed
+.env
+.env.*
+*.key
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,4 @@
+# 可复现优先：本仓库不做任何行尾转换。
+# data/external/ 是 SHA-256 逐字节校验的不可变副本（data/manifests/），
+# 任何 CRLF/LF 归一化都会破坏 manifest 校验；统一对所有文件禁用转换。
+* -text

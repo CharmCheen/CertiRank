@@ -1,0 +1,910 @@
+{
+  "schema_version": 1,
+  "gate": "G2",
+  "substudy": "Gate2-NondeterminismPropagation",
+  "condition": "P0",
+  "repo_commit": "136ae4f4a344a2f75d89f811e516dfcb0de30e46",
+  "query_selection_rule": "sorted(sha256(query_id))[:3] over the 20 queries used by Gate 1B (gate1b_pairset_manifest.json::selected_query_ids)",
+  "candidate_rule": "retrieval ranks 0..7 (Top-8) of the frozen Gate 1B retrieval (gate1b_retrieval_candidates.jsonl), initial order = retrieval-rank order",
+  "pair_id_rule": "f\"{query_id}|{doc1_id}|{doc2_id}\" in row order (i < j), the Gate 1 format",
+  "query_ids": [
+    "636",
+    "327",
+    "51"
+  ],
+  "query_set_sha256": "7d9b10de1bb3c3682181d5290e5eb60995517021760dd085527c229c7a42cb77",
+  "k": 3,
+  "method": "naive",
+  "candidate_depth": 8,
+  "pairs_per_query": 28,
+  "repetitions": 5,
+  "planned_calls": 420,
+  "retrieval_source": "gate1b_retrieval_candidates.jsonl",
+  "entries": [
+    {
+      "query_id": "636",
+      "depth": 8,
+      "doc_ids": [
+        "24294572",
+        "42708716",
+        "14328288",
+        "19752008",
+        "1910120",
+        "15113221",
+        "22025252",
+        "13794374"
+      ],
+      "retrieval_ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "retrieval_scores": [
+        0.8582621812820435,
+        0.8484777808189392,
+        0.8426827192306519,
+        0.8415613770484924,
+        0.8268184661865234,
+        0.8247965574264526,
+        0.8242310881614685,
+        0.8228893280029297
+      ],
+      "candidate_set_hash": "05a284c6ad98d45811e231256a27d2940cb20ab83b85c86aaac56de25b77a8e2",
+      "query_text": "Inositol lipid 3-phosphatase PTEN converts Ptdlns(3,4)P 2 into phosphatidylinositol 4-phosphate.",
+      "query_text_sha256": "69c042bfdaad584f12039ce69b35fa6141dab56dc919671617c83b12f49e725a",
+      "qrels": {
+        "24294572": 1
+      },
+      "pairs": [
+        {
+          "pair_position": 0,
+          "position_i": 0,
+          "position_j": 1,
+          "document_1_id": "24294572",
+          "document_2_id": "42708716",
+          "pair_id": "636|24294572|42708716",
+          "request_hash": "c5ce8f32e5ceca057402ed46959255b9e7acb3051e5e8cbe6461c0330f9bc52a"
+        },
+        {
+          "pair_position": 1,
+          "position_i": 0,
+          "position_j": 2,
+          "document_1_id": "24294572",
+          "document_2_id": "14328288",
+          "pair_id": "636|24294572|14328288",
+          "request_hash": "9859f846c75216d1a92e08b0eaa658148fde813f5a6c10ce081109bbb1519859"
+        },
+        {
+          "pair_position": 2,
+          "position_i": 0,
+          "position_j": 3,
+          "document_1_id": "24294572",
+          "document_2_id": "19752008",
+          "pair_id": "636|24294572|19752008",
+          "request_hash": "080d3374daa414e9dcf86eb79e3349a29c21fee85c0b73aba04a89a6b0faf732"
+        },
+        {
+          "pair_position": 3,
+          "position_i": 0,
+          "position_j": 4,
+          "document_1_id": "24294572",
+          "document_2_id": "1910120",
+          "pair_id": "636|24294572|1910120",
+          "request_hash": "feaa32639812b01e21bbaeba4ffa8fcdf560172a4a02af04c8fb2f329578abf6"
+        },
+        {
+          "pair_position": 4,
+          "position_i": 0,
+          "position_j": 5,
+          "document_1_id": "24294572",
+          "document_2_id": "15113221",
+          "pair_id": "636|24294572|15113221",
+          "request_hash": "ac5fc1b7d08e0b4d5f3dbfbcebebff0f61107635e009101b14dd6625a6921c44"
+        },
+        {
+          "pair_position": 5,
+          "position_i": 0,
+          "position_j": 6,
+          "document_1_id": "24294572",
+          "document_2_id": "22025252",
+          "pair_id": "636|24294572|22025252",
+          "request_hash": "78b6aa73c059768a94fc6decd41fef52f06605f87735193f09f29021cc8472aa"
+        },
+        {
+          "pair_position": 6,
+          "position_i": 0,
+          "position_j": 7,
+          "document_1_id": "24294572",
+          "document_2_id": "13794374",
+          "pair_id": "636|24294572|13794374",
+          "request_hash": "5688eda8d25f2293e94d99f165e098eb4157ea0a362bedcbadb370b6c876a8ed"
+        },
+        {
+          "pair_position": 7,
+          "position_i": 1,
+          "position_j": 2,
+          "document_1_id": "42708716",
+          "document_2_id": "14328288",
+          "pair_id": "636|42708716|14328288",
+          "request_hash": "a665e4ffc4bb449c47e94e82c6da03cb50e2168f56693002616a873bee7e0594"
+        },
+        {
+          "pair_position": 8,
+          "position_i": 1,
+          "position_j": 3,
+          "document_1_id": "42708716",
+          "document_2_id": "19752008",
+          "pair_id": "636|42708716|19752008",
+          "request_hash": "ddd97b35189b736d7240e45efae6c6d2a20debe6925ba1de1603cdf2d5377ae6"
+        },
+        {
+          "pair_position": 9,
+          "position_i": 1,
+          "position_j": 4,
+          "document_1_id": "42708716",
+          "document_2_id": "1910120",
+          "pair_id": "636|42708716|1910120",
+          "request_hash": "72bdc355e559b69f92e815a970d35d4b777ae04340981b9f8941764ec54d0296"
+        },
+        {
+          "pair_position": 10,
+          "position_i": 1,
+          "position_j": 5,
+          "document_1_id": "42708716",
+          "document_2_id": "15113221",
+          "pair_id": "636|42708716|15113221",
+          "request_hash": "c02fae28c33e06a88142c0cabb50e6b60948d18faa7b6788c581a71af75ad832"
+        },
+        {
+          "pair_position": 11,
+          "position_i": 1,
+          "position_j": 6,
+          "document_1_id": "42708716",
+          "document_2_id": "22025252",
+          "pair_id": "636|42708716|22025252",
+          "request_hash": "66983e771a93b11e057e91e0d11bafd8b0737ed1956b95ffaf0b09bd633dcb9d"
+        },
+        {
+          "pair_position": 12,
+          "position_i": 1,
+          "position_j": 7,
+          "document_1_id": "42708716",
+          "document_2_id": "13794374",
+          "pair_id": "636|42708716|13794374",
+          "request_hash": "204097b3587935870c01ce9e9291240532558535c7aae8b97fce971739527f21"
+        },
+        {
+          "pair_position": 13,
+          "position_i": 2,
+          "position_j": 3,
+          "document_1_id": "14328288",
+          "document_2_id": "19752008",
+          "pair_id": "636|14328288|19752008",
+          "request_hash": "ca1ec39d5eb2cd67dc205595f971ac381f5fe2c6c10af266b1425c3b4cd9c45a"
+        },
+        {
+          "pair_position": 14,
+          "position_i": 2,
+          "position_j": 4,
+          "document_1_id": "14328288",
+          "document_2_id": "1910120",
+          "pair_id": "636|14328288|1910120",
+          "request_hash": "b0ac284abe67c75bc7bc889d434d4417cf1a5786df845744b016d54d0e2390ce"
+        },
+        {
+          "pair_position": 15,
+          "position_i": 2,
+          "position_j": 5,
+          "document_1_id": "14328288",
+          "document_2_id": "15113221",
+          "pair_id": "636|14328288|15113221",
+          "request_hash": "9d02bc0c2916c64690d09fafcb400122b267bea27909ed00da8be66364a60f4a"
+        },
+        {
+          "pair_position": 16,
+          "position_i": 2,
+          "position_j": 6,
+          "document_1_id": "14328288",
+          "document_2_id": "22025252",
+          "pair_id": "636|14328288|22025252",
+          "request_hash": "a69df895dcc336fa082fcb6fcbaf5c890f0dff78f62e9178baf9f20c0b4733ec"
+        },
+        {
+          "pair_position": 17,
+          "position_i": 2,
+          "position_j": 7,
+          "document_1_id": "14328288",
+          "document_2_id": "13794374",
+          "pair_id": "636|14328288|13794374",
+          "request_hash": "0c48fca1324f1f7a2badf86bf69d57b220f171214caf0ff6422ee16e08d5ebdf"
+        },
+        {
+          "pair_position": 18,
+          "position_i": 3,
+          "position_j": 4,
+          "document_1_id": "19752008",
+          "document_2_id": "1910120",
+          "pair_id": "636|19752008|1910120",
+          "request_hash": "367f958efa93bc20565d1b0e3f11d9fbf724634cc726aa00e4ffdd52b122597e"
+        },
+        {
+          "pair_position": 19,
+          "position_i": 3,
+          "position_j": 5,
+          "document_1_id": "19752008",
+          "document_2_id": "15113221",
+          "pair_id": "636|19752008|15113221",
+          "request_hash": "89dc1a9d061408de5428845e5cb2543dbcb527f8c783d4a9b9e9b6e4f7a6fe9b"
+        },
+        {
+          "pair_position": 20,
+          "position_i": 3,
+          "position_j": 6,
+          "document_1_id": "19752008",
+          "document_2_id": "22025252",
+          "pair_id": "636|19752008|22025252",
+          "request_hash": "634228f263d87801c22346fe043961f9894336caf97895c45e40f80dafba3c71"
+        },
+        {
+          "pair_position": 21,
+          "position_i": 3,
+          "position_j": 7,
+          "document_1_id": "19752008",
+          "document_2_id": "13794374",
+          "pair_id": "636|19752008|13794374",
+          "request_hash": "a08d6268a84375bd330a7d1a67e0ae27a2603194dd6718fd2d6301f40febb2a3"
+        },
+        {
+          "pair_position": 22,
+          "position_i": 4,
+          "position_j": 5,
+          "document_1_id": "1910120",
+          "document_2_id": "15113221",
+          "pair_id": "636|1910120|15113221",
+          "request_hash": "901353e3a9c81a8bbd2df2f42b780db310536883454a5bded23daf918be02356"
+        },
+        {
+          "pair_position": 23,
+          "position_i": 4,
+          "position_j": 6,
+          "document_1_id": "1910120",
+          "document_2_id": "22025252",
+          "pair_id": "636|1910120|22025252",
+          "request_hash": "25012aed055cbc8ad6ce55a807503e911bc88a22d4b1aecfdad0dd8cd1d7e68a"
+        },
+        {
+          "pair_position": 24,
+          "position_i": 4,
+          "position_j": 7,
+          "document_1_id": "1910120",
+          "document_2_id": "13794374",
+          "pair_id": "636|1910120|13794374",
+          "request_hash": "a1d1c57947ccf7752beb02768de3a52a3cc6339f2ba54965698a3564ddb51552"
+        },
+        {
+          "pair_position": 25,
+          "position_i": 5,
+          "position_j": 6,
+          "document_1_id": "15113221",
+          "document_2_id": "22025252",
+          "pair_id": "636|15113221|22025252",
+          "request_hash": "9c69f1ca34decac37fd4630049a872766f8a8c061eacf0503f2329ac3fb7dbd7"
+        },
+        {
+          "pair_position": 26,
+          "position_i": 5,
+          "position_j": 7,
+          "document_1_id": "15113221",
+          "document_2_id": "13794374",
+          "pair_id": "636|15113221|13794374",
+          "request_hash": "875b6b134250059c3fb877be3c70a15c04ce09032c40d0afc604aa7527b1f228"
+        },
+        {
+          "pair_position": 27,
+          "position_i": 6,
+          "position_j": 7,
+          "document_1_id": "22025252",
+          "document_2_id": "13794374",
+          "pair_id": "636|22025252|13794374",
+          "request_hash": "b00bdd24a16059fdd7874bd7b0f433400dee50ce87ecd39d8c6aa4dc73d56e80"
+        }
+      ],
+      "pair_request_hash_set_sha256": "61895085bbd69e666cb0638ef1790dea3eafc22145b25c5363d067cb6ce241dd"
+    },
+    {
+      "query_id": "327",
+      "depth": 8,
+      "doc_ids": [
+        "17997584",
+        "14380875",
+        "5922085",
+        "364522",
+        "1574014",
+        "22972632",
+        "34469966",
+        "36180468"
+      ],
+      "retrieval_ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "retrieval_scores": [
+        0.8201656341552734,
+        0.8197453022003174,
+        0.8196260929107666,
+        0.818907618522644,
+        0.8175150156021118,
+        0.8162003755569458,
+        0.8144002556800842,
+        0.8128839135169983
+      ],
+      "candidate_set_hash": "ff861213c643da7f5ac792bde8a5f7638b6c90bb98003f652d0f7fbb7c5ac341",
+      "query_text": "Deletion of αvβ8 does not result in a spontaneous inflammatory phenotype.",
+      "query_text_sha256": "80112a6e162b760d23eb45e601551ac4662dcb35a6d3b16017f3bb9f61ec5c0f",
+      "qrels": {
+        "17997584": 1
+      },
+      "pairs": [
+        {
+          "pair_position": 0,
+          "position_i": 0,
+          "position_j": 1,
+          "document_1_id": "17997584",
+          "document_2_id": "14380875",
+          "pair_id": "327|17997584|14380875",
+          "request_hash": "7052cf33a6dfae4387b30697dbe7626b5eb20e25278a8b3b38fa03c09e47de1e"
+        },
+        {
+          "pair_position": 1,
+          "position_i": 0,
+          "position_j": 2,
+          "document_1_id": "17997584",
+          "document_2_id": "5922085",
+          "pair_id": "327|17997584|5922085",
+          "request_hash": "6952c5d1d58818b22e97c0cb49e41538d76461205181c990f912c450d09544c4"
+        },
+        {
+          "pair_position": 2,
+          "position_i": 0,
+          "position_j": 3,
+          "document_1_id": "17997584",
+          "document_2_id": "364522",
+          "pair_id": "327|17997584|364522",
+          "request_hash": "19c22b8488e7a99bcf8de5687a495e87c171a32fa0fb38e82d0531325f792ac7"
+        },
+        {
+          "pair_position": 3,
+          "position_i": 0,
+          "position_j": 4,
+          "document_1_id": "17997584",
+          "document_2_id": "1574014",
+          "pair_id": "327|17997584|1574014",
+          "request_hash": "8f58c9977ca3c135e036d3b9c8a17a3154523d33597faf3be699ef5650c8a7f9"
+        },
+        {
+          "pair_position": 4,
+          "position_i": 0,
+          "position_j": 5,
+          "document_1_id": "17997584",
+          "document_2_id": "22972632",
+          "pair_id": "327|17997584|22972632",
+          "request_hash": "022cef79a08cda2ba35bf326ea9830f33f1cb5d12b9704bbb141118f31cfd122"
+        },
+        {
+          "pair_position": 5,
+          "position_i": 0,
+          "position_j": 6,
+          "document_1_id": "17997584",
+          "document_2_id": "34469966",
+          "pair_id": "327|17997584|34469966",
+          "request_hash": "9da990bc6ecd5203daea097427c4b4e54b59ddd129a92d4c52aee4429c08dcc2"
+        },
+        {
+          "pair_position": 6,
+          "position_i": 0,
+          "position_j": 7,
+          "document_1_id": "17997584",
+          "document_2_id": "36180468",
+          "pair_id": "327|17997584|36180468",
+          "request_hash": "4ba7b40956417a9b66a236ff86b9d8460e94659f72d61395c7473af6407e5661"
+        },
+        {
+          "pair_position": 7,
+          "position_i": 1,
+          "position_j": 2,
+          "document_1_id": "14380875",
+          "document_2_id": "5922085",
+          "pair_id": "327|14380875|5922085",
+          "request_hash": "33639cb4e2748deedb6b4cbbeae5b39be8c54195ffe84a5b3b9656112a3b19a6"
+        },
+        {
+          "pair_position": 8,
+          "position_i": 1,
+          "position_j": 3,
+          "document_1_id": "14380875",
+          "document_2_id": "364522",
+          "pair_id": "327|14380875|364522",
+          "request_hash": "7b41967e8a3e00d87bb4a881f60ebe8cc499eb43c51767ac5b3542f03d9be4b9"
+        },
+        {
+          "pair_position": 9,
+          "position_i": 1,
+          "position_j": 4,
+          "document_1_id": "14380875",
+          "document_2_id": "1574014",
+          "pair_id": "327|14380875|1574014",
+          "request_hash": "43e3dd6b812e9851667a625c14313ff5f4e66e35d660e8bdf7829256811342f3"
+        },
+        {
+          "pair_position": 10,
+          "position_i": 1,
+          "position_j": 5,
+          "document_1_id": "14380875",
+          "document_2_id": "22972632",
+          "pair_id": "327|14380875|22972632",
+          "request_hash": "a8376056c83177cf915f13e5f24f7cb444437db87aae15c712610147624d7d49"
+        },
+        {
+          "pair_position": 11,
+          "position_i": 1,
+          "position_j": 6,
+          "document_1_id": "14380875",
+          "document_2_id": "34469966",
+          "pair_id": "327|14380875|34469966",
+          "request_hash": "252e930659d5a3c73c39374c9aed59225c703177b98631215ae8b22cb6fa0476"
+        },
+        {
+          "pair_position": 12,
+          "position_i": 1,
+          "position_j": 7,
+          "document_1_id": "14380875",
+          "document_2_id": "36180468",
+          "pair_id": "327|14380875|36180468",
+          "request_hash": "a0414ed80523f96c4090c990554b8637f91c2f728114778febb64e8c50d776c8"
+        },
+        {
+          "pair_position": 13,
+          "position_i": 2,
+          "position_j": 3,
+          "document_1_id": "5922085",
+          "document_2_id": "364522",
+          "pair_id": "327|5922085|364522",
+          "request_hash": "eaff4169502845d18eb345c5eaab84bf425f33f361286d3e64fcaf94ff766bdb"
+        },
+        {
+          "pair_position": 14,
+          "position_i": 2,
+          "position_j": 4,
+          "document_1_id": "5922085",
+          "document_2_id": "1574014",
+          "pair_id": "327|5922085|1574014",
+          "request_hash": "4ba20af1a36e041d23f428039cea7bbf750e8ae354006b248f8f2fc4ea851883"
+        },
+        {
+          "pair_position": 15,
+          "position_i": 2,
+          "position_j": 5,
+          "document_1_id": "5922085",
+          "document_2_id": "22972632",
+          "pair_id": "327|5922085|22972632",
+          "request_hash": "c0de3a69797ca4f23043df57ad5d3ca428b3a73d033145b723ffaa8fe35c03c9"
+        },
+        {
+          "pair_position": 16,
+          "position_i": 2,
+          "position_j": 6,
+          "document_1_id": "5922085",
+          "document_2_id": "34469966",
+          "pair_id": "327|5922085|34469966",
+          "request_hash": "fbb3ee1cc2fb22bd2098f346f852b5e8297e7d0c960666f9049d0aa9238486e2"
+        },
+        {
+          "pair_position": 17,
+          "position_i": 2,
+          "position_j": 7,
+          "document_1_id": "5922085",
+          "document_2_id": "36180468",
+          "pair_id": "327|5922085|36180468",
+          "request_hash": "893d91467c2f615ca78beec1169524e1b22fcd7560918020fa63356ddc6d02a1"
+        },
+        {
+          "pair_position": 18,
+          "position_i": 3,
+          "position_j": 4,
+          "document_1_id": "364522",
+          "document_2_id": "1574014",
+          "pair_id": "327|364522|1574014",
+          "request_hash": "35efb7906d48260fab922db68c6be89aaebe9337e236472463231ce405e063a0"
+        },
+        {
+          "pair_position": 19,
+          "position_i": 3,
+          "position_j": 5,
+          "document_1_id": "364522",
+          "document_2_id": "22972632",
+          "pair_id": "327|364522|22972632",
+          "request_hash": "85a76231c1d38dc0222730ca22dcb45482c8c17cc23a15715a289eb74e709539"
+        },
+        {
+          "pair_position": 20,
+          "position_i": 3,
+          "position_j": 6,
+          "document_1_id": "364522",
+          "document_2_id": "34469966",
+          "pair_id": "327|364522|34469966",
+          "request_hash": "517d0f4546def46a6c21ad8290444576a8021c8269934c1ac2ee0e5021f90ae1"
+        },
+        {
+          "pair_position": 21,
+          "position_i": 3,
+          "position_j": 7,
+          "document_1_id": "364522",
+          "document_2_id": "36180468",
+          "pair_id": "327|364522|36180468",
+          "request_hash": "b84757c5b78ae486ef9629c5c44583d8bed0c55fe13978e3c2336ae572e23800"
+        },
+        {
+          "pair_position": 22,
+          "position_i": 4,
+          "position_j": 5,
+          "document_1_id": "1574014",
+          "document_2_id": "22972632",
+          "pair_id": "327|1574014|22972632",
+          "request_hash": "493a46732844afc8f6fa1a4f3ea20d6b30dff3119d603d4990f9ea0b617144e6"
+        },
+        {
+          "pair_position": 23,
+          "position_i": 4,
+          "position_j": 6,
+          "document_1_id": "1574014",
+          "document_2_id": "34469966",
+          "pair_id": "327|1574014|34469966",
+          "request_hash": "6b97b151db96d78d52658f2ed8a1df709126053930f60a603b46a376b8650a8e"
+        },
+        {
+          "pair_position": 24,
+          "position_i": 4,
+          "position_j": 7,
+          "document_1_id": "1574014",
+          "document_2_id": "36180468",
+          "pair_id": "327|1574014|36180468",
+          "request_hash": "52b3a6dcbbd1fca4641996db0c9620bb8f6c0e9de074ac08c74b83b7aab0ce14"
+        },
+        {
+          "pair_position": 25,
+          "position_i": 5,
+          "position_j": 6,
+          "document_1_id": "22972632",
+          "document_2_id": "34469966",
+          "pair_id": "327|22972632|34469966",
+          "request_hash": "829d725f2f2c115512456a960ae9de739887610585908cb24bb2c52efb52f936"
+        },
+        {
+          "pair_position": 26,
+          "position_i": 5,
+          "position_j": 7,
+          "document_1_id": "22972632",
+          "document_2_id": "36180468",
+          "pair_id": "327|22972632|36180468",
+          "request_hash": "910fab2bd6614f21d2d60a3d21a48870f74a129c1471f533b8f1a46b8685261c"
+        },
+        {
+          "pair_position": 27,
+          "position_i": 6,
+          "position_j": 7,
+          "document_1_id": "34469966",
+          "document_2_id": "36180468",
+          "pair_id": "327|34469966|36180468",
+          "request_hash": "eddbcac8e55dc52373493c582549795ac811028dd5a31865b9f3a15ac6847c1d"
+        }
+      ],
+      "pair_request_hash_set_sha256": "d9a80b4bc70bfc72de0e87756013a65f4bb7208f86c502a856d249684b2d1ce0"
+    },
+    {
+      "query_id": "51",
+      "depth": 8,
+      "doc_ids": [
+        "45638119",
+        "16734530",
+        "24341590",
+        "12737132",
+        "5468807",
+        "10169908",
+        "9767444",
+        "29124963"
+      ],
+      "retrieval_ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "retrieval_scores": [
+        0.8708233833312988,
+        0.8238348960876465,
+        0.8213176131248474,
+        0.8204256296157837,
+        0.8198075294494629,
+        0.8189815282821655,
+        0.818880558013916,
+        0.818088173866272
+      ],
+      "candidate_set_hash": "aeb09364ccecaf4cd77aabcbdd833e2a99d7e5217fde8373fed0adc4c22b2f38",
+      "query_text": "ALDH1 expression is associated with better breast cancer outcomes.",
+      "query_text_sha256": "18765520c12f499374c8c8e96f6acab025a66cbfc04de2f4f9046bd77f61417e",
+      "qrels": {
+        "45638119": 1
+      },
+      "pairs": [
+        {
+          "pair_position": 0,
+          "position_i": 0,
+          "position_j": 1,
+          "document_1_id": "45638119",
+          "document_2_id": "16734530",
+          "pair_id": "51|45638119|16734530",
+          "request_hash": "97751dc20bb113a0de75473941885d722e0c8c4faade4acacc436fdeb509e7b6"
+        },
+        {
+          "pair_position": 1,
+          "position_i": 0,
+          "position_j": 2,
+          "document_1_id": "45638119",
+          "document_2_id": "24341590",
+          "pair_id": "51|45638119|24341590",
+          "request_hash": "6e413c4b5b429237754d58ab203850e53d223c7004b490086fc9c7ac75f66e2c"
+        },
+        {
+          "pair_position": 2,
+          "position_i": 0,
+          "position_j": 3,
+          "document_1_id": "45638119",
+          "document_2_id": "12737132",
+          "pair_id": "51|45638119|12737132",
+          "request_hash": "6659181293a782a0bfb3e39f944775c1668652938de5180c42841e0d5ccb32ef"
+        },
+        {
+          "pair_position": 3,
+          "position_i": 0,
+          "position_j": 4,
+          "document_1_id": "45638119",
+          "document_2_id": "5468807",
+          "pair_id": "51|45638119|5468807",
+          "request_hash": "112dd94944ed4b8a4b2422de263de43aaf90a04183aac8c520e7b21dd622260f"
+        },
+        {
+          "pair_position": 4,
+          "position_i": 0,
+          "position_j": 5,
+          "document_1_id": "45638119",
+          "document_2_id": "10169908",
+          "pair_id": "51|45638119|10169908",
+          "request_hash": "f55e3bc3159cca61afeb44de9553d6a4847c4157adcaddc2c07cfc1e2a5e7b09"
+        },
+        {
+          "pair_position": 5,
+          "position_i": 0,
+          "position_j": 6,
+          "document_1_id": "45638119",
+          "document_2_id": "9767444",
+          "pair_id": "51|45638119|9767444",
+          "request_hash": "9e4e477788ab011871bcc68598926b63683d89cb1c4528c2e16bcf0a39ff6243"
+        },
+        {
+          "pair_position": 6,
+          "position_i": 0,
+          "position_j": 7,
+          "document_1_id": "45638119",
+          "document_2_id": "29124963",
+          "pair_id": "51|45638119|29124963",
+          "request_hash": "12d76e089151c4b669b7caac37ee0a4e3a722608666de7e2463bb4e1c60c7182"
+        },
+        {
+          "pair_position": 7,
+          "position_i": 1,
+          "position_j": 2,
+          "document_1_id": "16734530",
+          "document_2_id": "24341590",
+          "pair_id": "51|16734530|24341590",
+          "request_hash": "607db701324ce26c8558ad75229f62c7e03d59c0043a1bdc67eb710f258f4bfc"
+        },
+        {
+          "pair_position": 8,
+          "position_i": 1,
+          "position_j": 3,
+          "document_1_id": "16734530",
+          "document_2_id": "12737132",
+          "pair_id": "51|16734530|12737132",
+          "request_hash": "aafd2d340019a173e6a1bc4edc6234edd745b08c41e292d59018831f6a60ab4a"
+        },
+        {
+          "pair_position": 9,
+          "position_i": 1,
+          "position_j": 4,
+          "document_1_id": "16734530",
+          "document_2_id": "5468807",
+          "pair_id": "51|16734530|5468807",
+          "request_hash": "4aa10b8495f81c2d6da96d4e430a2a33e4158bcf85e1a6f919fb4636c5330378"
+        },
+        {
+          "pair_position": 10,
+          "position_i": 1,
+          "position_j": 5,
+          "document_1_id": "16734530",
+          "document_2_id": "10169908",
+          "pair_id": "51|16734530|10169908",
+          "request_hash": "5625a13fe13eefca5b1e6ec791f8e7e21dec79445949aa8dcc0103b4cc7276f7"
+        },
+        {
+          "pair_position": 11,
+          "position_i": 1,
+          "position_j": 6,
+          "document_1_id": "16734530",
+          "document_2_id": "9767444",
+          "pair_id": "51|16734530|9767444",
+          "request_hash": "1e2e0c2abe44d399795459887a97145ba961933fe6dade89d538f16c4842038d"
+        },
+        {
+          "pair_position": 12,
+          "position_i": 1,
+          "position_j": 7,
+          "document_1_id": "16734530",
+          "document_2_id": "29124963",
+          "pair_id": "51|16734530|29124963",
+          "request_hash": "0a4c89730ef6cd830fb929c41b58c1cee4564b7cfd1251d3129a57b7dc1cc738"
+        },
+        {
+          "pair_position": 13,
+          "position_i": 2,
+          "position_j": 3,
+          "document_1_id": "24341590",
+          "document_2_id": "12737132",
+          "pair_id": "51|24341590|12737132",
+          "request_hash": "d62475704884143acc50a611c0cec1274fd226e6b5dc9a5173d60709d279dd73"
+        },
+        {
+          "pair_position": 14,
+          "position_i": 2,
+          "position_j": 4,
+          "document_1_id": "24341590",
+          "document_2_id": "5468807",
+          "pair_id": "51|24341590|5468807",
+          "request_hash": "7f83e4a516406b075c8d6fddaf21801dda2ce436e5ff2ee51e703199c36c36e4"
+        },
+        {
+          "pair_position": 15,
+          "position_i": 2,
+          "position_j": 5,
+          "document_1_id": "24341590",
+          "document_2_id": "10169908",
+          "pair_id": "51|24341590|10169908",
+          "request_hash": "f49fbc89a6d4dfa7e516531346c3d02b8c0b55aaa990caf0ede7b2e9cf6df42c"
+        },
+        {
+          "pair_position": 16,
+          "position_i": 2,
+          "position_j": 6,
+          "document_1_id": "24341590",
+          "document_2_id": "9767444",
+          "pair_id": "51|24341590|9767444",
+          "request_hash": "c9e76965dfc48bd3e7151055de8e494f84973e9412c5653e6b943996662c5176"
+        },
+        {
+          "pair_position": 17,
+          "position_i": 2,
+          "position_j": 7,
+          "document_1_id": "24341590",
+          "document_2_id": "29124963",
+          "pair_id": "51|24341590|29124963",
+          "request_hash": "366474af362087f6cd15abfcd012754efec368ad3b2338ee371b270851ca1b58"
+        },
+        {
+          "pair_position": 18,
+          "position_i": 3,
+          "position_j": 4,
+          "document_1_id": "12737132",
+          "document_2_id": "5468807",
+          "pair_id": "51|12737132|5468807",
+          "request_hash": "7316d3f9872b33c5031068b7ae53b6ea40dc628538ce9beee9e443d6539d9cca"
+        },
+        {
+          "pair_position": 19,
+          "position_i": 3,
+          "position_j": 5,
+          "document_1_id": "12737132",
+          "document_2_id": "10169908",
+          "pair_id": "51|12737132|10169908",
+          "request_hash": "a3491d8c9c215c7f8262023cc5a44eac603fd07c1925bc60cd2d7ccbdb97175b"
+        },
+        {
+          "pair_position": 20,
+          "position_i": 3,
+          "position_j": 6,
+          "document_1_id": "12737132",
+          "document_2_id": "9767444",
+          "pair_id": "51|12737132|9767444",
+          "request_hash": "761b7db7a14ce5c4978c7ddb212eced2cefcfdfd24bd6ba07bc3b9092704b307"
+        },
+        {
+          "pair_position": 21,
+          "position_i": 3,
+          "position_j": 7,
+          "document_1_id": "12737132",
+          "document_2_id": "29124963",
+          "pair_id": "51|12737132|29124963",
+          "request_hash": "761c158bb3525ecdef6186f4bba29dc9d4e9552882dcffe9e975a9e7ee6c2762"
+        },
+        {
+          "pair_position": 22,
+          "position_i": 4,
+          "position_j": 5,
+          "document_1_id": "5468807",
+          "document_2_id": "10169908",
+          "pair_id": "51|5468807|10169908",
+          "request_hash": "c1f09462dd3f62d2dd1116ec06daa83a447f60ac19a70cb78f8cc64eb812c7e0"
+        },
+        {
+          "pair_position": 23,
+          "position_i": 4,
+          "position_j": 6,
+          "document_1_id": "5468807",
+          "document_2_id": "9767444",
+          "pair_id": "51|5468807|9767444",
+          "request_hash": "40d866cdd9089c9acc0cc775b72c420ed88f653c777ee2e982faf7fd0acc47d1"
+        },
+        {
+          "pair_position": 24,
+          "position_i": 4,
+          "position_j": 7,
+          "document_1_id": "5468807",
+          "document_2_id": "29124963",
+          "pair_id": "51|5468807|29124963",
+          "request_hash": "c946693715dcde09366674d3a8f75b99e3a4f068a85851b06ee853fd266fa4d7"
+        },
+        {
+          "pair_position": 25,
+          "position_i": 5,
+          "position_j": 6,
+          "document_1_id": "10169908",
+          "document_2_id": "9767444",
+          "pair_id": "51|10169908|9767444",
+          "request_hash": "225e328fb7d0bb8871dd3be83b2508263fc51bc940a33482bf3a465ed8eef965"
+        },
+        {
+          "pair_position": 26,
+          "position_i": 5,
+          "position_j": 7,
+          "document_1_id": "10169908",
+          "document_2_id": "29124963",
+          "pair_id": "51|10169908|29124963",
+          "request_hash": "073aaf40d94a5a847baa46d30ea0d81a7bb353b38acb7783b3797c8c0168036b"
+        },
+        {
+          "pair_position": 27,
+          "position_i": 6,
+          "position_j": 7,
+          "document_1_id": "9767444",
+          "document_2_id": "29124963",
+          "pair_id": "51|9767444|29124963",
+          "request_hash": "5228c93324ecd6f0ad5ea2d778c118046fe64bfcb9ce82e4e04cdb362a2b9a3e"
+        }
+      ],
+      "pair_request_hash_set_sha256": "97d362a80e3104d527f993cde8d47727b63243b7da3a0e70940438f8bbaef31f"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+# ================================================================================
+# CertiRank protocol — P0 冻结版（数据契约 + 外部数据引用 + 审计期望）
+#
+# 本文件是规范来源（normative）。P0 只冻结：数据契约、外部数据引用、重放语义、
+# 信息边界与审计期望。Tournament 执行规则（P2）与在线复核策略（P3）在各自阶段
+# 以新版本号冻结，不回改本文件。
+#
+# 注意：本文件是给人读的规范。机器可校验的期望值有两份等价载体：
+#   1) scripts/audit_gate2.py 的 REPORT_EXPECTATIONS（含报告章节引用）；
+#   2) data/external/lotus_gate2/gate2_live_analysis.json / gate2_live_replay_analysis.json
+#      （生产方存储分析，作为交叉核对目标）。
+# ================================================================================
+
+protocol: certirank-gate2c
+version: "0.1.0-frozen-p0"
+frozen_on: "2026-10-15"
+
+# ------------------------------------------------------------------------------
+# 外部数据（不可变副本）
+# ------------------------------------------------------------------------------
+external_data:
+  source_project: "LOTUS 非确定性研究（lotus-code，commit 136ae4f4a344a2f75d89f811e516dfcb0de30e46）"
+  run_id: "live_pilot_20261014T132233Z"
+  condition: >
+    P0 语义，但端点重定向至 https://llmapi.paratera.com 的 DeepSeek-V4.1-Flash
+    （thinking disabled，max_tokens=128，无采样参数，LOTUS/实验缓存全关）。
+    该偏差已在 Gate 2 报告 §A 记录；本数据的一切结论只适用于该条件，
+    不得与 Gate 1 官方端点数据合并解释。
+  immutable: true
+  manifest: "data/manifests/gate2_external_data.json"   # SHA-256 + 字节数 + 来源
+  primary_files:
+    pair_calls: "data/external/lotus_gate2/gate2_live_pair_calls.jsonl"     # 420 行
+    query_results: "data/external/lotus_gate2/gate2_live_query_results.jsonl"  # 15 行
+    workload: "data/external/lotus_gate2/gate2_workload.json"               # 冻结 workload（含 qrels 与钉死的 request_hash）
+  secrets_policy: >
+    任何密钥、.env 文件、非公开查询内容不得进入本仓库或公开 Git。
+    provider_runtime.yaml 仅含环境变量名。若未来接入真实调用，凭据只走
+    环境变量名，值放 .env（git-ignored）。
+
+# ------------------------------------------------------------------------------
+# 数据契约：pair response record（比较应答记录）
+# ------------------------------------------------------------------------------
+# 每条比较应答必须携带以下八类字段。"pair_id 相同"本身绝不构成复用依据；
+# 复用必须通过完整请求身份（request_hash）等同性检验。
+data_contract:
+  unit: pair_response_record
+  fields:
+    query_id: "查询 ID"
+    candidate_ids: "document_1_id / document_2_id —— 两条候选 ID（含输入顺序）"
+    in_pair_positions: "position_i / position_j —— 候选表中的行位置"
+    pair_slot: "pair_position / pair_id —— naive 枚举槽位"
+    request_identity: >
+      request_hash —— 绑定 prompt 文本 + 模型 + 推理参数 + 输入顺序 + 端点身份。
+      与冻结 workload 的逐槽位 request_hash 做 1:1 join 校验。
+    model_and_prompt_version: >
+      requested_model + model_parameters（P0 wire 条件）+ experiment_id/condition；
+      prompt 文本本身由 request_hash 钉死。
+    input_order: "document_order —— 全候选表（检索行序）"
+    call_instance: "run_id / repetition_id / provider_request_id / timestamp_utc"
+    raw_answer: "raw_response_content —— 逐字原始回答（parser 的输入，必须保留）"
+    normalized_verdict: >
+      strict_parsed_decision（True = 候选 1 胜）+ strict_parser_status；
+      另存 lotus_parsed_decision 供双 parser 一致性检查。
+  validation_rules:
+    - "C1 每条记录携带全部契约字段"
+    - "C2 单文件单一 experiment_id/condition（不得跨条件池化）"
+    - "C3 (query_id, pair_position) 与 workload 1:1 对齐，request_hash 逐槽位一致"
+    - "C4 document_order 与 workload 候选表一致"
+    - "C5 strict_parser_status == valid 且判定为布尔（原始回答保留）"
+    - "C6 完整性：query × pair × repetition 恰好一次，无缺失无多余"
+    - "C7 池化前提：同一 (query, pair) 槽位的全部响应 request_hash 一致"
+    - "C8 双 parser 一致；不一致记为 parser 歧义，不记为语义翻转"
+
+# ------------------------------------------------------------------------------
+# Pair Response Pool
+# ------------------------------------------------------------------------------
+pair_response_pool:
+  definition: "(query_id, pair_position, request_hash) → 响应列表 的固定表"
+  gate2_instance:
+    queries: 3            # 636 / 327 / 51（sorted(sha256(query_id))[:3] 选出）
+    pairs_per_query: 28   # 8 候选的 C(8,2)
+    responses_per_slot: 5
+    total_records: 420
+    unique_request_hashes: 84
+  usability: >
+    经 C7 检验后，本表可作为离线 Tournament 的固定响应表：任取每槽位 3/5 子集
+    即可组成一次独立三次投票的 run（每槽位 C(5,3)=10 种组合）。
+    执行路径未覆盖的 pair 不在表内 —— 那是新分支请求，必须实际调用并计入预算。
+
+# ------------------------------------------------------------------------------
+# 重放语义（与 LOTUS sem_topk naive 完全一致；CertiRank 独立实现）
+# ------------------------------------------------------------------------------
+replay_semantics:
+  enumeration: "候选表行序上枚举 (i, j)，i < j；pair_position 按枚举顺序"
+  vote: "verdict == True → 行 i 得一票，否则行 j 得一票"
+  ranking: "按得票数降序稳定排序；平票按候选行序（原索引升序）打破"
+  top_k: "排序结果的前 K 个（K=3）"
+  effect_classes:
+    none: "全排序不动"
+    below_topk: "仅 Top-K 之外的尾部移动（用户不可见，不算影响）"
+    topk_order: "Top-K 成员不变、顺序变化"
+    topk_set: "Top-K 成员变化"
+  impact_definition: "影响 = effect ∈ {topk_order, topk_set}（对照有序答案定义）"
+  counterfactual_discipline: >
+    单点翻转是"其余判定固定时反转一票"的确定性关系层分析，不是 provider 概率；
+    多点传播只比较真实观测到的判定向量，不构造合成组合。
+
+# ------------------------------------------------------------------------------
+# 信息边界（P0 起冻结，P2/P3 不得违反）
+# ------------------------------------------------------------------------------
+information_boundary:
+  full_response_table:
+    allowed: ["离线评价", "反事实上界", "OracleImpact 类事后分析"]
+    forbidden: ["交给在线复核策略当作可用信息"]
+  online_execution_trace:
+    definition: "Tournament 实际执行路径上读到的比较事件与其结果"
+    allowed: ["在线复核策略的决策输入"]
+  new_branch_requests:
+    definition: "执行路径需要、但响应表中不存在的比较"
+    rule: "必须实际读取并计入调用预算；不得用响应表静默补齐"
+
+# ------------------------------------------------------------------------------
+# 审计（P0 完成标准）
+# ------------------------------------------------------------------------------
+audit:
+  command: "python scripts/audit_gate2.py          # 全量审计并写出 results/"
+  check_mode: "python scripts/audit_gate2.py --check   # CI 用，仅返回码"
+  entry_conditions:
+    - "manifest 内全部文件 SHA-256 校验通过（不可变性）"
+    - "数据契约 C1-C8 全部通过"
+  recomputed_from_raw:
+    - "逐 run 判定向量 → 独立重放 naive sort → 与 LOTUS 记录的 Top-3/全排序比对（replay gate 15/15）"
+    - "算子层：逐 query 翻转对 8/9/12、macro 34.5%、run-pair 平均分歧 16.7%"
+    - "查询层：distinct Top-3、set/order agreement（60%/30%）、Jaccard@3 0.80、τ-b 0.748、nDCG@3 1.0"
+    - "单点反事实（base=r0）四分类：636 5/8/2/13，327 8/5/2/13，51 10/11/5/2"
+    - "pair 级交叉表：29 翻转 / 37 高影响 / 14 交集 / 23 稳定但高影响 / 15 翻转但低影响"
+    - "多点传播：joint-emergent 0/30，cancelling 6/30"
+    - "执行事实：420 calls、15 runs、prompt 327,530 / completion 1,260 tokens、§A.2 悬置请求定位"
+  cross_checks:
+    - "生产方存储分析 JSON 的 macro 指标逐位一致"
+    - "生产方存储传播分析的单点计数逐位一致（同 base=r0）"
+  known_discrepancy:
+    id: PROSE-46
+    statement: >
+      Gate 2 报告正文（§D.3 bullet、§E）的 "46 single-flip high-impact pairs" 及
+      派生的 "23 (50%)" 与其自身 §D.1/§D.3 表格矛盾（14+23=37；逐 query
+      order+set = 15+15+7 = 37），也与存储 replay 分析 JSON 矛盾。
+      替代口径（5-base 并集=60、交集=8、run-pair 求和=56/140/12）均不等于 46。
+    resolution: "判定为正文笔误；可复现值为 37，'从未翻转的高影响对' 占比应表述为 23/37 ≈ 62%。结论方向不变。"
+
+# ------------------------------------------------------------------------------
+# 统计单位（引用数字时的唯一口径）
+# ------------------------------------------------------------------------------
+statistical_units:
+  pair: "29 / 37 / 14 / 23 / 15：pair 级，分母 84 = 3 query × 28 pair"
+  run_pair: "16.7%、60%、30%：run-pair 级描述统计，30 个依赖样本（每 query C(5,2)=10）"
+  run: "15/15 replay gate、nDCG@3=1.0：run 级，分母 15"
+  caveat: >
+    每对仅 5 次重复，ever-flipped 是粗糙指示器（p≈0.2 的对在 5 次内至少翻转一次
+    的概率 ~67%）；正式统计验证需按两周计划补充独立查询与重复。
+
+# ------------------------------------------------------------------------------
+# 预算纪律
+# ------------------------------------------------------------------------------
+budget_discipline:
+  p0_new_llm_calls: 0
+  rule: >
+    P0/P1 只做离线复算。任何需要调用模型的实验（P2 离线执行同样零调用，
+    P3 起若需真实在线复核）必须先立项预算并在 manifest/protocol 记录。

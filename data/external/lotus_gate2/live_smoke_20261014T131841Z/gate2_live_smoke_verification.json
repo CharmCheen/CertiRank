@@ -1,0 +1,99 @@
+{
+  "substudy": "Gate2-NondeterminismPropagation",
+  "checks": [
+    {
+      "check": "workload exists",
+      "pass": true,
+      "detail": "D:\\FDU\\Experiment\\Lotus\\lotus-code\\experiments\\lotus_nondeterminism\\artifacts\\gate2_workload.json"
+    },
+    {
+      "check": "query selection reproduces the frozen rule",
+      "pass": true,
+      "detail": "['636', '327', '51']"
+    },
+    {
+      "check": "design parameters frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "candidate-set hashes recompute",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "candidates are the frozen Top-8 retrieval ranks",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "28 distinct pair request hashes per query",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "live artifacts present",
+      "pass": true,
+      "detail": "28 calls, 1 runs"
+    },
+    {
+      "check": "call and run counts internally consistent (28 per run)",
+      "pass": true,
+      "detail": "28 calls, 1 runs, 1 (query, repetition) group(s)"
+    },
+    {
+      "check": "full experiment plan present",
+      "pass": true,
+      "detail": "1/15 runs of the frozen plan \u2014 subset artifacts accepted without --require-full-plan"
+    },
+    {
+      "check": "every call's request hash equals the workload's frozen hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "28 trace rows per (query, repetition)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "strict parse fields internally consistent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "every call carries the frozen P0 condition",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "replay reproduces every run's Top-K",
+      "pass": true,
+      "detail": "G2-636-r0=ok"
+    },
+    {
+      "check": "identical request sets across repetitions -> identical answers",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no secret material in artifacts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "gate 1 artifacts digest snapshot recorded",
+      "pass": true,
+      "detail": "6 files"
+    }
+  ],
+  "all_pass": true,
+  "gate1_readonly_digests": {
+    "gate1b_retrieval_candidates.jsonl": "652afb02b5a96cbe8690cc7137214b383d3341bc582e835b239f3cedac02da5a",
+    "gate1b_pairset_manifest.json": "b322116994b00133066f61c6a4261764d68e2831224f4d666980238693287d2f",
+    "gate1b_pilot_pairs.jsonl": "a6555f9878e9da22f02f9f9a14838450cd75fae011bce3236d1533bfb30370df",
+    "gate1b_pair_calls.jsonl": "6dbf1f68fbdf4df48539236aa803943ac232bc096680d4beeb1b5e56f2b30ded",
+    "gate1b_pilot_analysis.json": "bb0ebdce36bddd5ff3f8e7181c24fe7d9be3c1772cc2bb97b9b8e7980e35f5a0",
+    "gate1b_pilot_report.md": "82a2eada578db1cda4b271555df83e0a346b0bcf6e47f8ba007da22acb98e2c2"
+  }
+}
