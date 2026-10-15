@@ -24,7 +24,7 @@
 - **[POOL-1] PASS** — Pair Response Pool 形态：84 个 (query, pair) slot × 5 响应；84 个唯一 request_hash。{"327": {"slots": 28, "responses": 140}, "51": {"slots": 28, "responses": 140}, "636": {"slots": 28, "responses": 140}}
 - **[POOL-2] PASS** — 原始回答保留：每条响应含 raw_response_content（可重新归一化）。420/420 条原始回答非空
 
-**Pool 可复用性结论：** 420 条响应构成 84 个 `(query, pair_position, request_hash)` slot、每 slot 恰 5 条响应，且每 slot 内 5 次响应共享同一 request_hash（即 5 次独立重复回答的是同一请求身份）。该表可直接作为离线 Tournament 的固定响应表使用：任取每 slot 的 3/5 子集即可组成一个独立三次投票的 run（C(5,3)=10 种组合/slot）；新分支请求（执行路径未覆盖的 pair）不在表内，必须实际调用并计入预算。
+**Pool 可复用性结论：** 84 个请求槽位各有 5 次响应。可用于 5 次单响应基础执行，或一个预先指定的三响应组工程 smoke。10 种 3/5 组合相互重叠，不能充当独立执行。正式复核实验要求不重叠三槽位组。当前执行尚未观察的新比较，即使全表已有，也必须扣逻辑预算。历史请求 hash 与 workload 匹配；缺少完整请求正文，无法独立重建 hash。端点证据继承来源 manifest。
 
 ## 3. 独立复算结果 vs 报告数字
 

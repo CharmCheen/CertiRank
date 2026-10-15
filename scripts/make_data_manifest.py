@@ -111,11 +111,12 @@ def build_manifest() -> dict:
     }
 
 
-def verify(manifest: dict) -> list[str]:
+def verify(manifest: dict, *, external_dir: Path | None = None) -> list[str]:
+    external_dir = EXTERNAL_DIR if external_dir is None else external_dir
     problems = []
     seen = set()
     for entry in manifest["files"]:
-        path = EXTERNAL_DIR / entry["path"]
+        path = external_dir / entry["path"]
         seen.add(entry["path"])
         if not path.is_file():
             problems.append(f"missing: {entry['path']}")
@@ -125,9 +126,9 @@ def verify(manifest: dict) -> list[str]:
             problems.append(f"sha256 drift: {entry['path']}")
         if path.stat().st_size != entry["bytes"]:
             problems.append(f"size drift: {entry['path']}")
-    for path in sorted(EXTERNAL_DIR.rglob("*")):
-        if path.is_file() and path.relative_to(EXTERNAL_DIR).as_posix() not in seen:
-            problems.append(f"uncatalogued file: {path.relative_to(EXTERNAL_DIR).as_posix()}")
+    for path in sorted(external_dir.rglob("*")):
+        if path.is_file() and path.relative_to(external_dir).as_posix() not in seen:
+            problems.append(f"uncatalogued file: {path.relative_to(external_dir).as_posix()}")
     return problems
 
 

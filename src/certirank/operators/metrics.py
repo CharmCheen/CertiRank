@@ -43,8 +43,8 @@ def kendall_tau_b(ranking_a: Sequence[Hashable], ranking_b: Sequence[Hashable]) 
     """
     if set(ranking_a) != set(ranking_b):
         raise ValueError("rankings must cover the same document set")
-    if len(set(ranking_a)) != len(ranking_a):
-        raise ValueError("ranking_a must be a total order over distinct documents")
+    if len(set(ranking_a)) != len(ranking_a) or len(set(ranking_b)) != len(ranking_b):
+        raise ValueError("both rankings must be total orders over distinct documents")
     n = len(ranking_a)
     if n < 2:
         return 1.0
@@ -83,7 +83,7 @@ def paper_ndcg_at_k(found_qrels_values: Sequence[int], ideal_qrels_values: Seque
 
 
 def _valid(row: Mapping[str, Any]) -> bool:
-    return str(row["strict_parser_status"]) == "valid"
+    return row.get("strict_parser_status") == "valid" and type(row.get("strict_parsed_decision")) is bool
 
 
 def operator_level_metrics(trace_rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
@@ -92,10 +92,19 @@ def operator_level_metrics(trace_rows: Sequence[Mapping[str, Any]]) -> dict[str,
     ``ever_flipped`` is computed over strict-valid verdicts only; invalid responses are
     never counted as semantic flips.
     """
-    repetitions = sorted({int(r["repetition_id"]) for r in trace_rows})
+    if any(type(r.get("repetition_id")) is not int or r["repetition_id"] < 0
+           or not isinstance(r.get("pair_id"), str) or not r["pair_id"] for r in trace_rows):
+        raise ValueError("trace rows require integer repetitions and nonempty pair IDs")
+    if len({str(r["query_id"]) for r in trace_rows if "query_id" in r}) > 1:
+        raise ValueError("operator metrics require a single query")
+    repetitions = sorted({r["repetition_id"] for r in trace_rows})
     by_pair: dict[str, dict[int, Mapping[str, Any]]] = {}
     for row in trace_rows:
-        by_pair.setdefault(str(row["pair_id"]), {})[int(row["repetition_id"])] = row
+        pair, repetition = row["pair_id"], row["repetition_id"]
+        group = by_pair.setdefault(pair, {})
+        if repetition in group:
+            raise ValueError("duplicate pair/repetition would overwrite an observed response")
+        group[repetition] = row
 
     ever_flipped = 0
     never_valid = 0
@@ -151,6 +160,13 @@ def query_level_metrics(
     """Query-level metrics across complete runs (Top-K lists + full rankings, recomputed)."""
     if len(run_topks) != len(run_rankings):
         raise ValueError("run_topks and run_rankings must have the same length")
+    if type(k) is not int or k < 1:
+        raise ValueError("k must be a positive integer")
+    reference_docs = set(run_rankings[0]) if run_rankings else set()
+    for topk, ranking in zip(run_topks, run_rankings):
+        if (len(ranking) != len(set(ranking)) or set(ranking) != reference_docs
+                or len(topk) != k or len(set(topk)) != k or list(topk) != list(ranking[:k])):
+            raise ValueError("Top-K must be a distinct length-k prefix of a consistent full ranking")
 
     set_agreements: list[bool] = []
     order_agreements: list[bool] = []

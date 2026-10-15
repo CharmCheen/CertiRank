@@ -1,9 +1,9 @@
 # ================================================================================
-# CertiRank protocol — P0 冻结版（数据契约 + 外部数据引用 + 审计期望）
+# CertiRank protocol — v0.2 离线修正版（契约 + 执行语义）
 #
-# 本文件是规范来源（normative）。P0 只冻结：数据契约、外部数据引用、重放语义、
-# 信息边界与审计期望。Tournament 执行规则（P2）与在线复核策略（P3）在各自阶段
-# 以新版本号冻结，不回改本文件。
+# 本文件是规范来源（normative）。v0.2 修正 P0 的契约漏检、独立性与计费定义。
+# 原 v0.1 保存在 Git ddb3ecf；不可变外部数据及其 manifest 不变。
+# Tournament 的 P1 固定实现语义见 configs/offline_protocol.json；研究策略尚未冻结。
 #
 # 注意：本文件是给人读的规范。机器可校验的期望值有两份等价载体：
 #   1) scripts/audit_gate2.py 的 REPORT_EXPECTATIONS（含报告章节引用）；
@@ -12,7 +12,10 @@
 # ================================================================================
 
 protocol: certirank-gate2c
-version: "0.1.0-frozen-p0"
+version: "0.3.0-research-pilot"
+supersedes: "0.2.1-offline-review; original P0 in Git ddb3ecf"
+implementation_semantics: "configs/offline_protocol.json"
+research_policy_frozen: false
 frozen_on: "2026-10-15"
 
 # ------------------------------------------------------------------------------
@@ -50,11 +53,11 @@ data_contract:
     in_pair_positions: "position_i / position_j —— 候选表中的行位置"
     pair_slot: "pair_position / pair_id —— naive 枚举槽位"
     request_identity: >
-      request_hash —— 绑定 prompt 文本 + 模型 + 推理参数 + 输入顺序 + 端点身份。
-      与冻结 workload 的逐槽位 request_hash 做 1:1 join 校验。
+      request_hash 与冻结 workload 逐槽位匹配，并逐字段校验候选、位置、条件和模型参数。
+      历史导出缺少完整请求正文，本仓库不能独立重建请求 hash；端点由 manifest 来源佐证。
     model_and_prompt_version: >
       requested_model + model_parameters（P0 wire 条件）+ experiment_id/condition；
-      prompt 文本本身由 request_hash 钉死。
+      历史 prompt 身份继承导出的 request_hash，未独立重建；预期模型参数钉在 configs/gate2_identity.json。
     input_order: "document_order —— 全候选表（检索行序）"
     call_instance: "run_id / repetition_id / provider_request_id / timestamp_utc"
     raw_answer: "raw_response_content —— 逐字原始回答（parser 的输入，必须保留）"
@@ -63,13 +66,13 @@ data_contract:
       另存 lotus_parsed_decision 供双 parser 一致性检查。
   validation_rules:
     - "C1 每条记录携带全部契约字段"
-    - "C2 单文件单一 experiment_id/condition（不得跨条件池化）"
-    - "C3 (query_id, pair_position) 与 workload 1:1 对齐，request_hash 逐槽位一致"
+    - "C2 单文件单一 experiment_id/condition/model/parameters，并与 workload 条件及 pinned identity 核对"
+    - "C3 (query_id, pair_position) 与 workload 对齐；hash、候选 ID 与位置逐字段一致；entry 按 query_id 关联"
     - "C4 document_order 与 workload 候选表一致"
-    - "C5 strict_parser_status == valid 且判定为布尔（原始回答保留）"
+    - "C5 strict-valid 布尔判定，并独立重解析原文 Document 1/2 核对"
     - "C6 完整性：query × pair × repetition 恰好一次，无缺失无多余"
     - "C7 池化前提：同一 (query, pair) 槽位的全部响应 request_hash 一致"
-    - "C8 双 parser 一致；不一致记为 parser 歧义，不记为语义翻转"
+    - "C8 双 parser 字段必须存在且为布尔并一致；缺失或歧义拒绝池化"
 
 # ------------------------------------------------------------------------------
 # Pair Response Pool
@@ -83,9 +86,10 @@ pair_response_pool:
     total_records: 420
     unique_request_hashes: 84
   usability: >
-    经 C7 检验后，本表可作为离线 Tournament 的固定响应表：任取每槽位 3/5 子集
-    即可组成一次独立三次投票的 run（每槽位 C(5,3)=10 种组合）。
-    执行路径未覆盖的 pair 不在表内 —— 那是新分支请求，必须实际调用并计入预算。
+    本表可用于 5 次单响应基础执行，或一个预先指定的三响应组工程 smoke。
+    C(5,3)=10 个重叠组合只能做组合敏感性分析，不能扩大独立执行数。
+    正式复核评价为每对 12 个响应预分四个不重叠三槽位组；服务时间独立性仍需检查。
+    新分支以当前执行尚未观察定义，即使全表含该 pair，首次读取也消耗逻辑调用预算。
 
 # ------------------------------------------------------------------------------
 # 重放语义（与 LOTUS sem_topk naive 完全一致；CertiRank 独立实现）
@@ -116,8 +120,8 @@ information_boundary:
     definition: "Tournament 实际执行路径上读到的比较事件与其结果"
     allowed: ["在线复核策略的决策输入"]
   new_branch_requests:
-    definition: "执行路径需要、但响应表中不存在的比较"
-    rule: "必须实际读取并计入调用预算；不得用响应表静默补齐"
+    definition: "当前执行尚未观察、修复路径新需要的比较；与全表是否包含分开判定"
+    rule: "离线读取也计入逻辑预算；表外缺响应记录 unavailable；真实模式需新物理调用。禁止静默补齐"
 
 # ------------------------------------------------------------------------------
 # 审计（P0 完成标准）
@@ -165,5 +169,8 @@ statistical_units:
 budget_discipline:
   p0_new_llm_calls: 0
   rule: >
-    P0/P1 只做离线复算。任何需要调用模型的实验（P2 离线执行同样零调用，
-    P3 起若需真实在线复核）必须先立项预算并在 manifest/protocol 记录。
+    当前 P0/P1/P2 与单组策略 smoke 全部离线。任何新增模型调用必须先立项预算、
+    验证当期价格与硬上限并获得明确授权；历史成本情景不构成新运行上限。
+
+experiment_settings: "configs/experiment.json"
+research_protocol: "docs/experiment_protocol_v0.3.md"

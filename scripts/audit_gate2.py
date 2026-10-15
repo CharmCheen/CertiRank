@@ -141,17 +141,9 @@ def close(a: float, b: float, tol: float) -> bool:
 
 def step_manifest() -> tuple[list[dict[str, Any]], dict[str, Any]]:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-    import hashlib
+    from make_data_manifest import verify
 
-    problems = []
-    for entry in manifest["files"]:
-        path = EXTERNAL_DIR / entry["path"]
-        if not path.is_file():
-            problems.append(f"missing {entry['path']}")
-            continue
-        digest = hashlib.sha256(path.read_bytes()).hexdigest()
-        if digest != entry["sha256"] or path.stat().st_size != entry["bytes"]:
-            problems.append(f"drift {entry['path']}")
+    problems = verify(manifest, external_dir=EXTERNAL_DIR)
     checks = [
         check(
             "IMM-1",
@@ -176,7 +168,29 @@ def step_contract() -> tuple[list[dict[str, Any]], dict[str, Any], dict[str, Any
     pair_calls = load_jsonl(EXTERNAL_DIR / "gate2_live_pair_calls.jsonl")
     query_results = load_jsonl(EXTERNAL_DIR / "gate2_live_query_results.jsonl")
 
-    validation = validate_pair_calls(pair_calls, workload, expected_repetitions=5)
+    validation = validate_pair_calls(
+        pair_calls, workload, expected_repetitions=5,
+        expected_identity=json.loads((REPO_ROOT / "configs" / "gate2_identity.json").read_text()),
+    )
+    if not validation["contract_ok"]:
+        raise ValueError(f"data contract failed: {validation['issues'][:8]}")
+    expected_runs = {f"G2-{q}-r{r}" for q in workload["query_ids"] for r in range(5)}
+    recorded_runs = [row.get("run_id") for row in query_results]
+    if len(recorded_runs) != len(expected_runs) or set(recorded_runs) != expected_runs:
+        raise ValueError("query result roster has missing/duplicate/extra run IDs")
+    entries = {str(entry["query_id"]): entry for entry in workload["entries"]}
+    for row in query_results:
+        q = str(row.get("query_id"))
+        rep = row.get("repetition")
+        if q not in entries or type(rep) is not int or row["run_id"] != f"G2-{q}-r{rep}":
+            raise ValueError("query result identity does not match its run ID")
+        docs = entries[q]["doc_ids"]
+        ranking = row.get("replay_full_ranking_doc_ids")
+        topk = row.get("lotus_ordered_topk_doc_ids")
+        if (not isinstance(ranking, list) or len(ranking) != len(docs) or set(ranking) != set(docs)
+                or not isinstance(topk, list) or len(topk) != workload["k"] or len(set(topk)) != len(topk)
+                or not set(topk) <= set(docs)):
+            raise ValueError("malformed query result ranking/Top-K")
     pool = build_pair_pool(pair_calls)
     summary = pool_summary(pool)
 
@@ -638,11 +652,10 @@ def render_markdown(
     for c in contract_checks:
         lines.append(f"- **[{c['id']}] {'PASS' if c['ok'] else 'FAIL'}** — {c['description']}。{c['detail']}")
     lines.append("")
-    lines.append("**Pool 可复用性结论：** 420 条响应构成 84 个 `(query, pair_position, request_hash)` slot、"
-                 "每 slot 恰 5 条响应，且每 slot 内 5 次响应共享同一 request_hash（即 5 次独立重复回答的是"
-                 "同一请求身份）。该表可直接作为离线 Tournament 的固定响应表使用：任取每 slot 的 3/5 子集即可"
-                 "组成一个独立三次投票的 run（C(5,3)=10 种组合/slot）；新分支请求（执行路径未覆盖的 pair）不在"
-                 "表内，必须实际调用并计入预算。")
+    lines.append("**Pool 可复用性结论：** 84 个请求槽位各有 5 次响应。可用于 5 次单响应基础执行，"
+                 "或一个预先指定的三响应组工程 smoke。10 种 3/5 组合相互重叠，不能充当独立执行。"
+                 "正式复核实验要求不重叠三槽位组。当前执行尚未观察的新比较，即使全表已有，也必须扣逻辑预算。"
+                 "历史请求 hash 与 workload 匹配；缺少完整请求正文，无法独立重建 hash。端点证据继承来源 manifest。")
     lines.append("")
     lines.append("## 3. 独立复算结果 vs 报告数字")
     lines.append("")
@@ -741,8 +754,21 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="只看结果，不写文件（CI 用）")
     args = parser.parse_args()
 
-    manifest_checks, manifest = step_manifest()
-    contract_checks, workload, pool, pair_calls, query_results = step_contract()
+    try:
+        manifest_checks, manifest = step_manifest()
+    except (ValueError, KeyError, TypeError, OSError) as exc:
+        print(f"[FAIL] input manifest: {exc}")
+        return 1
+    if any(not check["ok"] for check in manifest_checks):
+        for check in manifest_checks:
+            print(f"[{'PASS' if check['ok'] else 'FAIL'}] {check['id']}: {check['description']}")
+        print("verdict: FAIL (input manifest gate; no recomputation or success artifacts written)")
+        return 1
+    try:
+        contract_checks, workload, pool, pair_calls, query_results = step_contract()
+    except (ValueError, KeyError, TypeError, OSError) as exc:
+        print(f"[FAIL] input contract: {exc}")
+        return 1
     result = step_recompute(workload, pool, pair_calls, query_results)
     consistency_checks = step_consistency(result)
     agreement_checks = step_producer_agreement(result)
@@ -751,7 +777,7 @@ def main() -> int:
     failed = [c for c in all_checks if not c["ok"]]
 
     payload = {
-        "audit_version": 1,
+        "audit_version": 2,
         "verdict": "PASS" if not failed else "FAIL",
         "checks": all_checks,
         "recomputed": {

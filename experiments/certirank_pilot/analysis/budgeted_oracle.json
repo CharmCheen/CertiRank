@@ -1,0 +1,296 @@
+[
+  {
+    "query_id": "636",
+    "fraction": "0.2",
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              1,
+              6
+            ],
+            "schedule": [],
+            "logical_calls": 10,
+            "extra_calls": 0,
+            "status": "complete"
+          },
+          {
+            "topk": [
+              0,
+              1,
+              3
+            ],
+            "schedule": [
+              [
+                3,
+                6
+              ]
+            ],
+            "logical_calls": 12,
+            "extra_calls": 2,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 11,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      }
+    ],
+    "base": {
+      "set_d_em": null,
+      "jaccard_distance": null
+    },
+    "oracle": null,
+    "search_complete": true,
+    "reason": "one response group cannot measure complete-algorithm disagreement"
+  },
+  {
+    "query_id": "636",
+    "fraction": "0.4",
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              1,
+              6
+            ],
+            "schedule": [],
+            "logical_calls": 10,
+            "extra_calls": 0,
+            "status": "complete"
+          },
+          {
+            "topk": [
+              0,
+              1,
+              3
+            ],
+            "schedule": [
+              [
+                3,
+                6
+              ]
+            ],
+            "logical_calls": 12,
+            "extra_calls": 2,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 101,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      }
+    ],
+    "base": {
+      "set_d_em": null,
+      "jaccard_distance": null
+    },
+    "oracle": null,
+    "search_complete": true,
+    "reason": "one response group cannot measure complete-algorithm disagreement"
+  },
+  {
+    "query_id": "327",
+    "fraction": "0.2",
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              6,
+              5
+            ],
+            "schedule": [],
+            "logical_calls": 11,
+            "extra_calls": 0,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 12,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      }
+    ],
+    "base": {
+      "set_d_em": null,
+      "jaccard_distance": null
+    },
+    "oracle": null,
+    "search_complete": true,
+    "reason": "one response group cannot measure complete-algorithm disagreement"
+  },
+  {
+    "query_id": "327",
+    "fraction": "0.4",
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              6,
+              5
+            ],
+            "schedule": [],
+            "logical_calls": 11,
+            "extra_calls": 0,
+            "status": "complete"
+          },
+          {
+            "topk": [
+              0,
+              2,
+              6
+            ],
+            "schedule": [
+              [
+                1,
+                2
+              ]
+            ],
+            "logical_calls": 15,
+            "extra_calls": 4,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 112,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      }
+    ],
+    "base": {
+      "set_d_em": null,
+      "jaccard_distance": null
+    },
+    "oracle": null,
+    "search_complete": true,
+    "reason": "one response group cannot measure complete-algorithm disagreement"
+  },
+  {
+    "query_id": "51",
+    "fraction": "0.2",
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              1,
+              2
+            ],
+            "schedule": [],
+            "logical_calls": 10,
+            "extra_calls": 0,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 11,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      }
+    ],
+    "base": {
+      "set_d_em": null,
+      "jaccard_distance": null
+    },
+    "oracle": null,
+    "search_complete": true,
+    "reason": "one response group cannot measure complete-algorithm disagreement"
+  },
+  {
+    "query_id": "51",
+    "fraction": "0.4",
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              1,
+              2
+            ],
+            "schedule": [],
+            "logical_calls": 10,
+            "extra_calls": 0,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 92,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      }
+    ],
+    "base": {
+      "set_d_em": null,
+      "jaccard_distance": null
+    },
+    "oracle": null,
+    "search_complete": true,
+    "reason": "one response group cannot measure complete-algorithm disagreement"
+  }
+]

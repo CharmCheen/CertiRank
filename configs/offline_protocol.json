@@ -1,0 +1,40 @@
+{
+  "version": "0.3.0-research-pilot",
+  "status": "implementation_semantics_fixed; research_policy_unfrozen",
+  "primary_output": "unordered_top3_set",
+  "leaf_order": "frozen workload candidate row order",
+  "presentation_order": "lower frozen row index first; preserve historical request identity",
+  "tournament": "power-of-two padded binary tree, root winner removal, update ancestors, repeat k times",
+  "nontransitivity": "allowed; no inferred comparisons",
+  "request_reuse": "per-execution canonical pair decision; no cross-execution cache",
+  "review": "initial response plus two fresh reserved slots, majority; at most one review per request",
+  "independent_execution_slots": "disjoint triples; matching hash alone does not establish stochastic independence",
+  "budget_fraction": [
+    "0.2",
+    "0.4"
+  ],
+  "budget_rounding": "floor(fraction * baseline unique request calls)",
+  "new_branch": "unobserved within this execution; charged even if present in global offline table",
+  "failure": "record spent calls, keep last complete output, stop aborted session",
+  "repair_baseline": "from-scratch tournament with all legally observed request results cached",
+  "policies_implemented": [
+    "Random",
+    "SimpleTopology",
+    "TraceSensitivity-structural-baseline",
+    "ReviewValue-dev-statistics-only"
+  ],
+  "confidence": "unavailable",
+  "historical_queries_dev_exposed": [
+    "636",
+    "327",
+    "51"
+  ],
+  "holdout_query_groups": null,
+  "method_freeze": false,
+  "paid_execution_authorized": false,
+  "run_preflight": "validate exact budget and pristine ledger before any response read",
+  "source_scope": "response-content fingerprint plus query/request context; explicit query and N/K in evaluator",
+  "evaluation_failure": "initial failure yields topk=null and blocks group metric; aborted valid fallback remains in denominator",
+  "experiment_config": "configs/experiment.json",
+  "primary_policy_repair": "cached_replay; incremental measured independently"
+}

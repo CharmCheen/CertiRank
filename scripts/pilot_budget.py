@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""certirank_pilot 预算推算 —— P0 通过条件「所有成本上限可计算」。
+"""certirank_pilot 历史成本情景估算；新运行的硬上限仍待确认。
 
 数据源：Gate 2 live pilot（live_pilot_20261014T132233Z）的 420 条真实调用与
 15 个 run 记录（data/external/lotus_gate2/，manifest SHA-256 校验的不可变副本）。
@@ -8,29 +8,27 @@
   1. 实测每次逻辑调用的 token / 延迟 / 传输尝试分布；
   2. 从 run 记录的 total_cost_usd（off_peak / peak 两档计价情景）反解单价，
      并在全部 15 个 run 上交叉验证；
-  3. 按《两周执行计划》§3.2 的数据块推算 token 与金额上限。
+  3. 按《两周执行计划》§3.2 的数据块推算 token 与金额情景。
 
-边界：零 LLM 调用；不改冻结协议（configs/protocol.yaml）；金额为逻辑调用
-上限（不含重试；表内比较按记账规则读取，不产生新物理调用）。
+边界：零 LLM 调用；不改冻结协议（configs/protocol.yaml）；金额为历史逻辑调用
+情景（不含重试；表内比较按记账规则读取，不产生新物理调用）。
 产物：experiments/certirank_pilot/budget_estimate.{md,json}
 """
 from __future__ import annotations
 
+import argparse
 import json
 import statistics
-from datetime import datetime, timezone
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from make_data_manifest import verify
+from certirank.experiment import load_config, config_hash
 DATA = ROOT / "data" / "external" / "lotus_gate2"
 OUT_DIR = ROOT / "experiments" / "certirank_pilot"
 
-# 《两周执行计划》§3.2 数据块：(名称, query-group 数, 每 query 比较数, 每对重复数)
-BLOCKS = [
-    ("开发集", 6, 28, 12),
-    ("查询留出集", 12, 28, 12),
-    ("N=16 扩展（可选）", 4, 120, 12),
-]
 SCENARIOS = ("off_peak", "peak")
 PRICE_TOL_USD = 1e-5  # run 记录金额为 6 位小数舍入
 LATENCY_OUTLIER_S = 1000  # A-2 悬置请求（~20,137 s）单独列示，不进均值
@@ -49,7 +47,17 @@ def usd(x: float) -> str:
     return f"${x:,.2f}" if x >= 1 else f"${x:.4f}"
 
 
-def main() -> None:
+def build_artifacts(config_path=None) -> dict[str, str]:
+    config = load_config(config_path or ROOT / "configs/experiment.json")
+    collection, formal = config["collection"], config["formal"]
+    n, extended = formal["n"], collection["optional_n"]
+    blocks = [("开发集", collection["dev_query_groups"], n * (n - 1) // 2, formal["response_count"]),
+              ("查询留出集", collection["heldout_query_groups"], n * (n - 1) // 2, formal["response_count"]),
+              (f"N={extended} 扩展（可选）", collection["optional_query_groups"], extended * (extended - 1) // 2, formal["response_count"])]
+    manifest = json.loads((ROOT / "data/manifests/gate2_external_data.json").read_text())
+    problems = verify(manifest, external_dir=DATA)
+    if problems:
+        raise ValueError(f"external data manifest verification failed: {problems[:5]}")
     calls = load_jsonl(DATA / "gate2_live_pair_calls.jsonl")
     runs = load_jsonl(DATA / "gate2_live_query_results.jsonl")
     if len(calls) != 420 or len(runs) != 15:
@@ -117,7 +125,7 @@ def main() -> None:
         return n_calls * ((per_call_prompt - hit) * pm + hit * ph + comp_mean * po)
 
     rows = []
-    for name, nq, npair, nrep in BLOCKS:
+    for name, nq, npair, nrep in blocks:
         n = nq * npair * nrep
         rows.append({
             "block": name,
@@ -154,8 +162,9 @@ def main() -> None:
                     total_row("全量合计（含 N=16 扩展）", rows)]
 
     payload = {
-        "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "estimate_status": "historical_scenarios_only; live_hard_cap_pending",
         "generated_by": "scripts/pilot_budget.py",
+        "settings_hash": config_hash(config),
         "source_run": "live_pilot_20261014T132233Z",
         "source_files": [
             "data/external/lotus_gate2/gate2_live_pair_calls.jsonl",
@@ -196,9 +205,9 @@ def main() -> None:
     qm = " / ".join(f"q{q} ≈ {v:.0f}" for q, v in q_means.items())
     lines = []
     a = lines.append
-    a("# certirank_pilot 预算推算（P0：所有成本上限可计算）")
+    a("# certirank_pilot 历史成本情景估算（付费硬上限待定）")
     a("")
-    a(f"生成：`python scripts/pilot_budget.py`（零 LLM 调用，幂等）· {payload['generated_utc']}")
+    a("生成：`python scripts/pilot_budget.py`（零 LLM 调用，可重复生成）")
     a("")
     a("数据源：Gate 2 live pilot `live_pilot_20261014T132233Z` 的 420 条真实调用与 15 个 run")
     a("（不可变副本，SHA-256 见 `data/manifests/gate2_external_data.json`）。")
@@ -232,7 +241,7 @@ def main() -> None:
       f"{max_err:.1e} USD（记录值为 6 位小数舍入）。计价情景来自生产方 manifest")
     a("（Paratera 网关 DeepSeek-V4.1-Flash 的估算记录，非实际账单）；正式立项前按当期价格复核。")
     a("")
-    a("## 3. 数据块上限（两周计划 §3.2；逻辑调用，不含重试）")
+    a("## 3. 数据采集规模与成本情景（不含重试）")
     a("")
     a(f"单次调用假设：prompt 取档位值、缓存命中率 {cached_ratio:.1%}、completion {comp_mean:.0f} tokens。")
     a("")
@@ -253,25 +262,59 @@ def main() -> None:
     a("4. **先导配置**：12 次重复 / 对为两周计划 §3.3 的先导配置，不支撑低违约率统计认证。")
     a(f"5. **串行时间参考**：中位 {statistics.median(lat):.2f} 秒 / 调用 → 核心合计 "
       f"{table[-2]['calls']:,} 次约 {table[-2]['calls']*statistics.median(lat)/3600:.1f} 小时；")
-    a(f"   p95 {pctl(lat, 0.95):.1f} 秒 → 最坏约 {table[-2]['calls']*pctl(lat, 0.95)/3600:.1f} 小时。")
+    a(f"   p95 {pctl(lat, 0.95):.1f} 秒 / 调用的情景约 {table[-2]['calls']*pctl(lat, 0.95)/3600:.1f} 小时。")
     a("   按计划 §3.3 以随机 / 交错顺序采集，分散时间漂移与服务版本变化。")
     a("")
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUT_DIR / "budget_estimate.md").write_text("\n".join(lines), encoding="utf-8")
-    (OUT_DIR / "budget_estimate.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Stress scenarios use historical prices only. Neither row supplies a live cap.
+    stress = []
+    for label, prompt_cap, output_cap, attempts_cap in [
+        ("高档历史均值、无缓存", prof_high, comp_mean, 1),
+        ("历史最大输入、输出128、最多3次尝试的假设", max(prompt), 128, 3),
+    ]:
+        pm, _, po = prices["peak"]
+        stress.append({"scenario": label, "prompt_tokens_per_call": prompt_cap,
+                       "output_tokens_per_call": output_cap, "cache_hit_ratio": 0,
+                       "attempts_per_logical_call": attempts_cap,
+                       "core_usd_historical_price": core_rows[0]["calls"] + core_rows[1]["calls"]})
+        stress[-1]["core_usd_historical_price"] *= attempts_cap * (prompt_cap * pm + output_cap * po)
+    payload["stress_scenarios"] = stress
+    payload["live_hard_cap"] = None
+    payload["missing_for_live_cap"] = ["actual new workload and input token limits", "current verified provider prices",
+                                        "output/attempt limits and retry billing", "live smoke calls and cumulative money/deadline caps"]
+    a("## 5. 缓存与 token 敏感性")
+    a("")
+    for row in stress:
+        a(f"- {row['scenario']}：核心采集约 ${row['core_usd_historical_price']:.2f}。")
+    a("")
+    a("以上均按历史计价估算。高档输入采用历史查询均值，缓存和输出长度也可能变化；这些值无法构成新运行的金额上限。")
+    a("第二个情景中的输入、输出和重试限制只是显式假设，尚未在真实适配器中实施。")
+    a("付费运行仍需冻结实际 workload、当期计价、输入/输出限额、重试与累计金额上限、截止时间及授权；P6 live smoke 另列预算。")
+    a("延迟情景没有尾部保证；历史已有约 5.6 小时的悬置请求。")
+    a("")
+    return {"budget_estimate.md": "\n".join(lines),
+            "budget_estimate.json": json.dumps(payload, ensure_ascii=False, indent=2) + "\n"}
 
-    print(f"[PASS] 单价反解交叉验证：15 run × 2 情景，最大误差 {max_err:.1e} USD")
-    print(f"实测：prompt {prof_mid:.0f} tokens/调用（缓存命中 {cached_ratio:.0%}）、"
-          f"completion {comp_mean:.0f}、重试 {retries} 次")
-    for r in table:
-        co, cp = r["cost_usd"]["off_peak"], r["cost_usd"]["peak"]
-        print(f"  {r['block']:<14} {r['calls']:>6,} calls  "
-              f"off_peak {usd(co['low'])}–{usd(co['high'])}  peak {usd(cp['low'])}–{usd(cp['high'])}")
-    print(f"written: {OUT_DIR / 'budget_estimate.md'}")
-    print(f"written: {OUT_DIR / 'budget_estimate.json'}")
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--config", type=Path, default=ROOT / "configs/experiment.json")
+    args = parser.parse_args()
+    artifacts = build_artifacts(args.config)
+    if args.check:
+        failures = [name for name, text in artifacts.items() if not (OUT_DIR / name).exists() or (OUT_DIR / name).read_text() != text]
+        if failures:
+            print("FAIL stale/missing budget artifacts:", ", ".join(failures))
+            return 1
+        print("PASS historical budget scenarios reproduced; live hard cap pending")
+    else:
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        for name, text in artifacts.items():
+            (OUT_DIR / name).write_text(text, encoding="utf-8")
+        print("wrote historical budget scenarios; no live hard cap or paid authorization")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

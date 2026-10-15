@@ -1,128 +1,84 @@
-# Gate 2C 当前状态（P0 完成，2026-10-15）
+# CertiRank 当前状态（2026-10-15，离线 P1/P2）
 
-> 阶段编号与日程以用户版 v0.1 计划（`docs/CertiRank_两周执行计划_2026-10-15至2026-10-28.md`）
-> 为权威；本文件对应其 **P0（10/15：状态核对与协议定义）**，通过条件已全部满足。
+以用户版两周计划 P0–P7 为阶段编号。原 P0 记录位于 Git `ddb3ecf`；
+本次修正了契约漏检、响应独立性、新分支计费与成本上限措辞。
+源数据、外部报告与数据清单未修改。
 
-## 一句话
+## 已完成
 
-Gate 2 的原始 artifacts 已完整恢复为不可变副本并建立数据契约；一条命令
-（`python scripts/audit_gate2.py`）即可从原始响应独立复算全部核心统计
-（22/22 通过，零 LLM 调用）；Pair Response Pool 确认可复用；发现并裁定
-报告正文一处数字笔误（"46" 应为 37）；两周计划全部数据采集的金额上限已
-由实测数据推算（`experiments/certirank_pilot/budget_estimate.md`）。
-
-## P0 通过条件核对（对照两周计划 §5 P0）
-
-- [x] **`current_state.md` + `protocol.yaml` 交付**（`configs/protocol.yaml`，
-      P0 冻结版：数据契约 C1–C8、重放语义、信息边界、审计期望）；
-- [x] **已完成数据有可定位来源**：LOTUS repo commit `136ae4f`、run
-      `live_pilot_20261014T132233Z`，31 个文件 SHA-256 逐文件记录于
-      `data/manifests/gate2_external_data.json`（`--check` 通过）；
-- [x] **未提交修改没有被覆盖**：LOTUS 仓库只读引用，CertiRank 独立目录，
-      未触碰原实验区；
-- [x] **所有成本上限可计算**：见下文预算推算（两周计划 §7）。
-
-## 研究总纲悬置问题的核对结果（总纲 §3.1 "密钥更新后的执行情况"）
-
-总纲指出 2026-10-14 的 `gate2_live_report.md` 是鉴权失败的运行快照、密钥更新后
-的执行情况待核对。核对结论：**该悬置已解除**，三段事实链如下——
-
-| 时间（UTC） | 目录 | 结果 |
+| 阶段 | 当前状态 | 证据 |
 |---|---|---|
-| 10-14 11:44 | `live_smoke_20261014T114455Z/` | 鉴权失败快照：`BLOCKED_PROVIDER_CREDENTIAL_INVALID`，1 个 run（G2-636-r0）、0 个比较、0 个模型回答（api key ****c424 invalid）。**总纲引用的就是这份** |
-| 10-14 13:18 | `live_smoke_20261014T131841Z/` | 更新密钥后的 smoke：1 query（636）× 28 pair，28/28 strict-valid |
-| 10-14 13:22 | `live_pilot_20261014T132233Z/`（主数据） | 完整 pilot：3 query × 28 pair × 5 响应 = 420/420 strict-valid，15/15 runs 成功，replay gate 15/15 |
+| P0 状态恢复与离线协议 | 已完成；新付费运行 preflight 未完成 | 31 文件哈希、420 条记录、22 项审计；protocol v0.2 |
+| P1 小例子与正确性边界 | 已完成实现与有限验证 | Top-1/Top-3、64 表穷举、随机多更新、预算与中止测试 |
+| P2 历史配置现象与可观测性 | 已完成离线分析 | `certirank_pilot/analysis/phenomenon_report.md`、逐请求反事实与子集描述 |
+| P3 开发策略 | 工程接口与单组 smoke 已完成；真实开发评价未完成 | Random、SimpleTopology、TraceSensitivity 候选、Vote3；D_EM=null |
+| P4–P7 | 未开始正式验证 | 未冻结 Proposed/holdout，无真实调用、费用与端到端验证 |
 
-即：顶层 `gate2_live_report.md` 描述的是**密钥更新后成功完成的 pilot**，不是失败
-快照；失败快照作为独立目录原样存档，两者未混淆。据此，总纲 §3.1 表中
-"密钥更新后的执行情况：待核对" 一行可以关闭，Gate 2 现象证据（H0 的初步
-依据）以主 pilot 数据为准。
+## 核心结果
 
-## 已恢复的实验资产
+历史 source revision：LOTUS `136ae4f4a344a2f75d89f811e516dfcb0de30e46`，
+run `live_pilot_20261014T132233Z`。更新密钥后的 420 次 pilot 成功，
+早前鉴权失败作为独立 smoke 快照保留。当前无鉴权失败的证据推断。
 
-来源：LOTUS 非确定性研究（`lotus-code`，commit `136ae4f`），run
-`live_pilot_20261014T132233Z`（2026-10-14，420 planned calls / 15 runs / 0 失败）。
-全部文件为不可变副本，SHA-256 见 `data/manifests/gate2_external_data.json`：
+- naive 重放 15/15，旧报告 `46` 笔误的可复现有序影响值为 37。
+- 按无序集合重新统计，r0 高影响为 28，翻转交集 12，未观察到翻转的高影响 16。
+- Tournament 集合 D_EM：636=0.60、327=0.90、51=0.00；宏平均 0.50。
+- Tournament 每执行平均唯一请求约 10–11，Recall@3 均为 1.0。只有三个查询和单相关文档标签，质量证据有限。
+- 159 个 run-request 单请求翻转反事实中，134 个 unresolved（84.3%）。
+  它们需要当前轨迹外的信息，不能在在线分析中填零。
+- 原始 slot 的时间独立性未经证明；每查询 10 个执行对相互依赖。
+- 48 行单组工程 smoke 的增量与合法缓存重放输出、状态和调用账目一致。
+  一个三响应组无法估计完整复核算法的独立执行 D_EM，结果保持 null。
 
-| 类别 | 文件 | 用途 |
-|---|---|---|
-| 原始响应 | `gate2_live_pair_calls.jsonl`（420 行） | 审计与 Pool 的唯一判定来源 |
-| 原始 run | `gate2_live_query_results.jsonl`（15 行） | replay gate 的比对目标 |
-| 冻结 workload | `gate2_workload.json` | pair 表、钉死的 request_hash、候选表、qrels |
-| 生产方报告 | `gate2_live_report.md` | 审计期望值的引用来源 |
-| 生产方分析 | `gate2_live_analysis.json`、`gate2_live_replay_analysis.json` | 交叉核对目标 |
-| 运行账目 | `gate2_live_manifest.json`、`*_verification.json` | 预算与验证状态记录 |
-| 佐证 | `live_smoke_20261014T131841Z/`、`live_smoke_20261014T114455Z/` | 密钥前后 smoke 对照（见上表） |
-| 端点配置 | `provider_runtime.yaml` | 仅环境变量名，无密钥 |
-| 生产方脚本 | `lotus_scripts_reference/`（7 脚本 + gate2 包 5 模块） | 只读来源参照，CertiRank 不执行 |
+## 契约修正与证据边界
 
-## 数据契约（已冻结）
+候选、位置、condition、模型及参数均逐字段核对；原文重新解析后与两个判定字段核对。
+重复响应拒绝装配，不再静默覆盖；entry 按 query_id 关联。
+`configs/gate2_identity.json` 钉住历史预期元数据。
+历史导出没有完整请求正文，因此无法在本仓库独立重建请求 hash；端点继承 manifest 证据。
 
-规范：`configs/protocol.yaml`；实现：`src/certirank/pair_pool.py`。
-每条比较应答八类字段：query_id、候选 ID（含输入顺序）、pair 槽位、请求身份
-（request_hash，与 workload 逐槽位 1:1 校验）、模型与 prompt 版本、输入顺序、
-调用实例、原始回答 + 规范化判定。**仅凭 pair_id 相同不构成复用依据。**
+响应池中的 10 个 3/5 组合相互重叠，只用于组合敏感性描述。
+正式复核评价要求四个不重叠三槽位组；同请求 hash 不构成概率独立证明。
+新分支按当前执行未观察定义，读取全局表也扣预算。
 
-## 审计结论（详见 results/gate2c_audit.md）
+## 成本与阻塞
 
-- **完整性**：3 query × 28 pair × 5 响应 = 420 条记录，无缺失、无多余，全部
-  strict-valid；
-- **可复现性**：独立重放 naive sort（CertiRank 自实现，非生产方代码），
-  15/15 run 的 Top-3 与全排序和 LOTUS 记录完全一致；
-- **统计复算**：报告 §A–§D 的全部数字复现（逐 query 翻转 8/9/12、macro
-  34.5% / 16.7%、set/order agreement 60%/30%、Jaccard 0.80、τ-b 0.748、
-  nDCG@3 1.0、单点四分类、交叉表 29/14/23/15、多点传播 0 joint / 6 cancelling）；
-- **数字核查（PROSE-46）**：正文的 "46 single-flip high-impact pairs" 与其自身
-  表格及存储分析矛盾，可复现值为 **37**（14 + 23）；"高影响对从未翻转" 的占比
-  应表述为 23/37 ≈ 62%，结论方向不变；
-- **Pool 可复用性**：84 slot × 5 响应，槽位内 5 次响应共享同一 request_hash
-  （同一请求身份的独立重复）→ 可作为离线 Tournament 固定响应表；表外比较
-  属新分支请求，必须实际调用。
+`budget_estimate.md` 是历史价格与 token 分布的情景外推，live_hard_cap=null。
+核心 6,048 次采集在原缓存情景约 $0.14–0.38；去缓存高档情景约 $1.66。
+新查询长度、输出、重试、价格和 live smoke 会改变金额；这些估算均未授权新运行。
 
-## 预算推算（两周计划 §3.2 数据块，P0 通过条件）
+继续正式开发/留出评价前缺少：
 
-由 420 条真实调用的 token 分布与 15 个 run 的计价记录反解
-（`scripts/pilot_budget.py`，零 LLM 调用、幂等）：
+1. 新的独立 query-group 与标签、完整 prompt/request provenance 和实际候选。
+2. 每对 12 次响应的非重叠槽位、采集随机/交错顺序与时间漂移检查。
+3. 策略与最强 comparator 冻结、开发/留出隔离；三个历史查询均标记为已暴露开发数据。
+4. 真实 API 适配器、当期价格、输入/输出/重试限额、累计金额与截止时间上限，以及明确付费授权。
 
-- 实测单次逻辑调用：prompt 均值 780 tokens（provider 缓存命中 80%）、
-  completion 恒 3、传输尝试 1 次、重试 0；中位延迟 0.78 s
-  （唯一悬置请求 ~5.6 h 已单列，见审计 A-2/A-3）；
-- 单价反解在 15 run × 2 计价情景上交叉验证，最大误差 2.3e-06 USD；
-- **金额上限**（逻辑调用、不含重试）：开发集 2,016 次 $0.05–0.13；
-  留出集 4,032 次 $0.09–0.25；N=16 扩展 5,760 次 $0.13–0.36；
-  核心合计 6,048 次 **$0.14–0.38**；全量 11,808 次 **$0.28–0.74**
-  （off_peak–peak × 低—高 token 档位）；
-- 串行采集时间参考：核心合计约 1.3 小时（中位延迟）至 8.4 小时（p95）。
+H0 有探索性支持；H1/H2/H3 尚未检验真实收益。有限正确性验证不等于一般证明。
 
-计价情景来自生产方 manifest 的估算记录（Paratera 网关 DeepSeek-V4.1-Flash），
-非实际账单；正式立项前按当期价格复核。
+## 复现与交接
 
-## 统计单位（引用旧数字时使用）
+`uv run --no-project --with pytest python scripts/check_offline.py`。
+核心运行与分析仅用标准库；pytest 只用于测试。
+正确性覆盖见 `experiments/certirank_pilot/offline_correctness.md`，
+策略接口见 `experiments/certirank_pilot/policy_spec.md`。
 
-- **pair 级**（分母 84）：29 翻转 / 37 高影响 / 14 交集 / 23 稳定但高影响 / 15 翻转但低影响；
-- **run-pair 级**（30 个依赖样本，仅描述统计）：16.7% 平均分歧、60%/30% agreement；
-- **run 级**（分母 15）：15/15 replay、nDCG@3 = 1.0。
+## 框架与算法复审（2026-10-15）
 
-## 边界与偏差（继承自 Gate 2 报告）
+协议更新为 v0.2.1。已修复预算读取前校验、旧 ledger 复用、Vote3 槽位重复使用、
+基础执行失败行丢失、跨查询/响应源汇总、非法输出与指标输入、契约 provenance 漏检、
+旧轨迹与新判断混用、审计未在输入 Gate 失败时停止等问题。
+完整反例、修复范围与剩余研究不确定性见 `experiments/certirank_pilot/framework_review.md`。
+新增 N=4 全 K、非二次幂和 N=64 多更新、反事实所有补全对照；
+正确性检查仍是有限验证，没有升级成一般证明。历史数据与原研究结论未改变。
 
-1. 端点偏差：Paratera 网关的 DeepSeek-V4.1-Flash，非原 P0 冻结端点；
-   不可与 Gate 1 官方端点数据合并。
-2. pilot 规模：3 query、每对 5 次重复；ever-flipped 是粗糙指示器
-   （p≈0.2 时 5 次内至少翻转一次仅 ~67%）。
-3. 信息边界：完整响应表只用于离线评价与上界；在线策略只读执行轨迹；
-   新分支请求计入预算（`information_boundary`，自 P0 冻结）。
+## 研究目标对齐修正（v0.3）
 
-## 与用户 v0.1 两周计划的阶段映射
+已补齐统一配置、实际投票/修复漏斗、绝对预算开发网格、预算忠实的枚举理想参考、
+开发统计价值估计器、分池加载/代码模型冻结/组级 Bootstrap 与完整 CPU 测量。
+协议见 `docs/experiment_protocol_v0.3.md`。测试目前 143 项。
 
-本仓库早期内部草稿（`docs/two_week_plan.md`，已标注让位）使用的 P0–P3 编号
-与用户版计划不同，对应关系如下：
-
-| 用户版计划（权威） | 本仓库已完成 / 待办 |
-|---|---|
-| P0（10/15）状态核对与协议 | ✅ 本文 + `protocol.yaml` + 预算推算 |
-| P1（10/16）小例子与正确性边界 | ⬜ **下一步**：四元素反例 fixtures、Tournament Top-1/Top-3 固定规则、N=4 全 64 表穷举、增量 vs 从头重放、预算耗尽行为（全部零调用） |
-| P2（10/17–18）现象验证 | 数据侧大部分已由审计覆盖（`gate2c_audit.md`）；待补：`phenomenon_report.md` 形态重组、保守 unknown 集合、5 响应子集方差描述、审计断言例行回归化 |
-| P3–P7（10/19–28） | ⬜ 按用户版计划执行 |
-
-`oracle.py`（真实调用通道）待任何需要新调用的阶段实现；`trace.py`/`policy.py`
-/`repair.py` 分别在 P1/P3/待 P3 决策后实现。
+当前历史池仍不够拟合独立组价值，未打开真实留出集。合成机制和 CPU 报告分别位于
+`certirank_pilot/research_diagnostics/` 与 `certirank_pilot/cpu_benchmark/`。
+CPU 微基准未显示原定 25% 完整收益，暂缓扩展复杂修复器；策略主比较共用合法缓存重放。
+真实质量饱和、独立新数据、当期服务计价、真实调用行为仍为待验证项。

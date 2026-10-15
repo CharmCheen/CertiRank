@@ -1,0 +1,424 @@
+[
+  {
+    "query_id": "synthetic-N8-dev-0",
+    "n": 8,
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              4,
+              0,
+              1
+            ],
+            "schedule": [],
+            "logical_calls": 11,
+            "extra_calls": 0,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 122,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      },
+      {
+        "options": [
+          {
+            "topk": [
+              4,
+              0,
+              1
+            ],
+            "schedule": [],
+            "logical_calls": 11,
+            "extra_calls": 0,
+            "status": "complete"
+          },
+          {
+            "topk": [
+              4,
+              0,
+              2
+            ],
+            "schedule": [
+              [
+                1,
+                2
+              ]
+            ],
+            "logical_calls": 14,
+            "extra_calls": 3,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 102,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      },
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              1,
+              2
+            ],
+            "schedule": [],
+            "logical_calls": 10,
+            "extra_calls": 0,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 92,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      },
+      {
+        "options": [
+          {
+            "topk": [
+              4,
+              0,
+              5
+            ],
+            "schedule": [],
+            "logical_calls": 11,
+            "extra_calls": 0,
+            "status": "complete"
+          },
+          {
+            "topk": [
+              0,
+              5,
+              2
+            ],
+            "schedule": [
+              [
+                4,
+                5
+              ]
+            ],
+            "logical_calls": 14,
+            "extra_calls": 3,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 102,
+        "search_complete": true,
+        "missing_responses": false,
+        "remaining_schedules": 0
+      }
+    ],
+    "base": {
+      "set_d_em": 0.8333333333333334,
+      "jaccard_distance": 0.4666666666666666
+    },
+    "oracle": {
+      "set_d_em": 0.8333333333333334,
+      "jaccard_distance": 0.4666666666666666,
+      "mean_calls": 10.75,
+      "selected": [
+        {
+          "topk": [
+            4,
+            0,
+            1
+          ],
+          "schedule": [],
+          "logical_calls": 11,
+          "extra_calls": 0,
+          "status": "complete"
+        },
+        {
+          "topk": [
+            4,
+            0,
+            1
+          ],
+          "schedule": [],
+          "logical_calls": 11,
+          "extra_calls": 0,
+          "status": "complete"
+        },
+        {
+          "topk": [
+            0,
+            1,
+            2
+          ],
+          "schedule": [],
+          "logical_calls": 10,
+          "extra_calls": 0,
+          "status": "complete"
+        },
+        {
+          "topk": [
+            4,
+            0,
+            5
+          ],
+          "schedule": [],
+          "logical_calls": 11,
+          "extra_calls": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    "search_complete": true,
+    "joint_assignments_examined": 4,
+    "joint_assignments_total": 4,
+    "quality_constraint": "measured",
+    "interpretation": "exact empirical clairvoyant optimum only if search_complete; otherwise achieved optimistic reference"
+  },
+  {
+    "query_id": "synthetic-N16-dev-0",
+    "n": 16,
+    "scope": "privileged budgeted review schedules; actual reserved votes and repair",
+    "deployable": false,
+    "groups": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11
+      ]
+    ],
+    "reachability": [
+      {
+        "options": [
+          {
+            "topk": [
+              4,
+              0,
+              2
+            ],
+            "schedule": [],
+            "logical_calls": 21,
+            "extra_calls": 0,
+            "status": "complete"
+          },
+          {
+            "topk": [
+              0,
+              2,
+              8
+            ],
+            "schedule": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                4
+              ]
+            ],
+            "logical_calls": 29,
+            "extra_calls": 8,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 3000,
+        "search_complete": false,
+        "missing_responses": false,
+        "remaining_schedules": 39
+      },
+      {
+        "options": [
+          {
+            "topk": [
+              0,
+              5,
+              2
+            ],
+            "schedule": [],
+            "logical_calls": 21,
+            "extra_calls": 0,
+            "status": "complete"
+          },
+          {
+            "topk": [
+              0,
+              2,
+              8
+            ],
+            "schedule": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                5
+              ]
+            ],
+            "logical_calls": 28,
+            "extra_calls": 7,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 3000,
+        "search_complete": false,
+        "missing_responses": false,
+        "remaining_schedules": 39
+      },
+      {
+        "options": [
+          {
+            "topk": [
+              4,
+              0,
+              1
+            ],
+            "schedule": [],
+            "logical_calls": 21,
+            "extra_calls": 0,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 3000,
+        "search_complete": false,
+        "missing_responses": false,
+        "remaining_schedules": 39
+      },
+      {
+        "options": [
+          {
+            "topk": [
+              8,
+              0,
+              1
+            ],
+            "schedule": [],
+            "logical_calls": 21,
+            "extra_calls": 0,
+            "status": "complete"
+          }
+        ],
+        "states_explored": 3000,
+        "search_complete": false,
+        "missing_responses": false,
+        "remaining_schedules": 39
+      }
+    ],
+    "base": {
+      "set_d_em": 1.0,
+      "jaccard_distance": 0.65
+    },
+    "oracle": {
+      "set_d_em": 0.8333333333333334,
+      "jaccard_distance": 0.5166666666666667,
+      "mean_calls": 24.75,
+      "selected": [
+        {
+          "topk": [
+            0,
+            2,
+            8
+          ],
+          "schedule": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "logical_calls": 29,
+          "extra_calls": 8,
+          "status": "complete"
+        },
+        {
+          "topk": [
+            0,
+            2,
+            8
+          ],
+          "schedule": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "logical_calls": 28,
+          "extra_calls": 7,
+          "status": "complete"
+        },
+        {
+          "topk": [
+            4,
+            0,
+            1
+          ],
+          "schedule": [],
+          "logical_calls": 21,
+          "extra_calls": 0,
+          "status": "complete"
+        },
+        {
+          "topk": [
+            8,
+            0,
+            1
+          ],
+          "schedule": [],
+          "logical_calls": 21,
+          "extra_calls": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    "search_complete": false,
+    "joint_assignments_examined": 4,
+    "joint_assignments_total": 4,
+    "quality_constraint": "measured",
+    "interpretation": "exact empirical clairvoyant optimum only if search_complete; otherwise achieved optimistic reference"
+  }
+]

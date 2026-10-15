@@ -52,6 +52,8 @@ EFFECT_ORDER = (EFFECT_NONE, EFFECT_BELOW_TOPK, EFFECT_TOPK_ORDER, EFFECT_TOPK_S
 
 def naive_replay(verdicts: Sequence[bool], n_docs: int) -> dict[str, Any]:
     """Rebuild the naive sort from a verdict vector with LOTUS's exact semantics."""
+    if type(n_docs) is not int or n_docs < 1 or any(type(v) is not bool for v in verdicts):
+        raise ValueError("require a positive integer document count and boolean verdicts")
     expected = n_docs * (n_docs - 1) // 2
     if len(verdicts) != expected:
         raise ValueError(f"verdict vector has {len(verdicts)} entries, expected {expected}")
@@ -71,7 +73,7 @@ def naive_replay(verdicts: Sequence[bool], n_docs: int) -> dict[str, Any]:
 
 def flip_one(verdicts: Sequence[bool], position: int) -> list[bool]:
     """One counterfactual verdict vector: the single verdict at ``position`` inverted."""
-    if not 0 <= position < len(verdicts):
+    if type(position) is not int or not 0 <= position < len(verdicts):
         raise ValueError(f"position {position} out of range for {len(verdicts)} verdicts")
     flipped = list(verdicts)
     flipped[position] = not flipped[position]
@@ -116,6 +118,8 @@ def single_point_counterfactuals(
     positions, ``effect_class``, ``full_ranking_changed``, ``topk_set_changed``,
     ``topk_order_changed``, ``winner_before`` (``"doc1"``/``"doc2"``) and the vote delta.
     """
+    if type(k) is not int or not 1 <= k <= n_docs:
+        raise ValueError("require integer 1 <= k <= n_docs")
     base = naive_replay(base_verdicts, n_docs)
     base_ranking = base["indexes"]
     base_topk = base_ranking[:k]
@@ -159,6 +163,8 @@ def multi_point_propagation(
     difference set touches the answer, yet the combination does) or cancelling
     (individually material flips whose combination leaves the ordered Top-K unchanged)?
     """
+    if type(k) is not int or not 1 <= k <= n_docs:
+        raise ValueError("require integer 1 <= k <= n_docs")
     runs = [naive_replay(v, n_docs) for v in verdict_vectors]
     topks = [r["indexes"][:k] for r in runs]
 
@@ -173,6 +179,10 @@ def multi_point_propagation(
             "differing_pair_count": len(diff_positions),
             "topk_set_equal": set(topks[a]) == set(topks[b]),
             "topk_order_equal": list(topks[a]) == list(topks[b]),
+            "single_flip_answer_impact_count": 0,
+            "combined_answer_changed": False,
+            "joint_emergent": False,
+            "cancelling": False,
         }
         if diff_positions:
             singles = single_point_counterfactuals(

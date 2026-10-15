@@ -1,6 +1,7 @@
 {
-  "generated_utc": "2026-10-15T05:09:15Z",
+  "estimate_status": "historical_scenarios_only; live_hard_cap_pending",
   "generated_by": "scripts/pilot_budget.py",
+  "settings_hash": "f5bafaed2e21d231220e840b8032ef5b2e81948582cb20a1a7cf77a102dd95a3",
   "source_run": "live_pilot_20261014T132233Z",
   "source_files": [
     "data/external/lotus_gate2/gate2_live_pair_calls.jsonl",
@@ -152,5 +153,30 @@
         }
       }
     }
+  ],
+  "stress_scenarios": [
+    {
+      "scenario": "高档历史均值、无缓存",
+      "prompt_tokens_per_call": 905.5,
+      "output_tokens_per_call": 3,
+      "cache_hit_ratio": 0,
+      "attempts_per_logical_call": 1,
+      "core_usd_historical_price": 1.6641009032258063
+    },
+    {
+      "scenario": "历史最大输入、输出128、最多3次尝试的假设",
+      "prompt_tokens_per_call": 1145,
+      "output_tokens_per_call": 128,
+      "cache_hit_ratio": 0,
+      "attempts_per_logical_call": 3,
+      "core_usd_historical_price": 9.022429935483872
+    }
+  ],
+  "live_hard_cap": null,
+  "missing_for_live_cap": [
+    "actual new workload and input token limits",
+    "current verified provider prices",
+    "output/attempt limits and retry billing",
+    "live smoke calls and cumulative money/deadline caps"
   ]
 }

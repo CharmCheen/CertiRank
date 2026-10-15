@@ -1,0 +1,17 @@
+{
+  "experiment_id": "Gate2-NondeterminismPropagation|P0",
+  "condition": "P0",
+  "requested_model": "DeepSeek-V4.1-Flash",
+  "model_parameters": {
+    "thinking_mode_requested": "disabled",
+    "thinking_control_supported": true,
+    "reasoning_effort_requested": null,
+    "temperature_requested": null,
+    "top_p_requested": null,
+    "presence_penalty_requested": null,
+    "frequency_penalty_requested": null,
+    "max_tokens_requested": 128,
+    "tools_present": false,
+    "provider": "openai_compatible"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "source_kind": "synthetic",
+  "settings_hash": "f5bafaed2e21d231220e840b8032ef5b2e81948582cb20a1a7cf77a102dd95a3",
+  "code_hashes": {
+    "scripts/research_diagnostics.py": "dee2eb5ed2ffcfd728cbcccf3a28daa92122fa7e9469bc8af3780ab2d6083a1f",
+    "src/certirank/__init__.py": "b9c5f0ca76d25127f473c6a7e2fc4815fcf692aee5d8ce176dab27d0a29b6111",
+    "src/certirank/campaign.py": "479eba9232da768aef3b76287d3b97bd41b1426de4f9b6f99507be04bfac0925",
+    "src/certirank/diagnostics.py": "1689804f46c9425e0338de1e40d75fe6e285c07be2b28b15d13b741021fa6ab6",
+    "src/certirank/evaluation.py": "3d3df4f3a524cf3b2d9205ec6d1f88bcbc33271b6fd88f84cd6f90223f00cdc4",
+    "src/certirank/experiment.py": "3df07fbf2a7e0a959dc02d3abf8d0af91cda8db51eb03dc5931b0592817a0776",
+    "src/certirank/operators/__init__.py": "438f441087bf43bbf5c58b76b4453db61b8d22b2f1c296391a9ab1526e1f3b10",
+    "src/certirank/operators/metrics.py": "5da89c8e72735a4a73cb710b5494f3ecf12d9391153b57cf4f81b0086a5f10bc",
+    "src/certirank/operators/naive_sort.py": "4e2f11bef158654051edbea3ea7222c80f7ae2ee64f6fd3d9403102c65e57ca4",
+    "src/certirank/operators/tournament.py": "b7355eafc6d17534c68a970086a4409a3193500fef7e6cb589c8407a6c220e2f",
+    "src/certirank/oracle.py": "1c270158a9c27523761ebdaa43c0823819893ef5aed0558e962910a8eba56143",
+    "src/certirank/pair_pool.py": "6167f01a4509f483b84c3b1dded73638b185f4baf96db979249a0d9a50b77e23",
+    "src/certirank/policy.py": "c95d9cac2326baabe3c24bf6843158c292b4757730858ccb80881557112a0ba7",
+    "src/certirank/repair.py": "88b4c8ee8bf326a3333332dd1f807a0fab1a2fb26f16cdb26a1b59cfbf9bc726",
+    "src/certirank/research_diagnostics.py": "a31c091a9c4ebfe3597f26f438093d9e1212e8666be7217898192a5c50c445b0",
+    "src/certirank/synthetic.py": "0cfc4ed2be3617f9d54625dee320bda417984cf3895bc5062824b55d3291cb6d",
+    "src/certirank/trace.py": "e062b178b6fa63bf6d1db47b7e677d90a1208017b9850b37bc4ea01bf0ae1207",
+    "src/certirank/value_model.py": "37d0573008fd741d1df4522ba597ad372b1ede143755ebf0f705ae604678f7cb"
+  },
+  "comparisons": {
+    "0.2": {
+      "status": "estimated",
+      "unit": "query-group; variants averaged within group first",
+      "groups": 4,
+      "queries": 4,
+      "point": {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "baseline_d": 0.75,
+        "candidate_calls": 16.5625,
+        "comparator_calls": 18.5625
+      },
+      "bootstrap_95": {
+        "gain": [
+          0.0,
+          0.0
+        ],
+        "quality_delta": [
+          0.0,
+          0.0
+        ]
+      },
+      "relative_gain": 0.0,
+      "positive_groups": 0,
+      "per_query_group": {
+        "synthetic-N8-heldout-0": [
+          {
+            "query_id": "synthetic-N8-heldout-0",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 10.5,
+            "comparator_calls": 12.5
+          }
+        ],
+        "synthetic-N8-heldout-1": [
+          {
+            "query_id": "synthetic-N8-heldout-1",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 10.5,
+            "comparator_calls": 12.5
+          }
+        ],
+        "synthetic-N16-heldout-0": [
+          {
+            "query_id": "synthetic-N16-heldout-0",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 22.5,
+            "comparator_calls": 24.5
+          }
+        ],
+        "synthetic-N16-heldout-1": [
+          {
+            "query_id": "synthetic-N16-heldout-1",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.5,
+            "candidate_calls": 22.75,
+            "comparator_calls": 24.75
+          }
+        ]
+      }
+    },
+    "0.4": {
+      "status": "estimated",
+      "unit": "query-group; variants averaged within group first",
+      "groups": 4,
+      "queries": 4,
+      "point": {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "baseline_d": 0.875,
+        "candidate_calls": 19.25,
+        "comparator_calls": 21.375
+      },
+      "bootstrap_95": {
+        "gain": [
+          0.0,
+          0.0
+        ],
+        "quality_delta": [
+          0.0,
+          0.0
+        ]
+      },
+      "relative_gain": 0.0,
+      "positive_groups": 0,
+      "per_query_group": {
+        "synthetic-N8-heldout-0": [
+          {
+            "query_id": "synthetic-N8-heldout-0",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 13,
+            "comparator_calls": 14.5
+          }
+        ],
+        "synthetic-N8-heldout-1": [
+          {
+            "query_id": "synthetic-N8-heldout-1",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 12.5,
+            "comparator_calls": 14.5
+          }
+        ],
+        "synthetic-N16-heldout-0": [
+          {
+            "query_id": "synthetic-N16-heldout-0",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 1,
+            "candidate_calls": 26,
+            "comparator_calls": 28
+          }
+        ],
+        "synthetic-N16-heldout-1": [
+          {
+            "query_id": "synthetic-N16-heldout-1",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 25.5,
+            "comparator_calls": 28.5
+          }
+        ]
+      }
+    }
+  },
+  "verdict": {
+    "verdict": "synthetic_only",
+    "point_gates_pass": false,
+    "intervals_support": false,
+    "enough_query_groups": false,
+    "claim_beyond_confidence": false,
+    "new_physical_calls": 0
+  },
+  "new_physical_calls": 0,
+  "limitations": "synthetic heldout fixtures verify machinery, not real strategy effectiveness; oracle may be truncated"
+}

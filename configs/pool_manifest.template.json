@@ -1,0 +1,15 @@
+{
+  "_note": "Template only. Populate 6 development and 12 heldout query groups, pinned files and independent labels before running. No API access is implemented.",
+  "schema_version": 1,
+  "dataset_id": "beir/scifact",
+  "source_kind": "real",
+  "query_groups": [
+    {"query_id": "NEW_DEV_QUERY", "query_group": "NEW_DEV_GROUP", "split": "dev", "label_source": "independent dataset qrels"},
+    {"query_id": "NEW_HELDOUT_QUERY", "query_group": "NEW_HELDOUT_GROUP", "split": "heldout", "label_source": "independent dataset qrels"}
+  ],
+  "pools": {
+    "dev": {"workload": "../data/new_pilot/dev/workload.json", "pair_calls": "../data/new_pilot/dev/calls.jsonl", "identity": "../data/new_pilot/dev/identity.json", "sha256": {"workload": "FILL", "pair_calls": "FILL", "identity": "FILL"}},
+    "heldout": {"workload": "../data/new_pilot/heldout/workload.json", "pair_calls": "../data/new_pilot/heldout/calls.jsonl", "identity": "../data/new_pilot/heldout/identity.json", "sha256": {"workload": "FILL", "pair_calls": "FILL", "identity": "FILL"}}
+  },
+  "acquisition": {"response_slots": "12 per pair, disjoint triples", "request_order": "randomized/interleaved; log timestamps", "time_independence": "must be checked; disjoint slots alone do not prove independence"}
+}

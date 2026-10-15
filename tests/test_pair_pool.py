@@ -112,7 +112,7 @@ DOCS = {q: [f"{q}-d0", f"{q}-d1", f"{q}-d2"] for q in QUERIES}
 
 def _workload(entries):
     return {
-        "query_ids": QUERIES,
+        "query_ids": list(QUERIES),
         "pairs_per_query": 3,
         "k": 2,
         "entries": entries,
@@ -120,7 +120,7 @@ def _workload(entries):
 
 
 def _entry(query_id, request_hash_seq):
-    docs = DOCS[query_id]
+    docs = list(DOCS[query_id])
     pairs = []
     idx = 0
     for i in range(3):
@@ -158,7 +158,7 @@ def _record(workload, query_id, pair_position, repetition, verdict, **overrides)
         "model_parameters": {"max_tokens_requested": 128},
         "experiment_id": "test|cond",
         "condition": "cond",
-        "document_order": DOCS[query_id],
+        "document_order": list(DOCS[query_id]),
         "run_id": f"R-{query_id}-{repetition}",
         "repetition_id": repetition,
         "provider_request_id": f"prov-{query_id}-{pair_position}-{repetition}",
@@ -226,9 +226,39 @@ def test_same_pair_id_with_different_identity_is_not_reusable():
     )
     records[5]["position_i"], records[5]["position_j"] = records[5]["position_j"], records[5]["position_i"]
     validation = validate_pair_calls(records, workload, expected_repetitions=2)
-    # pair_position is unchanged, so the workload join still matches the pinned hash;
-    # the C4 document_order check is what would catch a re-ordered candidate list.
-    assert isinstance(validation["issues"], list)
+    assert not validation["contract_ok"]
+    assert any("C3" in issue for issue in validation["issues"])
+
+
+@pytest.mark.parametrize("overrides", [
+    {"condition": "other"},
+    {"requested_model": "other-model"},
+    {"model_parameters": {}},
+    {"raw_response_content": "Document 1"},
+    {"lotus_parsed_decision": None},
+    {"pair_position": None},
+    {"repetition_id": "0"},
+])
+def test_inconsistent_record_is_rejected(overrides):
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    records[0].update(overrides)  # original answer is Document 2 / False
+    result = validate_pair_calls(records, workload, expected_repetitions=2)
+    assert not result["contract_ok"]
+
+
+def test_workload_entry_order_does_not_change_query_identity():
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    workload["entries"].reverse()
+    assert validate_pair_calls(records, workload, expected_repetitions=2)["contract_ok"]
+
+
+def test_pool_rejects_duplicate_call_instead_of_overwriting():
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    with pytest.raises(ValueError):
+        build_pair_pool(records + [records[0]])
 
 
 def test_missing_contract_field_is_flagged():
@@ -256,3 +286,57 @@ def test_jsonl_loader_roundtrip(tmp_path):
     from certirank.pair_pool import load_jsonl
 
     assert [row["i"] for row in load_jsonl(path)] == [0, 1, 2]
+
+
+def test_duplicate_workload_queries_cannot_pass_contract():
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    workload["query_ids"].append("q1")
+    result = validate_pair_calls(records, workload, expected_repetitions=2)
+    assert not result["contract_ok"]
+
+
+@pytest.mark.parametrize("field,value", [("timestamp_utc", ""), ("timestamp_utc", "2026-10-15"),
+                                         ("run_id", ""), ("requested_model", "")])
+def test_empty_or_unzoned_provenance_is_rejected(field, value):
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    for row in records:
+        row[field] = value
+    assert not validate_pair_calls(records, workload, expected_repetitions=2)["contract_ok"]
+
+
+def test_nested_boolean_numeric_identity_drift_is_rejected():
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    for row in records:
+        row["model_parameters"] = {"thinking": 1}
+    result = validate_pair_calls(records, workload, expected_repetitions=2,
+                                 expected_identity={"model_parameters": {"thinking": True}})
+    assert not result["contract_ok"]
+
+
+def test_relaxed_pool_status_never_coerces_nonboolean_verdicts():
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    records[0]["strict_parsed_decision"] = "False"
+    with pytest.raises(ValueError):
+        build_pair_pool(records, require_valid=False)
+
+
+def test_jsonl_record_must_be_an_object(tmp_path):
+    path = tmp_path / "rows.jsonl"
+    path.write_text('[1, 2, 3]\n')
+    from certirank.pair_pool import load_jsonl
+    with pytest.raises(ValueError, match="object"):
+        load_jsonl(path)
+
+
+def test_mutating_one_record_does_not_mutate_shared_fixtures():
+    workload = _workload([_entry(q, [f"hash-{q}-{p}" for p in range(3)]) for q in QUERIES])
+    records = _complete_records(workload)
+    before = list(workload["entries"][0]["doc_ids"])
+    records[0]["document_order"].reverse()
+    assert workload["entries"][0]["doc_ids"] == before
+    assert records[1]["document_order"] == before
+    assert not validate_pair_calls(records, workload, expected_repetitions=2)["contract_ok"]

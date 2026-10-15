@@ -1,0 +1,6427 @@
+{
+  "settings_hash": "f5bafaed2e21d231220e840b8032ef5b2e81948582cb20a1a7cf77a102dd95a3",
+  "code_hash": "91e2e3f8d29e0d864ce9b202110eeac14552f075a58ac2ea046616e225e087a2",
+  "source_kind": "synthetic",
+  "python": "3.14.7",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "rows": [
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 70000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 70000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 72000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 71000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 71000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 128000,
+        "probe": 5000,
+        "total": 188000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 77000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 7000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 71000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 70000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 71000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 7000,
+        "policy": 12000,
+        "probe": 5000,
+        "total": 68000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 7000,
+        "policy": 11000,
+        "probe": 5000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 5000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 68000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 5000,
+        "total": 72000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 68000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 3000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 5000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 72000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 3000,
+        "total": 70000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 70000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 5000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 68000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 69000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 5000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 5000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 3000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 5000,
+        "total": 68000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 5000,
+        "total": 68000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 10000,
+        "probe": 3000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 9000,
+        "extraction": 5000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 7000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 7000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 5000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 3000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 3000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 5000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 9000,
+        "extraction": 5000,
+        "policy": 11000,
+        "probe": 3000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 11000,
+        "probe": 3000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 11000,
+        "probe": 5000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 9000,
+        "extraction": 5000,
+        "policy": 11000,
+        "probe": 4000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 9000,
+        "extraction": 13000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 73000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 10000,
+        "probe": 4000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 5000,
+        "total": 67000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 65000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 66000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 9000,
+        "probe": 4000,
+        "total": 65000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 200000,
+        "probe": 4000,
+        "total": 263000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 7000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 257000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 7000,
+        "policy": 201000,
+        "probe": 4000,
+        "total": 260000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 7000,
+        "policy": 204000,
+        "probe": 5000,
+        "total": 265000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 202000,
+        "probe": 4000,
+        "total": 263000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 4000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 7000,
+        "policy": 200000,
+        "probe": 4000,
+        "total": 263000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 201000,
+        "probe": 5000,
+        "total": 263000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 198000,
+        "probe": 5000,
+        "total": 263000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 236000,
+        "probe": 6000,
+        "total": 313000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 205000,
+        "probe": 6000,
+        "total": 283000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 203000,
+        "probe": 5000,
+        "total": 268000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 262000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 199000,
+        "probe": 5000,
+        "total": 263000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 201000,
+        "probe": 4000,
+        "total": 265000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 198000,
+        "probe": 6000,
+        "total": 260000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 4000,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 198000,
+        "probe": 5000,
+        "total": 274000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 203000,
+        "probe": 5000,
+        "total": 267000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 195000,
+        "probe": 4000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 4000,
+        "total": 261000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 262000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 7000,
+        "policy": 198000,
+        "probe": 4000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 199000,
+        "probe": 4000,
+        "total": 260000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 5000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 6000,
+        "total": 260000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 5000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 199000,
+        "probe": 5000,
+        "total": 267000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 4000,
+        "total": 260000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 5000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 257000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 7000,
+        "policy": 196000,
+        "probe": 4000,
+        "total": 256000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 5000,
+        "total": 261000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 194000,
+        "probe": 4000,
+        "total": 256000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 195000,
+        "probe": 4000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 7000,
+        "policy": 198000,
+        "probe": 4000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 5000,
+        "policy": 195000,
+        "probe": 4000,
+        "total": 256000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 5000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 7000,
+        "policy": 194000,
+        "probe": 4000,
+        "total": 256000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 4000,
+        "total": 261000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 5000,
+        "total": 261000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 4000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 5000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 205000,
+        "probe": 5000,
+        "total": 264000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 198000,
+        "probe": 4000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 12000,
+        "policy": 198000,
+        "probe": 4000,
+        "total": 266000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 198000,
+        "probe": 5000,
+        "total": 260000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 5000,
+        "policy": 203000,
+        "probe": 4000,
+        "total": 263000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 5000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 195000,
+        "probe": 5000,
+        "total": 255000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 197000,
+        "probe": 3000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 7000,
+        "policy": 195000,
+        "probe": 4000,
+        "total": 254000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 198000,
+        "probe": 5000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 197000,
+        "probe": 5000,
+        "total": 257000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 11000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 5000,
+        "total": 258000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 6000,
+        "policy": 196000,
+        "probe": 4000,
+        "total": 259000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 9000,
+        "extraction": 6000,
+        "policy": 194000,
+        "probe": 4000,
+        "total": 256000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 15,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 10000,
+        "extraction": 5000,
+        "policy": 197000,
+        "probe": 4000,
+        "total": 257000
+      },
+      "node_evaluations": 13
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 7000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 6000,
+        "policy": 29000,
+        "probe": 7000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 8000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 27000,
+        "probe": 8000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 7000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 19000,
+        "extraction": 8000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 26000,
+        "probe": 7000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 7000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 10000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 7000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 7000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 7000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 8000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 7000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 9000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 29000,
+        "probe": 9000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 19000,
+        "extraction": 8000,
+        "policy": 27000,
+        "probe": 9000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 6000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 9000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 27000,
+        "probe": 8000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 27000,
+        "probe": 8000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 8000,
+        "policy": 28000,
+        "probe": 8000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 27000,
+        "probe": 8000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 8000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 7000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 26000,
+        "probe": 8000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 30000,
+        "probe": 6000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 9000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 28000,
+        "probe": 8000,
+        "total": 133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 36000,
+        "extraction": 8000,
+        "policy": 35000,
+        "probe": 9000,
+        "total": 182000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 22000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 10000,
+        "total": 150000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 9000,
+        "total": 139000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 30000,
+        "probe": 9000,
+        "total": 139000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 9000,
+        "total": 137000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 10000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 8000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 9000,
+        "total": 137000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 137000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 7000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 28000,
+        "probe": 11000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 10000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 9000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 9000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 10000,
+        "total": 136000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 29000,
+        "probe": 8000,
+        "total": 137000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 29000,
+        "probe": 7000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 7000,
+        "total": 135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 19000,
+        "extraction": 7000,
+        "policy": 30000,
+        "probe": 9000,
+        "total": 134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1034000,
+        "probe": 10000,
+        "total": 1147000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1030000,
+        "probe": 9000,
+        "total": 1141000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1034000,
+        "probe": 16000,
+        "total": 1153000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1027000,
+        "probe": 9000,
+        "total": 1141000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1046000,
+        "probe": 9000,
+        "total": 1160000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 26000,
+        "extraction": 7000,
+        "policy": 1032000,
+        "probe": 10000,
+        "total": 1147000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1057000,
+        "probe": 10000,
+        "total": 1179000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1041000,
+        "probe": 7000,
+        "total": 1158000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1036000,
+        "probe": 9000,
+        "total": 1169000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1030000,
+        "probe": 10000,
+        "total": 1146000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1034000,
+        "probe": 10000,
+        "total": 1151000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1031000,
+        "probe": 9000,
+        "total": 1147000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1032000,
+        "probe": 10000,
+        "total": 1142000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1032000,
+        "probe": 8000,
+        "total": 1144000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1030000,
+        "probe": 9000,
+        "total": 1148000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1030000,
+        "probe": 8000,
+        "total": 1152000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1024000,
+        "probe": 8000,
+        "total": 1134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1029000,
+        "probe": 8000,
+        "total": 1140000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1023000,
+        "probe": 10000,
+        "total": 1138000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1027000,
+        "probe": 10000,
+        "total": 1138000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1023000,
+        "probe": 8000,
+        "total": 1132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1038000,
+        "probe": 9000,
+        "total": 1150000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1028000,
+        "probe": 9000,
+        "total": 1141000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1032000,
+        "probe": 7000,
+        "total": 1141000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1019000,
+        "probe": 8000,
+        "total": 1133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 9000,
+        "policy": 1025000,
+        "probe": 9000,
+        "total": 1142000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1070000,
+        "probe": 13000,
+        "total": 1201000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 22000,
+        "extraction": 8000,
+        "policy": 1025000,
+        "probe": 9000,
+        "total": 1146000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1029000,
+        "probe": 9000,
+        "total": 1148000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1022000,
+        "probe": 9000,
+        "total": 1135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1033000,
+        "probe": 10000,
+        "total": 1147000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1034000,
+        "probe": 8000,
+        "total": 1148000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1030000,
+        "probe": 9000,
+        "total": 1144000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 22000,
+        "extraction": 7000,
+        "policy": 1030000,
+        "probe": 8000,
+        "total": 1142000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1024000,
+        "probe": 8000,
+        "total": 1135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1034000,
+        "probe": 9000,
+        "total": 1147000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1028000,
+        "probe": 12000,
+        "total": 1146000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1025000,
+        "probe": 8000,
+        "total": 1138000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1032000,
+        "probe": 10000,
+        "total": 1149000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1024000,
+        "probe": 8000,
+        "total": 1135000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1033000,
+        "probe": 8000,
+        "total": 1146000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1022000,
+        "probe": 9000,
+        "total": 1133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1020000,
+        "probe": 7000,
+        "total": 1130000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1043000,
+        "probe": 9000,
+        "total": 1155000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1023000,
+        "probe": 9000,
+        "total": 1142000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1038000,
+        "probe": 8000,
+        "total": 1153000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1021000,
+        "probe": 7000,
+        "total": 1130000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1028000,
+        "probe": 8000,
+        "total": 1144000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1023000,
+        "probe": 9000,
+        "total": 1137000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1023000,
+        "probe": 8000,
+        "total": 1144000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1018000,
+        "probe": 8000,
+        "total": 1134000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1025000,
+        "probe": 9000,
+        "total": 1139000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 21000,
+        "extraction": 8000,
+        "policy": 1023000,
+        "probe": 10000,
+        "total": 1144000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1014000,
+        "probe": 9000,
+        "total": 1124000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1016000,
+        "probe": 8000,
+        "total": 1125000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1022000,
+        "probe": 8000,
+        "total": 1132000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1017000,
+        "probe": 9000,
+        "total": 1133000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 21000,
+        "extraction": 7000,
+        "policy": 1015000,
+        "probe": 11000,
+        "total": 1131000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 7000,
+        "policy": 1014000,
+        "probe": 7000,
+        "total": 1125000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 28,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 20000,
+        "extraction": 8000,
+        "policy": 1019000,
+        "probe": 9000,
+        "total": 1126000
+      },
+      "node_evaluations": 23
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 123000,
+        "extraction": 28000,
+        "policy": 197000,
+        "probe": 18000,
+        "total": 687000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 84000,
+        "extraction": 29000,
+        "policy": 193000,
+        "probe": 18000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 672000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 84000,
+        "extraction": 27000,
+        "policy": 194000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 20000,
+        "total": 679000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 4000,
+        "initial_update": 128000,
+        "extraction": 27000,
+        "policy": 204000,
+        "probe": 21000,
+        "total": 702000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 122000,
+        "extraction": 27000,
+        "policy": 198000,
+        "probe": 19000,
+        "total": 687000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 83000,
+        "extraction": 30000,
+        "policy": 196000,
+        "probe": 19000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 673000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 91000,
+        "extraction": 27000,
+        "policy": 198000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 683000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 122000,
+        "extraction": 28000,
+        "policy": 193000,
+        "probe": 20000,
+        "total": 680000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 122000,
+        "extraction": 27000,
+        "policy": 197000,
+        "probe": 18000,
+        "total": 692000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 89000,
+        "extraction": 30000,
+        "policy": 196000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 686000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 83000,
+        "extraction": 27000,
+        "policy": 198000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 681000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 127000,
+        "extraction": 28000,
+        "policy": 193000,
+        "probe": 19000,
+        "total": 689000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 128000,
+        "extraction": 28000,
+        "policy": 195000,
+        "probe": 20000,
+        "total": 689000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 83000,
+        "extraction": 27000,
+        "policy": 194000,
+        "probe": 19000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 671000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 82000,
+        "extraction": 27000,
+        "policy": 200000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 674000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 121000,
+        "extraction": 30000,
+        "policy": 195000,
+        "probe": 21000,
+        "total": 684000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 121000,
+        "extraction": 26000,
+        "policy": 197000,
+        "probe": 19000,
+        "total": 693000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 82000,
+        "extraction": 27000,
+        "policy": 196000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 671000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 83000,
+        "extraction": 28000,
+        "policy": 198000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 671000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 129000,
+        "extraction": 29000,
+        "policy": 193000,
+        "probe": 19000,
+        "total": 701000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 130000,
+        "extraction": 27000,
+        "policy": 197000,
+        "probe": 21000,
+        "total": 692000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 83000,
+        "extraction": 29000,
+        "policy": 209000,
+        "probe": 20000,
+        "invalidation": 7000,
+        "trace_build": 22000,
+        "total": 700000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 84000,
+        "extraction": 27000,
+        "policy": 198000,
+        "probe": 19000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 680000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 124000,
+        "extraction": 28000,
+        "policy": 196000,
+        "probe": 19000,
+        "total": 685000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 124000,
+        "extraction": 27000,
+        "policy": 201000,
+        "probe": 19000,
+        "total": 684000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 82000,
+        "extraction": 27000,
+        "policy": 197000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 671000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 85000,
+        "extraction": 28000,
+        "policy": 196000,
+        "probe": 20000,
+        "invalidation": 7000,
+        "trace_build": 21000,
+        "total": 673000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 122000,
+        "extraction": 26000,
+        "policy": 194000,
+        "probe": 20000,
+        "total": 680000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 121000,
+        "extraction": 27000,
+        "policy": 197000,
+        "probe": 21000,
+        "total": 679000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 83000,
+        "extraction": 28000,
+        "policy": 197000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 672000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 82000,
+        "extraction": 26000,
+        "policy": 196000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 670000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 121000,
+        "extraction": 27000,
+        "policy": 194000,
+        "probe": 17000,
+        "total": 680000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 123000,
+        "extraction": 30000,
+        "policy": 199000,
+        "probe": 19000,
+        "total": 683000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 83000,
+        "extraction": 27000,
+        "policy": 196000,
+        "probe": 20000,
+        "invalidation": 7000,
+        "trace_build": 21000,
+        "total": 670000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 83000,
+        "extraction": 28000,
+        "policy": 196000,
+        "probe": 19000,
+        "invalidation": 7000,
+        "trace_build": 21000,
+        "total": 668000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 125000,
+        "extraction": 28000,
+        "policy": 195000,
+        "probe": 18000,
+        "total": 684000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 122000,
+        "extraction": 30000,
+        "policy": 195000,
+        "probe": 20000,
+        "total": 679000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 82000,
+        "extraction": 27000,
+        "policy": 196000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 669000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 85000,
+        "extraction": 28000,
+        "policy": 196000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 670000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 123000,
+        "extraction": 27000,
+        "policy": 194000,
+        "probe": 18000,
+        "total": 680000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 123000,
+        "extraction": 28000,
+        "policy": 197000,
+        "probe": 18000,
+        "total": 679000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 82000,
+        "extraction": 28000,
+        "policy": 198000,
+        "probe": 19000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 670000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 85000,
+        "extraction": 28000,
+        "policy": 200000,
+        "probe": 18000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 677000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 122000,
+        "extraction": 27000,
+        "policy": 197000,
+        "probe": 23000,
+        "total": 680000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 121000,
+        "extraction": 27000,
+        "policy": 194000,
+        "probe": 21000,
+        "total": 681000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 86000,
+        "extraction": 28000,
+        "policy": 196000,
+        "probe": 18000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 675000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 83000,
+        "extraction": 26000,
+        "policy": 193000,
+        "probe": 18000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 670000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 122000,
+        "extraction": 28000,
+        "policy": 192000,
+        "probe": 19000,
+        "total": 681000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 122000,
+        "extraction": 27000,
+        "policy": 193000,
+        "probe": 20000,
+        "total": 681000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 84000,
+        "extraction": 28000,
+        "policy": 197000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 667000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 85000,
+        "extraction": 29000,
+        "policy": 210000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 702000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 123000,
+        "extraction": 28000,
+        "policy": 197000,
+        "probe": 21000,
+        "total": 688000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 120000,
+        "extraction": 28000,
+        "policy": 197000,
+        "probe": 20000,
+        "total": 681000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 84000,
+        "extraction": 27000,
+        "policy": 197000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 672000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 83000,
+        "extraction": 28000,
+        "policy": 194000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 20000,
+        "total": 669000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 121000,
+        "extraction": 27000,
+        "policy": 193000,
+        "probe": 16000,
+        "total": 679000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 121000,
+        "extraction": 27000,
+        "policy": 195000,
+        "probe": 19000,
+        "total": 678000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 83000,
+        "extraction": 27000,
+        "policy": 197000,
+        "probe": 19000,
+        "invalidation": 6000,
+        "trace_build": 20000,
+        "total": 671000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "incremental",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 83000,
+        "extraction": 26000,
+        "policy": 194000,
+        "probe": 16000,
+        "invalidation": 7000,
+        "trace_build": 20000,
+        "total": 670000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mode": "cached_replay",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 120000,
+        "extraction": 27000,
+        "policy": 196000,
+        "probe": 20000,
+        "total": 677000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 122000,
+        "extraction": 27000,
+        "policy": 26035000,
+        "probe": 23000,
+        "total": 26542000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 0,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 85000,
+        "extraction": 32000,
+        "policy": 26030000,
+        "probe": 24000,
+        "invalidation": 7000,
+        "trace_build": 20000,
+        "total": 26538000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 89000,
+        "extraction": 31000,
+        "policy": 25951000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26456000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 1,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 127000,
+        "extraction": 27000,
+        "policy": 25842000,
+        "probe": 24000,
+        "total": 26367000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 125000,
+        "extraction": 28000,
+        "policy": 26252000,
+        "probe": 20000,
+        "total": 26761000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 2,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 86000,
+        "extraction": 31000,
+        "policy": 26067000,
+        "probe": 28000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26584000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 85000,
+        "extraction": 29000,
+        "policy": 26048000,
+        "probe": 21000,
+        "invalidation": 7000,
+        "trace_build": 22000,
+        "total": 26551000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 3,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 124000,
+        "extraction": 30000,
+        "policy": 25988000,
+        "probe": 22000,
+        "total": 26520000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 123000,
+        "extraction": 28000,
+        "policy": 26095000,
+        "probe": 25000,
+        "total": 26603000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 4,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 86000,
+        "extraction": 27000,
+        "policy": 26021000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26520000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 85000,
+        "extraction": 28000,
+        "policy": 26005000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26495000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 5,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 126000,
+        "extraction": 36000,
+        "policy": 26150000,
+        "probe": 22000,
+        "total": 26680000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 123000,
+        "extraction": 36000,
+        "policy": 25997000,
+        "probe": 21000,
+        "total": 26510000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 6,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 85000,
+        "extraction": 29000,
+        "policy": 25844000,
+        "probe": 22000,
+        "invalidation": 7000,
+        "trace_build": 21000,
+        "total": 26343000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 91000,
+        "extraction": 31000,
+        "policy": 26189000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 26720000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 7,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 126000,
+        "extraction": 29000,
+        "policy": 26058000,
+        "probe": 22000,
+        "total": 26585000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 123000,
+        "extraction": 28000,
+        "policy": 26169000,
+        "probe": 20000,
+        "total": 26679000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 8,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 84000,
+        "extraction": 29000,
+        "policy": 26077000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26590000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 89000,
+        "extraction": 28000,
+        "policy": 25877000,
+        "probe": 21000,
+        "invalidation": 7000,
+        "trace_build": 22000,
+        "total": 26381000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 9,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 127000,
+        "extraction": 32000,
+        "policy": 26414000,
+        "probe": 28000,
+        "total": 26951000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 129000,
+        "extraction": 28000,
+        "policy": 26128000,
+        "probe": 22000,
+        "total": 26667000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 10,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 86000,
+        "extraction": 29000,
+        "policy": 26133000,
+        "probe": 24000,
+        "invalidation": 7000,
+        "trace_build": 22000,
+        "total": 26653000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 93000,
+        "extraction": 28000,
+        "policy": 26038000,
+        "probe": 23000,
+        "invalidation": 7000,
+        "trace_build": 20000,
+        "total": 26568000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 11,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 124000,
+        "extraction": 32000,
+        "policy": 26189000,
+        "probe": 22000,
+        "total": 26720000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 4000,
+        "initial_update": 122000,
+        "extraction": 28000,
+        "policy": 26038000,
+        "probe": 21000,
+        "total": 26552000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 12,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 86000,
+        "extraction": 27000,
+        "policy": 27358000,
+        "probe": 23000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 27868000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 87000,
+        "extraction": 28000,
+        "policy": 26057000,
+        "probe": 26000,
+        "invalidation": 8000,
+        "trace_build": 21000,
+        "total": 26566000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 13,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 124000,
+        "extraction": 28000,
+        "policy": 26141000,
+        "probe": 24000,
+        "total": 26658000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 125000,
+        "extraction": 28000,
+        "policy": 26048000,
+        "probe": 23000,
+        "total": 26559000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 14,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 93000,
+        "extraction": 28000,
+        "policy": 25857000,
+        "probe": 20000,
+        "invalidation": 7000,
+        "trace_build": 21000,
+        "total": 26367000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 85000,
+        "extraction": 28000,
+        "policy": 25931000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26427000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 15,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 123000,
+        "extraction": 28000,
+        "policy": 26229000,
+        "probe": 22000,
+        "total": 26742000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 124000,
+        "extraction": 28000,
+        "policy": 25947000,
+        "probe": 23000,
+        "total": 26458000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 16,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 87000,
+        "extraction": 31000,
+        "policy": 26071000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 20000,
+        "total": 26576000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 85000,
+        "extraction": 28000,
+        "policy": 26007000,
+        "probe": 22000,
+        "invalidation": 7000,
+        "trace_build": 20000,
+        "total": 26502000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 17,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 122000,
+        "extraction": 28000,
+        "policy": 26066000,
+        "probe": 25000,
+        "total": 26583000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 126000,
+        "extraction": 28000,
+        "policy": 26094000,
+        "probe": 22000,
+        "total": 26612000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 18,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 86000,
+        "extraction": 30000,
+        "policy": 26017000,
+        "probe": 31000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26530000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 86000,
+        "extraction": 28000,
+        "policy": 26034000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26531000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 19,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 124000,
+        "extraction": 30000,
+        "policy": 26041000,
+        "probe": 23000,
+        "total": 26558000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 124000,
+        "extraction": 27000,
+        "policy": 26027000,
+        "probe": 21000,
+        "total": 26541000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 20,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 84000,
+        "extraction": 30000,
+        "policy": 26045000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26546000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 84000,
+        "extraction": 27000,
+        "policy": 25970000,
+        "probe": 21000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26469000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 21,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 139000,
+        "extraction": 32000,
+        "policy": 26058000,
+        "probe": 21000,
+        "total": 26587000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 4000,
+        "initial_update": 124000,
+        "extraction": 29000,
+        "policy": 26009000,
+        "probe": 23000,
+        "total": 26520000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 22,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 85000,
+        "extraction": 31000,
+        "policy": 26075000,
+        "probe": 25000,
+        "invalidation": 7000,
+        "trace_build": 21000,
+        "total": 26602000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 85000,
+        "extraction": 27000,
+        "policy": 26001000,
+        "probe": 33000,
+        "invalidation": 6000,
+        "trace_build": 20000,
+        "total": 26510000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 23,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 130000,
+        "extraction": 29000,
+        "policy": 26029000,
+        "probe": 22000,
+        "total": 26556000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 0,
+        "initial_update": 127000,
+        "extraction": 28000,
+        "policy": 26006000,
+        "probe": 20000,
+        "total": 26516000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 24,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 85000,
+        "extraction": 29000,
+        "policy": 26000000,
+        "probe": 20000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 26507000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 4000,
+        "initial_update": 84000,
+        "extraction": 27000,
+        "policy": 25986000,
+        "probe": 19000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26482000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 25,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 123000,
+        "extraction": 32000,
+        "policy": 25988000,
+        "probe": 21000,
+        "total": 26507000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 124000,
+        "extraction": 27000,
+        "policy": 26071000,
+        "probe": 24000,
+        "total": 26585000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 26,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 86000,
+        "extraction": 27000,
+        "policy": 25998000,
+        "probe": 22000,
+        "invalidation": 6000,
+        "trace_build": 21000,
+        "total": 26499000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 3000,
+        "initial_update": 85000,
+        "extraction": 27000,
+        "policy": 26034000,
+        "probe": 22000,
+        "invalidation": 7000,
+        "trace_build": 20000,
+        "total": 26534000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 27,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 122000,
+        "extraction": 28000,
+        "policy": 25927000,
+        "probe": 20000,
+        "total": 26438000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 123000,
+        "extraction": 30000,
+        "policy": 26054000,
+        "probe": 22000,
+        "total": 26568000
+      },
+      "node_evaluations": 150
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 28,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 89000,
+        "extraction": 32000,
+        "policy": 26274000,
+        "probe": 26000,
+        "invalidation": 6000,
+        "trace_build": 22000,
+        "total": 26807000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "incremental",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 1000,
+        "initial_update": 88000,
+        "extraction": 30000,
+        "policy": 26246000,
+        "probe": 25000,
+        "invalidation": 6000,
+        "trace_build": 23000,
+        "total": 26770000
+      },
+      "node_evaluations": 90
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mode": "cached_replay",
+      "trial": 29,
+      "status": "complete",
+      "logical_calls": 102,
+      "cpu_ns": {
+        "state_copy": 2000,
+        "initial_update": 127000,
+        "extraction": 30000,
+        "policy": 26195000,
+        "probe": 20000,
+        "total": 26721000
+      },
+      "node_evaluations": 150
+    }
+  ],
+  "summary": [
+    {
+      "n": 8,
+      "method": "SimpleTopology",
+      "mean_total_cpu_ns": {
+        "incremental": 68200,
+        "cached_replay": 72366.66666666667
+      },
+      "mean_phase_cpu_ns": {
+        "incremental": {
+          "state_copy": 466.6666666666667,
+          "invalidation": 0,
+          "initial_update": 9633.333333333334,
+          "trace_build": 0,
+          "extraction": 6300,
+          "policy": 10333.333333333334,
+          "probe": 4266.666666666667
+        },
+        "cached_replay": {
+          "state_copy": 566.6666666666666,
+          "invalidation": 0,
+          "initial_update": 9766.666666666666,
+          "trace_build": 0,
+          "extraction": 5833.333333333333,
+          "policy": 14166.666666666666,
+          "probe": 4100
+        }
+      },
+      "paired_mean_reduction": 0.057577153385536706
+    },
+    {
+      "n": 8,
+      "method": "TraceSensitivity",
+      "mean_total_cpu_ns": {
+        "incremental": 262100,
+        "cached_replay": 260833.33333333334
+      },
+      "mean_phase_cpu_ns": {
+        "incremental": {
+          "state_copy": 566.6666666666666,
+          "invalidation": 0,
+          "initial_update": 10133.333333333334,
+          "trace_build": 0,
+          "extraction": 6100,
+          "policy": 199266.66666666666,
+          "probe": 4400
+        },
+        "cached_replay": {
+          "state_copy": 433.3333333333333,
+          "invalidation": 0,
+          "initial_update": 10066.666666666666,
+          "trace_build": 0,
+          "extraction": 6066.666666666667,
+          "policy": 197633.33333333334,
+          "probe": 4566.666666666667
+        }
+      },
+      "paired_mean_reduction": -0.004856230031948794
+    },
+    {
+      "n": 16,
+      "method": "SimpleTopology",
+      "mean_total_cpu_ns": {
+        "incremental": 136166.66666666666,
+        "cached_replay": 134733.33333333334
+      },
+      "mean_phase_cpu_ns": {
+        "incremental": {
+          "state_copy": 700,
+          "invalidation": 0,
+          "initial_update": 20433.333333333332,
+          "trace_build": 0,
+          "extraction": 7133.333333333333,
+          "policy": 28666.666666666668,
+          "probe": 8166.666666666667
+        },
+        "cached_replay": {
+          "state_copy": 400,
+          "invalidation": 0,
+          "initial_update": 19800,
+          "trace_build": 0,
+          "extraction": 7233.333333333333,
+          "policy": 28866.666666666668,
+          "probe": 8366.666666666666
+        }
+      },
+      "paired_mean_reduction": -0.010638297872340274
+    },
+    {
+      "n": 16,
+      "method": "TraceSensitivity",
+      "mean_total_cpu_ns": {
+        "incremental": 1143200,
+        "cached_replay": 1143533.3333333333
+      },
+      "mean_phase_cpu_ns": {
+        "incremental": {
+          "state_copy": 600,
+          "invalidation": 0,
+          "initial_update": 20533.333333333332,
+          "trace_build": 0,
+          "extraction": 7300,
+          "policy": 1028633.3333333334,
+          "probe": 9166.666666666666
+        },
+        "cached_replay": {
+          "state_copy": 566.6666666666666,
+          "invalidation": 0,
+          "initial_update": 20400,
+          "trace_build": 0,
+          "extraction": 7433.333333333333,
+          "policy": 1028733.3333333334,
+          "probe": 8800
+        }
+      },
+      "paired_mean_reduction": 0.0002914941992653297
+    },
+    {
+      "n": 64,
+      "method": "SimpleTopology",
+      "mean_total_cpu_ns": {
+        "incremental": 674900,
+        "cached_replay": 684500
+      },
+      "mean_phase_cpu_ns": {
+        "incremental": {
+          "state_copy": 1466.6666666666667,
+          "invalidation": 6166.666666666667,
+          "initial_update": 83800,
+          "trace_build": 21166.666666666668,
+          "extraction": 27633.333333333332,
+          "policy": 197200,
+          "probe": 19800
+        },
+        "cached_replay": {
+          "state_copy": 1633.3333333333333,
+          "invalidation": 0,
+          "initial_update": 123100,
+          "trace_build": 0,
+          "extraction": 27633.333333333332,
+          "policy": 195833.33333333334,
+          "probe": 19433.333333333332
+        }
+      },
+      "paired_mean_reduction": 0.01402483564645729
+    },
+    {
+      "n": 64,
+      "method": "TraceSensitivity",
+      "mean_total_cpu_ns": {
+        "incremental": 26583066.666666668,
+        "cached_replay": 26594866.666666668
+      },
+      "mean_phase_cpu_ns": {
+        "incremental": {
+          "state_copy": 1500,
+          "invalidation": 6400,
+          "initial_update": 86466.66666666667,
+          "trace_build": 21100,
+          "extraction": 28900,
+          "policy": 26074700,
+          "probe": 23033.333333333332
+        },
+        "cached_replay": {
+          "state_copy": 1933.3333333333333,
+          "invalidation": 0,
+          "initial_update": 125066.66666666667,
+          "trace_build": 0,
+          "extraction": 29300,
+          "policy": 26076166.666666668,
+          "probe": 22266.666666666668
+        }
+      },
+      "paired_mean_reduction": 0.0004436946478393322
+    }
+  ],
+  "limitations": "instrumented repeated CPU microbenchmark; no provider latency, no independent-query performance claim",
+  "new_physical_calls": 0
+}

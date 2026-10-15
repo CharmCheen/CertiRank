@@ -143,3 +143,15 @@ def test_identical_vectors_have_no_differences():
     assert pair_report["differing_pair_count"] == 0
     assert pair_report["topk_order_equal"] is True
     assert report["distinct_topk_ordered"] == 1
+    assert pair_report["single_flip_answer_impact_count"] == 0
+    assert pair_report["combined_answer_changed"] is False
+    assert pair_report["joint_emergent"] is False
+    assert pair_report["cancelling"] is False
+
+
+@pytest.mark.parametrize("k", [0, 5, True])
+def test_counterfactuals_reject_invalid_topk_dimensions(k):
+    with pytest.raises(ValueError):
+        single_point_counterfactuals(base_verdicts=BASE_4, n_docs=4, k=k)
+    with pytest.raises(ValueError):
+        multi_point_propagation(verdict_vectors=[BASE_4], n_docs=4, k=k)

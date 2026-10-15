@@ -1,5 +1,5 @@
 {
-  "audit_version": 1,
+  "audit_version": 2,
   "verdict": "PASS",
   "checks": [
     {

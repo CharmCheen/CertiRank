@@ -1,0 +1,178 @@
+[
+  {
+    "query_id": "636",
+    "absolute_budget": 2,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 51,
+    "feasible_forced_flip_repairs": 9,
+    "new_request_distribution": {
+      "0": 9,
+      "4": 3,
+      "3": 14,
+      "2": 12,
+      "1": 10,
+      "5": 3
+    }
+  },
+  {
+    "query_id": "636",
+    "absolute_budget": 4,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 51,
+    "feasible_forced_flip_repairs": 31,
+    "new_request_distribution": {
+      "0": 9,
+      "4": 3,
+      "3": 14,
+      "2": 12,
+      "1": 10,
+      "5": 3
+    }
+  },
+  {
+    "query_id": "636",
+    "absolute_budget": 6,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 51,
+    "feasible_forced_flip_repairs": 48,
+    "new_request_distribution": {
+      "0": 9,
+      "4": 3,
+      "3": 14,
+      "2": 12,
+      "1": 10,
+      "5": 3
+    }
+  },
+  {
+    "query_id": "636",
+    "absolute_budget": 8,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 51,
+    "feasible_forced_flip_repairs": 51,
+    "new_request_distribution": {
+      "0": 9,
+      "4": 3,
+      "3": 14,
+      "2": 12,
+      "1": 10,
+      "5": 3
+    }
+  },
+  {
+    "query_id": "327",
+    "absolute_budget": 2,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 55,
+    "feasible_forced_flip_repairs": 6,
+    "new_request_distribution": {
+      "2": 16,
+      "3": 10,
+      "1": 16,
+      "0": 6,
+      "4": 6,
+      "5": 1
+    }
+  },
+  {
+    "query_id": "327",
+    "absolute_budget": 4,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 55,
+    "feasible_forced_flip_repairs": 38,
+    "new_request_distribution": {
+      "2": 16,
+      "3": 10,
+      "1": 16,
+      "0": 6,
+      "4": 6,
+      "5": 1
+    }
+  },
+  {
+    "query_id": "327",
+    "absolute_budget": 6,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 55,
+    "feasible_forced_flip_repairs": 54,
+    "new_request_distribution": {
+      "2": 16,
+      "3": 10,
+      "1": 16,
+      "0": 6,
+      "4": 6,
+      "5": 1
+    }
+  },
+  {
+    "query_id": "327",
+    "absolute_budget": 8,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 55,
+    "feasible_forced_flip_repairs": 55,
+    "new_request_distribution": {
+      "2": 16,
+      "3": 10,
+      "1": 16,
+      "0": 6,
+      "4": 6,
+      "5": 1
+    }
+  },
+  {
+    "query_id": "51",
+    "absolute_budget": 2,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 53,
+    "feasible_forced_flip_repairs": 10,
+    "new_request_distribution": {
+      "0": 10,
+      "2": 10,
+      "3": 12,
+      "1": 12,
+      "4": 9
+    }
+  },
+  {
+    "query_id": "51",
+    "absolute_budget": 4,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 53,
+    "feasible_forced_flip_repairs": 32,
+    "new_request_distribution": {
+      "0": 10,
+      "2": 10,
+      "3": 12,
+      "1": 12,
+      "4": 9
+    }
+  },
+  {
+    "query_id": "51",
+    "absolute_budget": 6,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 53,
+    "feasible_forced_flip_repairs": 53,
+    "new_request_distribution": {
+      "0": 10,
+      "2": 10,
+      "3": 12,
+      "1": 12,
+      "4": 9
+    }
+  },
+  {
+    "query_id": "51",
+    "absolute_budget": 8,
+    "scope": "forced-flip repair feasibility, not voting value or independent evidence",
+    "requests": 53,
+    "feasible_forced_flip_repairs": 53,
+    "new_request_distribution": {
+      "0": 10,
+      "2": 10,
+      "3": 12,
+      "1": 12,
+      "4": 9
+    }
+  }
+]
