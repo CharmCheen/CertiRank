@@ -1,0 +1,293 @@
+{
+  "formal_dev": {
+    "records": 2016,
+    "queries": 6,
+    "pairs_per_query": 28,
+    "repetitions": 12,
+    "expected_records": 2016,
+    "unique_provider_request_ids": 2016,
+    "parse_invalid_independent": 0,
+    "parse_mismatch_independent": 0,
+    "timestamp_span_utc": [
+      "2026-10-15 08:34:41.923806+00:00",
+      "2026-10-15 09:51:47.046523+00:00"
+    ],
+    "timestamp_file_order_monotone_ratio": 1.0,
+    "distinct_raw_response_texts": 15,
+    "most_common_raw_texts": [
+      [
+        "Document 1",
+        1392
+      ],
+      [
+        "Document 2",
+        611
+      ],
+      [
+        "Neither document discusses leucine intake or longevity, so I must choose the more relevant of the two. Both concern diet and health outcomes, but neither addresses leucine or lifespan directly. Document 1 is slightly more relevant as it involves long-term dietary supplementation and broader health effects, but honestly both are poor matches.",
+        1
+      ],
+      [
+        "Neither document discusses diet, but both are about drug treatments. Document 1 at least addresses MS treatment efficacy directly. So: \"Document 1\"",
+        1
+      ],
+      [
+        "Neither document is relevant—the query concerns diverticulosis, a gut disorder, while both documents discuss antibiotic resistance. If forced to choose, Document 1.",
+        1
+      ]
+    ],
+    "identity": {
+      "experiment_id": "CertiRank|live",
+      "condition": "live|dev",
+      "requested_model": "GLM-5.3-Flash",
+      "model_parameters": {
+        "provider": "openai_compatible",
+        "base_url_host": "llmapi.paratera.com",
+        "temperature_requested": null,
+        "top_p_requested": null,
+        "presence_penalty_requested": null,
+        "frequency_penalty_requested": null,
+        "max_tokens_requested": 128,
+        "thinking_mode_requested": "low",
+        "reasoning_effort_requested": "low"
+      }
+    },
+    "contract_issues": [],
+    "n_contract_issues": 0
+  },
+  "formal_heldout": {
+    "records": 4032,
+    "queries": 12,
+    "pairs_per_query": 28,
+    "repetitions": 12,
+    "expected_records": 4032,
+    "unique_provider_request_ids": 4032,
+    "parse_invalid_independent": 0,
+    "parse_mismatch_independent": 0,
+    "timestamp_span_utc": [
+      "2026-10-15 09:54:34.882186+00:00",
+      "2026-10-15 12:00:18.342274+00:00"
+    ],
+    "timestamp_file_order_monotone_ratio": 1.0,
+    "distinct_raw_response_texts": 23,
+    "most_common_raw_texts": [
+      [
+        "Document 1",
+        3040
+      ],
+      [
+        "Document 2",
+        971
+      ],
+      [
+        "Document 2\n\nThe query concerns food dyes and ADHD, which relates to chemical/food additive exposure as a potential factor in ADHD symptoms. Document 2, examining phthalate (chemical additive) exposure and ADHD symptoms, is more relevant in theme than Document 1, which concerns physical activity interventions.",
+        1
+      ],
+      [
+        "Neither document directly matches, but Document 1 is more relevant as it discusses diet-related exposure risks, while Document 2 is about obesity.\n\nDocument 1",
+        1
+      ],
+      [
+        "Document 2\n\nDocument 2 directly discusses alkylphenols (specifically nonylphenol) as estrogenic endocrine disruptors, which is the core topic of the query. Document 1 addresses endocrine disruptors broadly but does not focus on alkylphenols or allergies.",
+        1
+      ]
+    ],
+    "identity": {
+      "experiment_id": "CertiRank|live",
+      "condition": "live|heldout",
+      "requested_model": "GLM-5.3-Flash",
+      "model_parameters": {
+        "provider": "openai_compatible",
+        "base_url_host": "llmapi.paratera.com",
+        "temperature_requested": null,
+        "top_p_requested": null,
+        "presence_penalty_requested": null,
+        "frequency_penalty_requested": null,
+        "max_tokens_requested": 128,
+        "thinking_mode_requested": "low",
+        "reasoning_effort_requested": "low"
+      }
+    },
+    "contract_issues": [],
+    "n_contract_issues": 0
+  },
+  "calibration_A_null": {
+    "records": 160,
+    "queries": 4,
+    "pairs_per_query": 8,
+    "repetitions": 5,
+    "expected_records": 160,
+    "unique_provider_request_ids": 160,
+    "parse_invalid_independent": 0,
+    "parse_mismatch_independent": 0,
+    "timestamp_span_utc": [
+      "2026-10-15 08:09:33.039615+00:00",
+      "2026-10-15 08:14:49.931333+00:00"
+    ],
+    "timestamp_file_order_monotone_ratio": 1.0,
+    "distinct_raw_response_texts": 2,
+    "most_common_raw_texts": [
+      [
+        "Document 1",
+        111
+      ],
+      [
+        "Document 2",
+        49
+      ]
+    ],
+    "identity": {
+      "experiment_id": "CertiRank|live",
+      "condition": "gate3-calib|A_null",
+      "requested_model": "GLM-5.3-Flash",
+      "model_parameters": {
+        "provider": "openai_compatible",
+        "base_url_host": "llmapi.paratera.com",
+        "temperature_requested": null,
+        "top_p_requested": null,
+        "presence_penalty_requested": null,
+        "frequency_penalty_requested": null,
+        "max_tokens_requested": 128,
+        "thinking_mode_requested": "low",
+        "reasoning_effort_requested": "low"
+      }
+    },
+    "contract_issues": [],
+    "n_contract_issues": 0
+  },
+  "calibration_B_zero": {
+    "records": 160,
+    "queries": 4,
+    "pairs_per_query": 8,
+    "repetitions": 5,
+    "expected_records": 160,
+    "unique_provider_request_ids": 160,
+    "parse_invalid_independent": 0,
+    "parse_mismatch_independent": 0,
+    "timestamp_span_utc": [
+      "2026-10-15 08:17:29.702432+00:00",
+      "2026-10-15 08:23:43.714255+00:00"
+    ],
+    "timestamp_file_order_monotone_ratio": 1.0,
+    "distinct_raw_response_texts": 2,
+    "most_common_raw_texts": [
+      [
+        "Document 1",
+        113
+      ],
+      [
+        "Document 2",
+        47
+      ]
+    ],
+    "identity": {
+      "experiment_id": "CertiRank|live",
+      "condition": "gate3-calib|B_zero",
+      "requested_model": "GLM-5.3-Flash",
+      "model_parameters": {
+        "provider": "openai_compatible",
+        "base_url_host": "llmapi.paratera.com",
+        "temperature_requested": 0.0,
+        "top_p_requested": null,
+        "presence_penalty_requested": null,
+        "frequency_penalty_requested": null,
+        "max_tokens_requested": 128,
+        "thinking_mode_requested": "low",
+        "reasoning_effort_requested": "low"
+      }
+    },
+    "contract_issues": [],
+    "n_contract_issues": 0
+  },
+  "cross_file_provider_request_id_collisions": 0,
+  "dev_heldout_isolation": {
+    "shared_query_ids": [],
+    "shared_request_hashes_dev_heldout": 0,
+    "shared_request_hashes_dev_calibration": 0,
+    "dev_condition": "live|dev",
+    "heldout_condition": "live|heldout",
+    "dev_model_params": {
+      "provider": "openai_compatible",
+      "base_url_host": "llmapi.paratera.com",
+      "temperature_requested": null,
+      "top_p_requested": null,
+      "presence_penalty_requested": null,
+      "frequency_penalty_requested": null,
+      "max_tokens_requested": 128,
+      "thinking_mode_requested": "low",
+      "reasoning_effort_requested": "low"
+    },
+    "heldout_model_params": {
+      "provider": "openai_compatible",
+      "base_url_host": "llmapi.paratera.com",
+      "temperature_requested": null,
+      "top_p_requested": null,
+      "presence_penalty_requested": null,
+      "frequency_penalty_requested": null,
+      "max_tokens_requested": 128,
+      "thinking_mode_requested": "low",
+      "reasoning_effort_requested": "low"
+    },
+    "params_identical": true,
+    "doc_order_stability_note": "doc order per query pinned inside each workload"
+  },
+  "reported_counts_check": {
+    "dev": true,
+    "heldout": true,
+    "calibration_total": true
+  },
+  "formal_dev_marginals": {
+    "records": 2016,
+    "position_i_win_rate": 0.695437,
+    "by_position_i": {
+      "0": 312,
+      "1": 349,
+      "2": 256,
+      "3": 195,
+      "4": 153,
+      "5": 65,
+      "6": 72
+    },
+    "total_by_position_i": {
+      "0": 504,
+      "1": 432,
+      "2": 360,
+      "3": 288,
+      "4": 216,
+      "5": 144,
+      "6": 72
+    },
+    "completion_tokens_mean": 10.957,
+    "prompt_tokens_mean": 672.3,
+    "latency_seconds_mean": 2.294,
+    "latency_seconds_max": 20.829,
+    "cached_prompt_tokens_nonzero": 288
+  },
+  "formal_heldout_marginals": {
+    "records": 4032,
+    "position_i_win_rate": 0.756696,
+    "by_position_i": {
+      "0": 852,
+      "1": 757,
+      "2": 567,
+      "3": 346,
+      "4": 274,
+      "6": 78,
+      "5": 177
+    },
+    "total_by_position_i": {
+      "0": 1008,
+      "1": 864,
+      "2": 720,
+      "3": 576,
+      "4": 432,
+      "5": 288,
+      "6": 144
+    },
+    "completion_tokens_mean": 7.567,
+    "prompt_tokens_mean": 731.6,
+    "latency_seconds_mean": 1.859,
+    "latency_seconds_max": 20.789,
+    "cached_prompt_tokens_nonzero": 329
+  }
+}

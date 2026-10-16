@@ -1,0 +1,342 @@
+{
+  "per_split": {
+    "dev": {
+      "n_queries": 6,
+      "tournament": {
+        "mean_d_em12": 0.3434343434343434,
+        "ci95": [
+          0.06818181818181819,
+          0.6313131313131314
+        ],
+        "mean_d_em_official4": 0.3055555555555556,
+        "mean_calls": 10.458333333333334,
+        "mean_compare_invocations": 10.458333333333334,
+        "queries_with_any_change": 3
+      },
+      "minheap": {
+        "mean_d_em12": 0.3156565656565657,
+        "ci95": [
+          0.06818181818181819,
+          0.5883838383838383
+        ],
+        "mean_d_em_official4": 0.3055555555555556,
+        "mean_calls": 10.458333333333334,
+        "mean_compare_invocations": 11.361111111111112,
+        "queries_with_any_change": 3
+      },
+      "quickselect": {
+        "mean_d_em12": 0.3282828282828283,
+        "ci95": [
+          0.08838383838383838,
+          0.601010101010101
+        ],
+        "mean_d_em_official4": 0.3611111111111111,
+        "mean_calls": 14.736111111111112,
+        "mean_compare_invocations": 14.736111111111112,
+        "queries_with_any_change": 3
+      },
+      "fullcompare": {
+        "mean_d_em12": 0.29545454545454547,
+        "ci95": [
+          0.07323232323232323,
+          0.5429292929292929
+        ],
+        "mean_d_em_official4": 0.27777777777777773,
+        "mean_calls": 28.0,
+        "mean_compare_invocations": 28.0,
+        "queries_with_any_change": 3
+      }
+    },
+    "heldout": {
+      "n_queries": 12,
+      "tournament": {
+        "mean_d_em12": 0.2159090909090909,
+        "ci95": [
+          0.06186868686868687,
+          0.3737373737373737
+        ],
+        "mean_d_em_official4": 0.15277777777777776,
+        "mean_calls": 10.680555555555555,
+        "mean_compare_invocations": 10.680555555555555,
+        "queries_with_any_change": 5
+      },
+      "minheap": {
+        "mean_d_em12": 0.27525252525252525,
+        "ci95": [
+          0.10984848484848486,
+          0.4444444444444444
+        ],
+        "mean_d_em_official4": 0.23611111111111113,
+        "mean_calls": 8.909722222222223,
+        "mean_compare_invocations": 9.666666666666666,
+        "queries_with_any_change": 6
+      },
+      "quickselect": {
+        "mean_d_em12": 0.2601010101010101,
+        "ci95": [
+          0.0909090909090909,
+          0.4583333333333333
+        ],
+        "mean_d_em_official4": 0.2638888888888889,
+        "mean_calls": 14.138888888888888,
+        "mean_compare_invocations": 14.138888888888888,
+        "queries_with_any_change": 6
+      },
+      "fullcompare": {
+        "mean_d_em12": 0.20075757575757577,
+        "ci95": [
+          0.059343434343434344,
+          0.3421717171717171
+        ],
+        "mean_d_em_official4": 0.15277777777777776,
+        "mean_calls": 28.0,
+        "mean_compare_invocations": 28.0,
+        "queries_with_any_change": 5
+      }
+    },
+    "pooled": {
+      "n_queries": 18,
+      "tournament": {
+        "mean_d_em12": 0.25841750841750843,
+        "ci95": [
+          0.12037037037037039,
+          0.4116161616161616
+        ],
+        "mean_d_em_official4": 0.2037037037037037,
+        "mean_calls": 10.606481481481481,
+        "mean_compare_invocations": 10.606481481481481,
+        "queries_with_any_change": 8
+      },
+      "minheap": {
+        "mean_d_em12": 0.2887205387205387,
+        "ci95": [
+          0.14814814814814817,
+          0.4318181818181819
+        ],
+        "mean_d_em_official4": 0.2592592592592593,
+        "mean_calls": 9.425925925925926,
+        "mean_compare_invocations": 10.231481481481481,
+        "queries_with_any_change": 9
+      },
+      "quickselect": {
+        "mean_d_em12": 0.2828282828282828,
+        "ci95": [
+          0.14057239057239057,
+          0.4419191919191919
+        ],
+        "mean_d_em_official4": 0.2962962962962963,
+        "mean_calls": 14.337962962962962,
+        "mean_compare_invocations": 14.337962962962962,
+        "queries_with_any_change": 9
+      },
+      "fullcompare": {
+        "mean_d_em12": 0.23232323232323232,
+        "ci95": [
+          0.11026936026936027,
+          0.3619528619528619
+        ],
+        "mean_d_em_official4": 0.19444444444444445,
+        "mean_calls": 28.0,
+        "mean_compare_invocations": 28.0,
+        "queries_with_any_change": 8
+      }
+    }
+  },
+  "paired_d_em12": {
+    "tournament-minheap": {
+      "mean_diff": -0.030303030303030307,
+      "ci95": [
+        -0.11616161616161616,
+        0.024410774410774414
+      ],
+      "n_nonzero": 5,
+      "positive": 3,
+      "p_value": 1.0
+    },
+    "tournament-quickselect": {
+      "mean_diff": -0.024410774410774404,
+      "ci95": [
+        -0.13383838383838384,
+        0.07575757575757576
+      ],
+      "n_nonzero": 8,
+      "positive": 3,
+      "p_value": 0.7265625
+    },
+    "tournament-fullcompare": {
+      "mean_diff": 0.026094276094276097,
+      "ci95": [
+        -0.014309764309764312,
+        0.07828282828282829
+      ],
+      "n_nonzero": 4,
+      "positive": 3,
+      "p_value": 0.625
+    },
+    "minheap-quickselect": {
+      "mean_diff": 0.005892255892255903,
+      "ci95": [
+        -0.06313131313131312,
+        0.08164983164983168
+      ],
+      "n_nonzero": 8,
+      "positive": 3,
+      "p_value": 0.7265625
+    },
+    "minheap-fullcompare": {
+      "mean_diff": 0.0563973063973064,
+      "ci95": [
+        -0.007575757575757579,
+        0.14393939393939392
+      ],
+      "n_nonzero": 6,
+      "positive": 5,
+      "p_value": 0.21875
+    },
+    "quickselect-fullcompare": {
+      "mean_diff": 0.0505050505050505,
+      "ci95": [
+        -0.04882154882154882,
+        0.15824915824915822
+      ],
+      "n_nonzero": 8,
+      "positive": 5,
+      "p_value": 0.7265625
+    }
+  },
+  "same_world_disagreement": {
+    "tournament|minheap": {
+      "mean_same_topk_rate": 0.8472222222222222,
+      "queries_with_any_disagreement": 6
+    },
+    "tournament|quickselect": {
+      "mean_same_topk_rate": 0.7638888888888888,
+      "queries_with_any_disagreement": 8
+    },
+    "tournament|fullcompare": {
+      "mean_same_topk_rate": 0.8796296296296297,
+      "queries_with_any_disagreement": 4
+    },
+    "minheap|quickselect": {
+      "mean_same_topk_rate": 0.7546296296296297,
+      "queries_with_any_disagreement": 8
+    },
+    "minheap|fullcompare": {
+      "mean_same_topk_rate": 0.8194444444444444,
+      "queries_with_any_disagreement": 7
+    },
+    "quickselect|fullcompare": {
+      "mean_same_topk_rate": 0.7777777777777778,
+      "queries_with_any_disagreement": 8
+    }
+  },
+  "input_order_sensitivity": {
+    "aggregate": {
+      "identity": {
+        "tournament": {
+          "mean_d_em12": 0.25841750841750843,
+          "queries_with_any_change": 8
+        },
+        "minheap": {
+          "mean_d_em12": 0.2887205387205387,
+          "queries_with_any_change": 9
+        },
+        "quickselect": {
+          "mean_d_em12": 0.2828282828282828,
+          "queries_with_any_change": 9
+        },
+        "fullcompare": {
+          "mean_d_em12": 0.23232323232323232,
+          "queries_with_any_change": 8
+        }
+      },
+      "reverse": {
+        "tournament": {
+          "mean_d_em12": 0.25841750841750843,
+          "queries_with_any_change": 8
+        },
+        "minheap": {
+          "mean_d_em12": 0.28703703703703703,
+          "queries_with_any_change": 9
+        },
+        "quickselect": {
+          "mean_d_em12": 0.27946127946127947,
+          "queries_with_any_change": 9
+        },
+        "fullcompare": {
+          "mean_d_em12": 0.3207070707070707,
+          "queries_with_any_change": 9
+        }
+      },
+      "shuffle_a": {
+        "tournament": {
+          "mean_d_em12": 0.29797979797979796,
+          "queries_with_any_change": 9
+        },
+        "minheap": {
+          "mean_d_em12": 0.3173400673400673,
+          "queries_with_any_change": 9
+        },
+        "quickselect": {
+          "mean_d_em12": 0.25841750841750843,
+          "queries_with_any_change": 9
+        },
+        "fullcompare": {
+          "mean_d_em12": 0.2760942760942761,
+          "queries_with_any_change": 9
+        }
+      },
+      "shuffle_b": {
+        "tournament": {
+          "mean_d_em12": 0.3181818181818182,
+          "queries_with_any_change": 9
+        },
+        "minheap": {
+          "mean_d_em12": 0.2542087542087542,
+          "queries_with_any_change": 9
+        },
+        "quickselect": {
+          "mean_d_em12": 0.28114478114478114,
+          "queries_with_any_change": 8
+        },
+        "fullcompare": {
+          "mean_d_em12": 0.29040404040404044,
+          "queries_with_any_change": 9
+        }
+      }
+    }
+  },
+  "call_level_resampling": {
+    "aggregate": {
+      "dev": {
+        "tournament": {
+          "mean_instability": 0.33636363636363636
+        },
+        "minheap": {
+          "mean_instability": 0.30397306397306395
+        },
+        "quickselect": {
+          "mean_instability": 0.32286195286195285
+        },
+        "fullcompare": {
+          "mean_instability": 0.2746801346801347
+        }
+      },
+      "heldout": {
+        "tournament": {
+          "mean_instability": 0.20875420875420878
+        },
+        "minheap": {
+          "mean_instability": 0.2642424242424242
+        },
+        "quickselect": {
+          "mean_instability": 0.27195286195286195
+        },
+        "fullcompare": {
+          "mean_instability": 0.19816498316498318
+        }
+      }
+    },
+    "note": "call-level resampling: no within-execution world consistency across pairs; independent draws per fresh read. Supplementary sensitivity analysis only."
+  }
+}

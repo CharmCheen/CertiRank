@@ -1,0 +1,241 @@
+{
+  "coverage": {
+    "tournament": {
+      "empirical_b1": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "empirical_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "worst_b1": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "worst_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      }
+    },
+    "minheap": {
+      "empirical_b1": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "empirical_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "worst_b1": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "worst_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      }
+    },
+    "quickselect": {
+      "empirical_b1": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "empirical_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "worst_b1": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "worst_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      }
+    },
+    "fullcompare": {
+      "empirical_b1": {
+        "n": 216,
+        "certified": 10,
+        "violated": 206,
+        "unknown": 0,
+        "coverage_rate": 0.046296296296296294
+      },
+      "empirical_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      },
+      "worst_b1": {
+        "n": 216,
+        "certified": 10,
+        "violated": 206,
+        "unknown": 0,
+        "coverage_rate": 0.046296296296296294
+      },
+      "worst_b2": {
+        "n": 216,
+        "certified": 0,
+        "violated": 216,
+        "unknown": 0,
+        "coverage_rate": 0.0
+      }
+    }
+  },
+  "cost": {
+    "tournament": {
+      "empirical_b1": {
+        "mean_search_units": 2.0,
+        "max_search_units": 4,
+        "mean_seconds": 1.8055555555555558e-05,
+        "total_seconds": 0.0039000000000000003
+      },
+      "empirical_b2": {
+        "mean_search_units": 1.4074074074074074,
+        "max_search_units": 3,
+        "mean_seconds": 6.944444444444445e-06,
+        "total_seconds": 0.0015
+      },
+      "worst_b1": {
+        "mean_search_units": 13.606481481481481,
+        "max_search_units": 14,
+        "mean_seconds": 0.0004884259259259259,
+        "total_seconds": 0.1055
+      },
+      "worst_b2": {
+        "mean_search_units": 13.606481481481481,
+        "max_search_units": 14,
+        "mean_seconds": 0.0005912037037037037,
+        "total_seconds": 0.1277
+      }
+    },
+    "minheap": {
+      "empirical_b1": {
+        "mean_search_units": 1.7638888888888888,
+        "max_search_units": 3,
+        "mean_seconds": 3.7037037037037033e-06,
+        "total_seconds": 0.0007999999999999999
+      },
+      "empirical_b2": {
+        "mean_search_units": 3.3796296296296298,
+        "max_search_units": 14,
+        "mean_seconds": 3.472222222222222e-05,
+        "total_seconds": 0.007500000000000001
+      },
+      "worst_b1": {
+        "mean_search_units": 15.36111111111111,
+        "max_search_units": 22,
+        "mean_seconds": 0.0005092592592592592,
+        "total_seconds": 0.11
+      },
+      "worst_b2": {
+        "mean_search_units": 15.5,
+        "max_search_units": 22,
+        "mean_seconds": 0.0004546296296296296,
+        "total_seconds": 0.0982
+      }
+    },
+    "quickselect": {
+      "empirical_b1": {
+        "mean_search_units": 1.4166666666666667,
+        "max_search_units": 3,
+        "mean_seconds": 0.0,
+        "total_seconds": 0.0
+      },
+      "empirical_b2": {
+        "mean_search_units": 1.0462962962962963,
+        "max_search_units": 2,
+        "mean_seconds": 4.6296296296296297e-07,
+        "total_seconds": 0.0001
+      },
+      "worst_b1": {
+        "mean_search_units": 21.87962962962963,
+        "max_search_units": 39,
+        "mean_seconds": 0.0008393518518518518,
+        "total_seconds": 0.1813
+      },
+      "worst_b2": {
+        "mean_search_units": 23.85648148148148,
+        "max_search_units": 44,
+        "mean_seconds": 0.0009055555555555555,
+        "total_seconds": 0.1956
+      }
+    },
+    "fullcompare": {
+      "empirical_b1": {
+        "mean_search_units": 6.425925925925926,
+        "max_search_units": 28,
+        "mean_seconds": 0.0001037037037037037,
+        "total_seconds": 0.0224
+      },
+      "empirical_b2": {
+        "mean_search_units": 11.277777777777779,
+        "max_search_units": 131,
+        "mean_seconds": 0.00020833333333333332,
+        "total_seconds": 0.045
+      },
+      "worst_b1": {
+        "mean_search_units": 117.2824074074074,
+        "max_search_units": 436,
+        "mean_seconds": 0.0047194444444444445,
+        "total_seconds": 1.0194
+      },
+      "worst_b2": {
+        "mean_search_units": 177.0787037037037,
+        "max_search_units": 1108,
+        "mean_seconds": 0.008373148148148149,
+        "total_seconds": 1.8086
+      }
+    }
+  },
+  "soundness": {
+    "tournament_boundary_shortcut_vs_empirical_b1": {
+      "agree": 216,
+      "disagree": 0,
+      "violations": []
+    },
+    "tournament_boundary_shortcut_vs_worst_b1": {
+      "disagree": 0,
+      "violations": []
+    }
+  }
+}

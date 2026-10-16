@@ -1,0 +1,1985 @@
+{
+  "exploratory": true,
+  "space_group_anatomy": {
+    "dev:PLAIN-142": {
+      "base_d_em": 1.0,
+      "base_topks": [
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          1,
+          4,
+          5
+        ]
+      ],
+      "slot0_differring_pairs_across_execs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "n_slot0_differring_pairs": 8,
+      "per_exec": [
+        {
+          "slots": [
+            0,
+            1,
+            2
+          ],
+          "base_topk": [
+            1,
+            4,
+            2
+          ],
+          "actionable": [
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              5,
+              6
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "slots": [
+            3,
+            4,
+            5
+          ],
+          "base_topk": [
+            4,
+            5,
+            6
+          ],
+          "actionable": [
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              2,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "key_pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "slots": [
+            6,
+            7,
+            8
+          ],
+          "base_topk": [
+            4,
+            6,
+            1
+          ],
+          "actionable": [
+            [
+              3,
+              6
+            ]
+          ],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              1,
+              2
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "slots": [
+            9,
+            10,
+            11
+          ],
+          "base_topk": [
+            1,
+            4,
+            5
+          ],
+          "actionable": [
+            [
+              3,
+              5
+            ]
+          ],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        }
+      ],
+      "oracle_04": {
+        "random_d_em": 1.0,
+        "rv_d_em": 1.0,
+        "oracle_d_em": 0.8333333333333334,
+        "oracle_gain_vs_random": 0.16666666666666663,
+        "oracle_gain_vs_base": 0.16666666666666663,
+        "oracle_total_extra_calls": 3,
+        "distinct_outputs_per_exec": [
+          2,
+          3,
+          1,
+          1
+        ],
+        "oracle_outputs": [
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      },
+      "oracle_02": {
+        "random_d_em": 1.0,
+        "rv_d_em": 1.0,
+        "oracle_d_em": 1.0,
+        "oracle_gain_vs_random": 0.0,
+        "oracle_gain_vs_base": 0.0,
+        "oracle_total_extra_calls": 0,
+        "distinct_outputs_per_exec": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "oracle_outputs": [
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ]
+      }
+    },
+    "dev:PLAIN-2539": {
+      "base_d_em": 0.8333333333333334,
+      "base_topks": [
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          6
+        ]
+      ],
+      "slot0_differring_pairs_across_execs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "n_slot0_differring_pairs": 8,
+      "per_exec": [
+        {
+          "slots": [
+            0,
+            1,
+            2
+          ],
+          "base_topk": [
+            2,
+            6,
+            0
+          ],
+          "actionable": [],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              4,
+              6
+            ]
+          ]
+        },
+        {
+          "slots": [
+            3,
+            4,
+            5
+          ],
+          "base_topk": [
+            2,
+            3,
+            4
+          ],
+          "actionable": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              0,
+              3
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ]
+          ]
+        },
+        {
+          "slots": [
+            6,
+            7,
+            8
+          ],
+          "base_topk": [
+            2,
+            0,
+            1
+          ],
+          "actionable": [
+            [
+              0,
+              6
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "slots": [
+            9,
+            10,
+            11
+          ],
+          "base_topk": [
+            2,
+            0,
+            6
+          ],
+          "actionable": [
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              1,
+              6
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              4,
+              6
+            ]
+          ]
+        }
+      ],
+      "oracle_04": {
+        "random_d_em": 0.8333333333333334,
+        "rv_d_em": 0.8333333333333334,
+        "oracle_d_em": 0.8333333333333334,
+        "oracle_gain_vs_random": 0.0,
+        "oracle_gain_vs_base": 0.0,
+        "oracle_total_extra_calls": 0,
+        "distinct_outputs_per_exec": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "oracle_outputs": [
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            6
+          ]
+        ]
+      },
+      "oracle_02": {
+        "random_d_em": 0.8333333333333334,
+        "rv_d_em": 0.8333333333333334,
+        "oracle_d_em": 0.8333333333333334,
+        "oracle_gain_vs_random": 0.0,
+        "oracle_gain_vs_base": 0.0,
+        "oracle_total_extra_calls": 0,
+        "distinct_outputs_per_exec": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "oracle_outputs": [
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            6
+          ]
+        ]
+      }
+    },
+    "heldout:PLAIN-165": {
+      "base_d_em": 0.6666666666666666,
+      "base_topks": [
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          0
+        ]
+      ],
+      "slot0_differring_pairs_across_execs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "n_slot0_differring_pairs": 3,
+      "per_exec": [
+        {
+          "slots": [
+            0,
+            1,
+            2
+          ],
+          "base_topk": [
+            3,
+            1,
+            5
+          ],
+          "actionable": [
+            [
+              1,
+              3
+            ]
+          ],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "slots": [
+            3,
+            4,
+            5
+          ],
+          "base_topk": [
+            1,
+            3,
+            0
+          ],
+          "actionable": [
+            [
+              0,
+              6
+            ]
+          ],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "slots": [
+            6,
+            7,
+            8
+          ],
+          "base_topk": [
+            1,
+            3,
+            5
+          ],
+          "actionable": [],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "slots": [
+            9,
+            10,
+            11
+          ],
+          "base_topk": [
+            1,
+            3,
+            0
+          ],
+          "actionable": [
+            [
+              0,
+              5
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              0,
+              5
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        }
+      ],
+      "oracle_04": {
+        "random_d_em": 0.6666666666666666,
+        "rv_d_em": 0.6666666666666666,
+        "oracle_d_em": 0.5,
+        "oracle_gain_vs_random": 0.16666666666666663,
+        "oracle_gain_vs_base": 0.16666666666666663,
+        "oracle_total_extra_calls": 2,
+        "distinct_outputs_per_exec": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "oracle_outputs": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ]
+      },
+      "oracle_02": {
+        "random_d_em": 0.6666666666666666,
+        "rv_d_em": 0.6666666666666666,
+        "oracle_d_em": 0.5,
+        "oracle_gain_vs_random": 0.16666666666666663,
+        "oracle_gain_vs_base": 0.16666666666666663,
+        "oracle_total_extra_calls": 2,
+        "distinct_outputs_per_exec": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "oracle_outputs": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ]
+      }
+    },
+    "heldout:PLAIN-2": {
+      "base_d_em": 0.6666666666666666,
+      "base_topks": [
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          1,
+          5,
+          0
+        ]
+      ],
+      "slot0_differring_pairs_across_execs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "n_slot0_differring_pairs": 3,
+      "per_exec": [
+        {
+          "slots": [
+            0,
+            1,
+            2
+          ],
+          "base_topk": [
+            1,
+            5,
+            2
+          ],
+          "actionable": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              0,
+              2
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "slots": [
+            3,
+            4,
+            5
+          ],
+          "base_topk": [
+            1,
+            5,
+            0
+          ],
+          "actionable": [
+            [
+              0,
+              3
+            ]
+          ],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "slots": [
+            6,
+            7,
+            8
+          ],
+          "base_topk": [
+            1,
+            5,
+            2
+          ],
+          "actionable": [
+            [
+              0,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              0,
+              2
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "slots": [
+            9,
+            10,
+            11
+          ],
+          "base_topk": [
+            1,
+            5,
+            0
+          ],
+          "actionable": [],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              2
+            ]
+          ]
+        }
+      ],
+      "oracle_04": {
+        "random_d_em": 0.6666666666666666,
+        "rv_d_em": 0.6666666666666666,
+        "oracle_d_em": 0.0,
+        "oracle_gain_vs_random": 0.6666666666666666,
+        "oracle_gain_vs_base": 0.6666666666666666,
+        "oracle_total_extra_calls": 8,
+        "distinct_outputs_per_exec": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "oracle_outputs": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            0,
+            1,
+            5
+          ]
+        ]
+      },
+      "oracle_02": {
+        "random_d_em": 0.6666666666666666,
+        "rv_d_em": 0.6666666666666666,
+        "oracle_d_em": 0.6666666666666666,
+        "oracle_gain_vs_random": 0.0,
+        "oracle_gain_vs_base": 0.0,
+        "oracle_total_extra_calls": 0,
+        "distinct_outputs_per_exec": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "oracle_outputs": [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            5
+          ]
+        ]
+      }
+    },
+    "heldout:PLAIN-2640": {
+      "base_d_em": 0.5,
+      "base_topks": [
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ]
+      ],
+      "slot0_differring_pairs_across_execs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "n_slot0_differring_pairs": 7,
+      "per_exec": [
+        {
+          "slots": [
+            0,
+            1,
+            2
+          ],
+          "base_topk": [
+            2,
+            0,
+            4
+          ],
+          "actionable": [
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              1,
+              4
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "slots": [
+            3,
+            4,
+            5
+          ],
+          "base_topk": [
+            2,
+            4,
+            0
+          ],
+          "actionable": [],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "slots": [
+            6,
+            7,
+            8
+          ],
+          "base_topk": [
+            2,
+            1,
+            0
+          ],
+          "actionable": [
+            [
+              1,
+              5
+            ]
+          ],
+          "actionable_and_key": [
+            [
+              1,
+              5
+            ]
+          ],
+          "key_pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "slots": [
+            9,
+            10,
+            11
+          ],
+          "base_topk": [
+            2,
+            4,
+            0
+          ],
+          "actionable": [
+            [
+              1,
+              5
+            ]
+          ],
+          "actionable_and_key": [],
+          "key_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "key_pairs_unstable": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        }
+      ],
+      "oracle_04": {
+        "random_d_em": 0.5,
+        "rv_d_em": 0.5,
+        "oracle_d_em": 0.5,
+        "oracle_gain_vs_random": 0.0,
+        "oracle_gain_vs_base": 0.0,
+        "oracle_total_extra_calls": 0,
+        "distinct_outputs_per_exec": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "oracle_outputs": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ]
+      },
+      "oracle_02": {
+        "random_d_em": 0.5,
+        "rv_d_em": 0.5,
+        "oracle_d_em": 0.5,
+        "oracle_gain_vs_random": 0.0,
+        "oracle_gain_vs_base": 0.0,
+        "oracle_total_extra_calls": 0,
+        "distinct_outputs_per_exec": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "oracle_outputs": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ]
+      }
+    }
+  },
+  "boundary_stats": {
+    "visible_pairs": 764,
+    "key_pairs": 417,
+    "key_pair_with_rank_le_2": 379,
+    "key_pair_with_rank_le_4": 262,
+    "key_pair_straddles_boundary": 370
+  },
+  "random_selection_dependence": {
+    "dev|0.2": {
+      "query_pairs_with_identical_selection_sets": 1,
+      "query_pairs_total": 15,
+      "identical_ratio": 0.0667
+    },
+    "dev|0.4": {
+      "query_pairs_with_identical_selection_sets": 0,
+      "query_pairs_total": 15,
+      "identical_ratio": 0.0
+    },
+    "heldout|0.2": {
+      "query_pairs_with_identical_selection_sets": 6,
+      "query_pairs_total": 66,
+      "identical_ratio": 0.0909
+    },
+    "heldout|0.4": {
+      "query_pairs_with_identical_selection_sets": 1,
+      "query_pairs_total": 66,
+      "identical_ratio": 0.0152
+    }
+  },
+  "probe_flip_probabilities": {
+    "dev": {
+      "P(probe1 != initial)": 0.075893,
+      "P(probe2 != initial)": 0.092262,
+      "P(probe flips majority)": 0.03869,
+      "P(flip | probe1 != initial)": 0.509804,
+      "note": "probe flips majority iff BOTH probe slots disagree with the initial slot"
+    },
+    "heldout": {
+      "P(probe1 != initial)": 0.056548,
+      "P(probe2 != initial)": 0.064732,
+      "P(probe flips majority)": 0.02753,
+      "P(flip | probe1 != initial)": 0.486842,
+      "note": "probe flips majority iff BOTH probe slots disagree with the initial slot"
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "identity": {
+    "data": "Gate 3 formal cache (NFCorpus, GLM-5.3-Flash, temperature=null, N=8, K=3, 12 reps)",
+    "queries": "18 (dev 6 + heldout 12); 12 frozen slot worlds each = 216 base executions per operator",
+    "study_kind": "exploratory mechanism study; zero new LLM calls"
+  },
+  "b1_stability": {
+    "tournament": {
+      "d_em12_pooled": 0.2584,
+      "d_em12_dev": 0.3434,
+      "d_em12_heldout": 0.2159,
+      "d_em4_official_pooled": 0.2037,
+      "mean_calls": 10.61,
+      "unstable_queries_of_18": 8
+    },
+    "minheap": {
+      "d_em12_pooled": 0.2887,
+      "d_em12_dev": 0.3157,
+      "d_em12_heldout": 0.2753,
+      "d_em4_official_pooled": 0.2593,
+      "mean_calls": 9.43,
+      "unstable_queries_of_18": 9
+    },
+    "quickselect": {
+      "d_em12_pooled": 0.2828,
+      "d_em12_dev": 0.3283,
+      "d_em12_heldout": 0.2601,
+      "d_em4_official_pooled": 0.2963,
+      "mean_calls": 14.34,
+      "unstable_queries_of_18": 9
+    },
+    "fullcompare": {
+      "d_em12_pooled": 0.2323,
+      "d_em12_dev": 0.2955,
+      "d_em12_heldout": 0.2008,
+      "d_em4_official_pooled": 0.1944,
+      "mean_calls": 28.0,
+      "unstable_queries_of_18": 8
+    }
+  },
+  "b1_paired": {
+    "tournament-minheap": {
+      "mean_diff": -0.0303,
+      "ci95": [
+        -0.1162,
+        0.0244
+      ],
+      "p_sign": 1.0
+    },
+    "tournament-quickselect": {
+      "mean_diff": -0.0244,
+      "ci95": [
+        -0.1338,
+        0.0758
+      ],
+      "p_sign": 0.727
+    },
+    "tournament-fullcompare": {
+      "mean_diff": 0.0261,
+      "ci95": [
+        -0.0143,
+        0.0783
+      ],
+      "p_sign": 0.625
+    },
+    "minheap-quickselect": {
+      "mean_diff": 0.0059,
+      "ci95": [
+        -0.0631,
+        0.0816
+      ],
+      "p_sign": 0.727
+    },
+    "minheap-fullcompare": {
+      "mean_diff": 0.0564,
+      "ci95": [
+        -0.0076,
+        0.1439
+      ],
+      "p_sign": 0.219
+    },
+    "quickselect-fullcompare": {
+      "mean_diff": 0.0505,
+      "ci95": [
+        -0.0488,
+        0.1582
+      ],
+      "p_sign": 0.727
+    }
+  },
+  "b1_same_world_agreement": {
+    "tournament|minheap": 0.8472,
+    "tournament|quickselect": 0.7639,
+    "tournament|fullcompare": 0.8796,
+    "minheap|quickselect": 0.7546,
+    "minheap|fullcompare": 0.8194,
+    "quickselect|fullcompare": 0.7778
+  },
+  "b1_input_order_range": {
+    "tournament": 0.0598,
+    "minheap": 0.0631,
+    "quickselect": 0.0244,
+    "fullcompare": 0.0884
+  },
+  "b2_branches": {
+    "tournament": {
+      "branch_escape_rate": 0.8555,
+      "mean_new_pairs_given_escape": 2.27,
+      "fixed_trace_unresolved_rate": 0.8555,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.546,
+      "double_emergent_rate": 0.00036,
+      "single_flips": 2291,
+      "double_flips": 11030
+    },
+    "minheap": {
+      "branch_escape_rate": 0.9028,
+      "mean_new_pairs_given_escape": 3.82,
+      "fixed_trace_unresolved_rate": 0.9028,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.5609,
+      "double_emergent_rate": 0.00011,
+      "single_flips": 2036,
+      "double_flips": 8823
+    },
+    "quickselect": {
+      "branch_escape_rate": 0.4453,
+      "mean_new_pairs_given_escape": 2.72,
+      "fixed_trace_unresolved_rate": 0.4453,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.5095,
+      "double_emergent_rate": 0.00031,
+      "single_flips": 3097,
+      "double_flips": 22650
+    },
+    "fullcompare": {
+      "branch_escape_rate": 0.0,
+      "mean_new_pairs_given_escape": 0.0,
+      "fixed_trace_unresolved_rate": 0.0,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.1806,
+      "double_emergent_rate": 0.04054,
+      "single_flips": 6048,
+      "double_flips": 81648
+    }
+  },
+  "b2_critical_edges": {
+    "flips_analysed": 2291,
+    "output_changing_flips": 1251,
+    "boundary_span_rate_among_changing": 0.9232613908872902,
+    "boundary_span_rate_among_absorbed": 0.0,
+    "changing_by_max_stage": {
+      "0": 704,
+      "1": 246,
+      "2": 301
+    },
+    "absorbed_by_max_stage": {
+      "0": 808,
+      "1": 186,
+      "2": 46
+    }
+  },
+  "b3_coverage": {
+    "tournament": {
+      "empirical_b1": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "empirical_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "worst_b1": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "worst_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      }
+    },
+    "minheap": {
+      "empirical_b1": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "empirical_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "worst_b1": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "worst_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      }
+    },
+    "quickselect": {
+      "empirical_b1": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "empirical_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "worst_b1": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "worst_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      }
+    },
+    "fullcompare": {
+      "empirical_b1": {
+        "certified": 10,
+        "n": 216,
+        "rate": 0.0463
+      },
+      "empirical_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      },
+      "worst_b1": {
+        "certified": 10,
+        "n": 216,
+        "rate": 0.0463
+      },
+      "worst_b2": {
+        "certified": 0,
+        "n": 216,
+        "rate": 0.0
+      }
+    }
+  },
+  "b3_shortcut_soundness": {
+    "agree": 216,
+    "disagree": 0,
+    "violations": []
+  },
+  "observed_vs_hypothetical": {
+    "queries_stable_across_all_12_worlds": {
+      "tournament": 10,
+      "minheap": 9,
+      "quickselect": 9,
+      "fullcompare": 10
+    },
+    "fullcompare_b1_certified_executions_of_216": 10,
+    "adaptive_operators_b1_certified_of_216": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "data_completeness": {
+    "dev": {
+      "query_groups": 6,
+      "queries_with_28_pairs": 6,
+      "queries_with_full_12_reps": 6,
+      "total_calls_expected": 2016
+    },
+    "heldout": {
+      "query_groups": 12,
+      "queries_with_28_pairs": 12,
+      "queries_with_full_12_reps": 12,
+      "total_calls_expected": 4032
+    }
+  },
+  "official_base_reproduction": {
+    "checked": 144,
+    "mismatches": [],
+    "unique_executions": 72
+  },
+  "transitive_oracle": {
+    "comparisons_checked": 2016,
+    "failures": []
+  }
+}

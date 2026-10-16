@@ -1,0 +1,130 @@
+{
+  "per_operator": {
+    "tournament": {
+      "single_flips_total": 2291,
+      "branch_escape_rate": 0.8555216062854648,
+      "mean_new_pairs_given_escape": 2.2729591836734695,
+      "max_new_pairs": 5,
+      "fixed_trace_unresolved_rate": 0.8555216062854648,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.5460497599301615,
+      "topk_order_sensitivity": 0.7992143168921868,
+      "conditional_absorption_rate": 0.4539502400698385,
+      "double_flips_total": 11030,
+      "double_joint_changed_rate": 0.7023572076155938,
+      "double_emergent_rate": 0.00036264732547597464,
+      "double_unresolved_rate": 0.9823209428830463
+    },
+    "minheap": {
+      "single_flips_total": 2036,
+      "branch_escape_rate": 0.9027504911591355,
+      "mean_new_pairs_given_escape": 3.8150163220892273,
+      "max_new_pairs": 10,
+      "fixed_trace_unresolved_rate": 0.9027504911591355,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.5609037328094303,
+      "topk_order_sensitivity": 0.8511787819253438,
+      "conditional_absorption_rate": 0.43909626719056977,
+      "double_flips_total": 8823,
+      "double_joint_changed_rate": 0.6573727756998753,
+      "double_emergent_rate": 0.00011334013374135781,
+      "double_unresolved_rate": 0.982885639805055
+    },
+    "quickselect": {
+      "single_flips_total": 3097,
+      "branch_escape_rate": 0.4452696157571844,
+      "mean_new_pairs_given_escape": 2.7237128353879623,
+      "max_new_pairs": 15,
+      "fixed_trace_unresolved_rate": 0.4452696157571844,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.5095253471101066,
+      "topk_order_sensitivity": 0.0,
+      "conditional_absorption_rate": 0.49047465288989345,
+      "double_flips_total": 22650,
+      "double_joint_changed_rate": 0.7213686534216336,
+      "double_emergent_rate": 0.00030905077262693157,
+      "double_unresolved_rate": 0.5584547461368653
+    },
+    "fullcompare": {
+      "single_flips_total": 6048,
+      "branch_escape_rate": 0.0,
+      "mean_new_pairs_given_escape": 0.0,
+      "max_new_pairs": 0,
+      "fixed_trace_unresolved_rate": 0.0,
+      "fixed_trace_resolved_agreement": 1.0,
+      "topk_set_sensitivity": 0.18055555555555555,
+      "topk_order_sensitivity": 0.3513558201058201,
+      "conditional_absorption_rate": 0.8194444444444444,
+      "double_flips_total": 81648,
+      "double_joint_changed_rate": 0.30223642955124436,
+      "double_emergent_rate": 0.040539878502841464,
+      "double_unresolved_rate": 0.0
+    }
+  },
+  "per_operator_split": {
+    "tournament": {
+      "dev": {
+        "n_flips": 753,
+        "branch_escape_rate": 0.852589641434263,
+        "topk_set_sensitivity": 0.5803452855245684
+      },
+      "heldout": {
+        "n_flips": 1538,
+        "branch_escape_rate": 0.8569570871261378,
+        "topk_set_sensitivity": 0.52925877763329
+      }
+    },
+    "minheap": {
+      "dev": {
+        "n_flips": 753,
+        "branch_escape_rate": 0.950863213811421,
+        "topk_set_sensitivity": 0.5803452855245684
+      },
+      "heldout": {
+        "n_flips": 1283,
+        "branch_escape_rate": 0.8745128604832424,
+        "topk_set_sensitivity": 0.5494933749025721
+      }
+    },
+    "quickselect": {
+      "dev": {
+        "n_flips": 1061,
+        "branch_escape_rate": 0.4948162111215834,
+        "topk_set_sensitivity": 0.5061262959472196
+      },
+      "heldout": {
+        "n_flips": 2036,
+        "branch_escape_rate": 0.4194499017681729,
+        "topk_set_sensitivity": 0.5112966601178782
+      }
+    },
+    "fullcompare": {
+      "dev": {
+        "n_flips": 2016,
+        "branch_escape_rate": 0.0,
+        "topk_set_sensitivity": 0.23660714285714285
+      },
+      "heldout": {
+        "n_flips": 4032,
+        "branch_escape_rate": 0.0,
+        "topk_set_sensitivity": 0.15252976190476192
+      }
+    }
+  },
+  "tournament_critical_edges": {
+    "flips_analysed": 2291,
+    "output_changing_flips": 1251,
+    "boundary_span_rate_among_changing": 0.9232613908872902,
+    "boundary_span_rate_among_absorbed": 0.0,
+    "changing_by_max_stage": {
+      "0": 704,
+      "1": 246,
+      "2": 301
+    },
+    "absorbed_by_max_stage": {
+      "0": 808,
+      "1": 186,
+      "2": 46
+    }
+  }
+}
