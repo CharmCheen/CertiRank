@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "rule_frozen_before_llm": true,
+  "dataset": "BEIR/nfcorpus",
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "top_k": 8,
+    "tokenizer": "lowercase [a-z0-9]+",
+    "index_fields": "title + text",
+    "tie_break": "(-score, doc_id)"
+  },
+  "eligibility": {
+    "min_qrel_docs_full": 2,
+    "min_labeled_in_top8": 2,
+    "min_perfect_in_top8": 1,
+    "bm25_ndcg3_band": [
+      0.2,
+      0.95
+    ],
+    "max_query_token_jaccard": 0.8,
+    "excluded_historical_ids": [
+      "327",
+      "51",
+      "636"
+    ],
+    "order": "lexicographic query_id among eligible"
+  },
+  "splits": {
+    "dev_source": "qrels/dev.tsv",
+    "heldout_source": "qrels/test.tsv",
+    "dev_candidates_considered": 324,
+    "heldout_candidates_considered": 323
+  },
+  "counts": {
+    "dev_selected": 6,
+    "heldout_selected": 12,
+    "dev_rejected": 154,
+    "heldout_rejected": 163
+  },
+  "dev_rejected_reasons": {
+    "bm25_ndcg3_outside_[0.2,0.95]": 3,
+    "no_perfect_grade_in_top8": 57,
+    "fewer_than_2_labeled_docs_in_top8": 88,
+    "fewer_than_2_labeled_docs_in_full_qrels": 6
+  },
+  "heldout_rejected_reasons": {
+    "fewer_than_2_labeled_docs_in_top8": 77,
+    "no_perfect_grade_in_top8": 66,
+    "fewer_than_2_labeled_docs_in_full_qrels": 12,
+    "bm25_ndcg3_outside_[0.2,0.95]": 8
+  },
+  "dev_selected_ids": [
+    "PLAIN-101",
+    "PLAIN-11",
+    "PLAIN-142",
+    "PLAIN-2429",
+    "PLAIN-2479",
+    "PLAIN-2539"
+  ],
+  "heldout_selected_ids": [
+    "PLAIN-112",
+    "PLAIN-165",
+    "PLAIN-175",
+    "PLAIN-2",
+    "PLAIN-23",
+    "PLAIN-2450",
+    "PLAIN-2490",
+    "PLAIN-2540",
+    "PLAIN-2630",
+    "PLAIN-2640",
+    "PLAIN-2650",
+    "PLAIN-2680"
+  ],
+  "forbidden": [
+    "select after observing LLM flips",
+    "prefer queries favorable to ReviewValue",
+    "mutate heldout after results",
+    "insert relevant docs manually"
+  ]
+}

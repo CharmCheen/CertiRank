@@ -1,0 +1,198 @@
+{
+  "settings_hash": "f5bafaed2e21d231220e840b8032ef5b2e81948582cb20a1a7cf77a102dd95a3",
+  "split": "dev",
+  "source_kind": "real",
+  "comparator": "Random",
+  "comparator_status": "frozen",
+  "comparisons": {
+    "0.2": {
+      "status": "estimated",
+      "unit": "query-group; variants averaged within group first",
+      "groups": 6,
+      "queries": 6,
+      "point": {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "baseline_d": 0.3055555555555556,
+        "candidate_calls": 10.416666666666666,
+        "comparator_calls": 12.416666666666666
+      },
+      "bootstrap_95": {
+        "gain": [
+          0,
+          0.0
+        ],
+        "quality_delta": [
+          0.0,
+          0.0
+        ]
+      },
+      "relative_gain": 0.0,
+      "positive_groups": 0,
+      "per_query_group": {
+        "PLAIN-101": [
+          {
+            "query_id": "PLAIN-101",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 10,
+            "comparator_calls": 12
+          }
+        ],
+        "PLAIN-11": [
+          {
+            "query_id": "PLAIN-11",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 11,
+            "comparator_calls": 13
+          }
+        ],
+        "PLAIN-142": [
+          {
+            "query_id": "PLAIN-142",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 1,
+            "candidate_calls": 10.75,
+            "comparator_calls": 12.75
+          }
+        ],
+        "PLAIN-2429": [
+          {
+            "query_id": "PLAIN-2429",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 10,
+            "comparator_calls": 12
+          }
+        ],
+        "PLAIN-2479": [
+          {
+            "query_id": "PLAIN-2479",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 10,
+            "comparator_calls": 12
+          }
+        ],
+        "PLAIN-2539": [
+          {
+            "query_id": "PLAIN-2539",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 10.75,
+            "comparator_calls": 12.75
+          }
+        ]
+      }
+    },
+    "0.4": {
+      "status": "estimated",
+      "unit": "query-group; variants averaged within group first",
+      "groups": 6,
+      "queries": 6,
+      "point": {
+        "gain": 0.08333333333333333,
+        "quality_delta": 0.0,
+        "baseline_d": 0.3888888888888889,
+        "candidate_calls": 12.5,
+        "comparator_calls": 14.416666666666666
+      },
+      "bootstrap_95": {
+        "gain": [
+          0.0,
+          0.25
+        ],
+        "quality_delta": [
+          0.0,
+          0.0
+        ]
+      },
+      "relative_gain": 0.21428571428571427,
+      "positive_groups": 1,
+      "per_query_group": {
+        "PLAIN-101": [
+          {
+            "query_id": "PLAIN-101",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 12,
+            "comparator_calls": 14
+          }
+        ],
+        "PLAIN-11": [
+          {
+            "query_id": "PLAIN-11",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 13,
+            "comparator_calls": 15
+          }
+        ],
+        "PLAIN-142": [
+          {
+            "query_id": "PLAIN-142",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 1,
+            "candidate_calls": 12.75,
+            "comparator_calls": 14.75
+          }
+        ],
+        "PLAIN-2429": [
+          {
+            "query_id": "PLAIN-2429",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 12,
+            "comparator_calls": 14
+          }
+        ],
+        "PLAIN-2479": [
+          {
+            "query_id": "PLAIN-2479",
+            "gain": 0.5,
+            "quality_delta": 0.0,
+            "baseline_d": 0.5,
+            "candidate_calls": 12,
+            "comparator_calls": 14
+          }
+        ],
+        "PLAIN-2539": [
+          {
+            "query_id": "PLAIN-2539",
+            "gain": 0.0,
+            "quality_delta": 0.0,
+            "baseline_d": 0.8333333333333334,
+            "candidate_calls": 13.25,
+            "comparator_calls": 14.75
+          }
+        ]
+      }
+    }
+  },
+  "verdict": {
+    "verdict": "development_only",
+    "point_gates_pass": false,
+    "intervals_support": false,
+    "enough_query_groups": false,
+    "claim_beyond_confidence": false,
+    "new_physical_calls": 0
+  },
+  "new_physical_calls": 0,
+  "quality": {
+    "metric": "Recall@K from supplied independent labels",
+    "confidence_signal": "unavailable",
+    "single_relevant_queries": 0,
+    "mean_recall_step_if_single_positive_no_variants": null
+  }
+}

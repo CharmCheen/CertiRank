@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "prompt_version": "certirank.pair_compare.v1",
+  "condition": "live|dev",
+  "experiment_id": "CertiRank|live",
+  "requested_model": "GLM-5.3-Flash",
+  "model_parameters": {
+    "provider": "openai_compatible",
+    "base_url_host": "llmapi.paratera.com",
+    "temperature_requested": 0.0,
+    "top_p_requested": null,
+    "presence_penalty_requested": null,
+    "frequency_penalty_requested": null,
+    "max_tokens_requested": 128,
+    "thinking_mode_requested": "low",
+    "reasoning_effort_requested": "low"
+  },
+  "query_ids": [
+    "example-q1",
+    "example-q2"
+  ],
+  "k": 3,
+  "pairs_per_query": 3,
+  "entries": [
+    {
+      "query_id": "example-q1",
+      "query_text": "Which document describes the 2026 CertiRank offline pilot?",
+      "doc_ids": [
+        "doc-a",
+        "doc-b",
+        "doc-c"
+      ],
+      "doc_texts": {
+        "doc-a": "In October 2026 the CertiRank team finished an offline pilot of fixed-semantic Top-K with 420 historical responses and zero live model calls.",
+        "doc-b": "The weather in Paris is usually mild in spring and rainy in autumn.",
+        "doc-c": "Tournament sorting uses a fixed leaf order and local repair after a comparison flips."
+      },
+      "qrels": {
+        "doc-a": 1
+      },
+      "pairs": [
+        {
+          "pair_position": 0,
+          "position_i": 0,
+          "position_j": 1,
+          "document_1_id": "doc-a",
+          "document_2_id": "doc-b",
+          "pair_id": "example-q1|doc-a|doc-b",
+          "request_hash": "d8f14d89c0ab9c90ff86e094795e4a535d641bfc4cb696e8745e34a7d7380edd"
+        },
+        {
+          "pair_position": 1,
+          "position_i": 0,
+          "position_j": 2,
+          "document_1_id": "doc-a",
+          "document_2_id": "doc-c",
+          "pair_id": "example-q1|doc-a|doc-c",
+          "request_hash": "20d524118400ec5af0d0b51be9c386bc344dd6283e4301d942a7a12d2dfd2e1e"
+        },
+        {
+          "pair_position": 2,
+          "position_i": 1,
+          "position_j": 2,
+          "document_1_id": "doc-b",
+          "document_2_id": "doc-c",
+          "pair_id": "example-q1|doc-b|doc-c",
+          "request_hash": "4979a6121bc09ef7ff9be1daa6edb5ca7fe588fa5dd6512b6e533813d8536f84"
+        }
+      ]
+    },
+    {
+      "query_id": "example-q2",
+      "query_text": "Which passage states the primary disagreement budget is 40%?",
+      "doc_ids": [
+        "doc-x",
+        "doc-y",
+        "doc-z"
+      ],
+      "doc_texts": {
+        "doc-x": "Secondary budgets of 20 percent were used only for development diagnostics.",
+        "doc-y": "The primary review budget for the CertiRank experiment is 40 percent of baseline calls.",
+        "doc-z": "CPU microbenchmarks do not replace real service latency measurements."
+      },
+      "qrels": {
+        "doc-y": 1
+      },
+      "pairs": [
+        {
+          "pair_position": 0,
+          "position_i": 0,
+          "position_j": 1,
+          "document_1_id": "doc-x",
+          "document_2_id": "doc-y",
+          "pair_id": "example-q2|doc-x|doc-y",
+          "request_hash": "adfbe1bcb831bd12a179c686a435625796ee602f242779af2f46a241b61ab8c0"
+        },
+        {
+          "pair_position": 1,
+          "position_i": 0,
+          "position_j": 2,
+          "document_1_id": "doc-x",
+          "document_2_id": "doc-z",
+          "pair_id": "example-q2|doc-x|doc-z",
+          "request_hash": "7365ff42d261759a989b9ca65971143ba4592ddacd60746d9340231d3d211069"
+        },
+        {
+          "pair_position": 2,
+          "position_i": 1,
+          "position_j": 2,
+          "document_1_id": "doc-y",
+          "document_2_id": "doc-z",
+          "pair_id": "example-q2|doc-y|doc-z",
+          "request_hash": "a70765f7e7c1e373bcce670c60d137ba4232843f86ee9237c98ef8d2a906e6ab"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "experiment_id": "CertiRank|live",
+  "condition": "live|dev",
+  "requested_model": "GLM-5.3-Flash",
+  "model_parameters": {
+    "provider": "openai_compatible",
+    "base_url_host": "llmapi.paratera.com",
+    "temperature_requested": null,
+    "top_p_requested": null,
+    "presence_penalty_requested": null,
+    "frequency_penalty_requested": null,
+    "max_tokens_requested": 128,
+    "thinking_mode_requested": "low",
+    "reasoning_effort_requested": "low"
+  }
+}

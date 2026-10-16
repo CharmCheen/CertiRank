@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "decision": "proceed",
+  "implementation_hash": "afecadd885a1999dbc66fb75aca0649a8276b1003f3f1aa3f58b5e5bfea7d8bf",
+  "settings_hash": "f5bafaed2e21d231220e840b8032ef5b2e81948582cb20a1a7cf77a102dd95a3",
+  "manifest_hash": "32872eb0b0dd141d24d8cfc734df2ab0f7781a5cbe7d3b3d8a63cc7f7a8d949a",
+  "model_hash": "abd1bc06b8506fe6f7aafe691e22facff15c5af4b602f05fcac4832a7fcad7f7",
+  "candidate": "ReviewValue",
+  "comparator": "Random"
+}

@@ -326,7 +326,7 @@ def test_relaxed_pool_status_never_coerces_nonboolean_verdicts():
 
 def test_jsonl_record_must_be_an_object(tmp_path):
     path = tmp_path / "rows.jsonl"
-    path.write_text('[1, 2, 3]\n')
+    path.write_text('[1, 2, 3]\n', encoding="utf-8")
     from certirank.pair_pool import load_jsonl
     with pytest.raises(ValueError, match="object"):
         load_jsonl(path)

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "status": "ESTIMATE_PENDING_PRICES",
+  "provider": "Paratera OpenAI-compatible",
+  "model": "GLM-5.3-Flash",
+  "token_method": {
+    "prompt_est": "len(text)//4 on NFCorpus title+text + 80 overhead (chars/4 heuristic)",
+    "completion_est": {
+      "observed_example_mean": 12,
+      "conservative": 32,
+      "hard_cap_per_call": 128
+    },
+    "note": "Re-estimate after calibration with real usage; do not treat as invoice."
+  },
+  "observed_reference": {
+    "source": "data/new_pilot (synthetic short docs)",
+    "prompt_mean": 92,
+    "completion_mean": 12,
+    "latency_mean_s": 0.95
+  },
+  "workload": {
+    "dev": {
+      "n_queries": 6,
+      "pairs_per_query": 28,
+      "prompt_est_min": 354,
+      "prompt_est_p50": 844,
+      "prompt_est_mean": 834,
+      "prompt_est_max": 1443,
+      "prompt_tokens_per_full_rep_all_queries": 140154
+    },
+    "heldout": {
+      "n_queries": 12,
+      "pairs_per_query": 28,
+      "prompt_est_min": 467,
+      "prompt_est_p50": 897,
+      "prompt_est_mean": 905,
+      "prompt_est_max": 1440,
+      "prompt_tokens_per_full_rep_all_queries": 304283
+    }
+  },
+  "phases": [
+    {
+      "phase": "temperature_calibration",
+      "planned_logical_calls": 320,
+      "prompt_tokens_est_total": 295680,
+      "completion_tokens_est_total": 3840,
+      "prompt_mean_est": 924,
+      "completion_mean_est": 12,
+      "cost_input_usd": null,
+      "cost_output_usd": null
+    },
+    {
+      "phase": "formal_dev",
+      "planned_logical_calls": 2016,
+      "prompt_tokens_est_total": 1681344,
+      "completion_tokens_est_total": 24192,
+      "prompt_mean_est": 834,
+      "completion_mean_est": 12,
+      "cost_input_usd": null,
+      "cost_output_usd": null
+    },
+    {
+      "phase": "formal_heldout",
+      "planned_logical_calls": 4032,
+      "prompt_tokens_est_total": 3648960,
+      "completion_tokens_est_total": 48384,
+      "prompt_mean_est": 905,
+      "completion_mean_est": 12,
+      "cost_input_usd": null,
+      "cost_output_usd": null
+    }
+  ],
+  "formal_total": {
+    "planned_logical_calls": 6048,
+    "prompt_tokens_est_total": 5330304,
+    "completion_tokens_est_total": 72576,
+    "conservative_completion_tokens": 193536,
+    "hard_cap_completion_tokens": 774144
+  },
+  "retry_allowance": {
+    "recommended_physical_attempt_limit": 6955,
+    "recommended_retry_budget_pct": 15,
+    "billing_if_retry_bills_tokens": "unknown — confirm with Paratera"
+  },
+  "prices": {
+    "source": "NOT VERIFIED — fill from Paratera billing for GLM-5.3-Flash",
+    "usd_per_1M_input": null,
+    "usd_per_1M_cached_input": null,
+    "usd_per_1M_output": null,
+    "retry_billing": "unknown until Paratera ToS/invoice confirms whether failed HTTP 4xx/5xx bill tokens"
+  },
+  "cost_formulas": {
+    "input": "USD = prompt_tokens / 1e6 * price_in",
+    "output": "USD = completion_tokens / 1e6 * price_out",
+    "cached": "if provider bills cache hits lower, split prompt_tokens before multiply"
+  },
+  "authorization_gates": {
+    "calibration": {
+      "calls": 320,
+      "authorized": false
+    },
+    "formal_dev": {
+      "calls": 2016,
+      "authorized": false
+    },
+    "formal_heldout": {
+      "calls": 4032,
+      "authorized": false
+    },
+    "monetary_limit_usd": null,
+    "deadline": null
+  },
+  "time_estimate": {
+    "assumption_mean_latency_s": 1.0,
+    "calibration_serial_s": 320.0,
+    "formal_dev_serial_s": 2016.0,
+    "formal_heldout_serial_s": 4032.0,
+    "note": "serial estimate; concurrency=1 preserves request-order logs"
+  }
+}

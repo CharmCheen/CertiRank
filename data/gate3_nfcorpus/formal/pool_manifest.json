@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "dataset_id": "beir/nfcorpus",
+  "source_kind": "real",
+  "query_groups": [
+    {
+      "query_id": "PLAIN-101",
+      "query_group": "PLAIN-101",
+      "split": "dev",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-11",
+      "query_group": "PLAIN-11",
+      "split": "dev",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-142",
+      "query_group": "PLAIN-142",
+      "split": "dev",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2429",
+      "query_group": "PLAIN-2429",
+      "split": "dev",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2479",
+      "query_group": "PLAIN-2479",
+      "split": "dev",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2539",
+      "query_group": "PLAIN-2539",
+      "split": "dev",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-112",
+      "query_group": "PLAIN-112",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-165",
+      "query_group": "PLAIN-165",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-175",
+      "query_group": "PLAIN-175",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2",
+      "query_group": "PLAIN-2",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-23",
+      "query_group": "PLAIN-23",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2450",
+      "query_group": "PLAIN-2450",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2490",
+      "query_group": "PLAIN-2490",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2540",
+      "query_group": "PLAIN-2540",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2630",
+      "query_group": "PLAIN-2630",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2640",
+      "query_group": "PLAIN-2640",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2650",
+      "query_group": "PLAIN-2650",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    },
+    {
+      "query_id": "PLAIN-2680",
+      "query_group": "PLAIN-2680",
+      "split": "heldout",
+      "label_source": "BEIR NFCorpus qrels"
+    }
+  ],
+  "pools": {
+    "dev": {
+      "sha256": {
+        "workload": "ce34c1e384b5bcdb6b967aa6959bb0aa35cb1ccfb8b4e59cc2a21531ff2d3c7f",
+        "pair_calls": "6e7b83347b1a6f9966aff9923753729bf93663c3964f0fe80cb56639407a40e3",
+        "identity": "299c7fcdd1dc00450dc51fb5f232a8599e430b7c9d1b230bb87c7d6897cf329b"
+      },
+      "workload": "dev\\workload.json",
+      "pair_calls": "dev\\pair_calls.jsonl",
+      "identity": "dev\\identity.json"
+    },
+    "heldout": {
+      "sha256": {
+        "workload": "51e898b42bf24b1293fb935aaa2540873c8306de18c793aff8d484a4307e366b",
+        "pair_calls": "615ea00c36bcba0d01c522d5369144b76a74a98a608fda7130551aa7cc008448",
+        "identity": "fa08780ecbc470f49ba61d891fbd3d36226e3e9d147b51fb1de6f86861429b80"
+      },
+      "workload": "heldout\\workload.json",
+      "pair_calls": "heldout\\pair_calls.jsonl",
+      "identity": "heldout\\identity.json"
+    }
+  },
+  "acquisition": {
+    "response_slots": "repetition count must match config formal.response_count",
+    "request_order": "collection order is logged; time independence must be checked separately",
+    "time_independence": "disjoint slots alone do not prove independence"
+  }
+}

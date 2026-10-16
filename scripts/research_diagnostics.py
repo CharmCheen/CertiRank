@@ -47,7 +47,7 @@ def artifacts(config):
         oracles.append({"query_id": case["query_id"], "n": case["n"], **oracle})
     deps = [Path(__file__), *list((ROOT / "src/certirank").rglob("*.py"))]
     summary = {"source_kind": "synthetic", "settings_hash": config_hash(config),
-        "code_hashes": {str(path.relative_to(ROOT)): sha256(path.read_bytes()).hexdigest() for path in sorted(deps)},
+        "code_hashes": {path.relative_to(ROOT).as_posix(): sha256(path.read_bytes()).hexdigest() for path in sorted(deps)},
         "comparisons": comparisons, "verdict": research_verdict(comparisons[config["primary_budget"]], config,
             split="heldout", source_kind="synthetic"), "new_physical_calls": 0,
         "limitations": "synthetic heldout fixtures verify machinery, not real strategy effectiveness; oracle may be truncated"}
@@ -74,7 +74,7 @@ def main():
     args = parser.parse_args()
     result = artifacts(load_config(args.config))
     if args.check:
-        bad = [name for name, value in result.items() if not (OUT / name).exists() or (OUT / name).read_text() != value]
+        bad = [name for name, value in result.items() if not (OUT / name).exists() or (OUT / name).read_text(encoding="utf-8") != value]
         if bad:
             print("FAIL synthetic diagnostics stale:", bad)
             return 1
@@ -82,7 +82,7 @@ def main():
     else:
         OUT.mkdir(parents=True, exist_ok=True)
         for name, value in result.items():
-            (OUT / name).write_text(value)
+            (OUT / name).write_text(value, encoding="utf-8")
         print("wrote synthetic-only research diagnostics; zero provider calls")
     return 0
 

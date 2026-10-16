@@ -15,7 +15,7 @@ def test_historical_contract_and_uniform_model_drift():
     data = ROOT / "data/external/lotus_gate2"
     calls = load_jsonl(data / "gate2_live_pair_calls.jsonl")
     workload = load_workload(data / "gate2_workload.json")
-    identity = json.loads((ROOT / "configs/gate2_identity.json").read_text())
+    identity = json.loads((ROOT / "configs/gate2_identity.json").read_text(encoding="utf-8"))
     assert validate_pair_calls(calls, workload, expected_identity=identity)["contract_ok"]
     changed = [{**row, "requested_model": "uniform-drift"} for row in calls]
     result = validate_pair_calls(changed, workload, expected_identity=identity)

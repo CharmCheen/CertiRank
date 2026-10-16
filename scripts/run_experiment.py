@@ -33,8 +33,8 @@ def main():
     config = load_config(args.config)
     if args.split == "heldout" and args.create_freeze:
         parser.error("freeze must be created from development results")
-    model = ReviewValueModel.from_dict(json.loads(args.model.read_text())) if args.model else None
-    freeze = json.loads(args.freeze.read_text()) if args.freeze else None
+    model = ReviewValueModel.from_dict(json.loads(args.model.read_text(encoding="utf-8"))) if args.model else None
+    freeze = json.loads(args.freeze.read_text(encoding="utf-8")) if args.freeze else None
     manifest, cases = load_cases(args.manifest, config, args.split, freeze=freeze, model=model)
     if args.split == "dev":
         if args.model or args.freeze:
@@ -57,10 +57,10 @@ def main():
     args.out.mkdir(parents=True, exist_ok=True)
     for name, value in (("summary.json", summary), ("query_metrics.json", metrics), ("resolved_config.json", config),
                          ("value_model.json", model.to_dict())):
-        (args.out / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n")
-    (args.out / "runs.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows))
+        (args.out / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (args.out / "runs.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
     if args.create_freeze:
-        (args.out / "freeze_manifest.json").write_text(json.dumps(freeze, ensure_ascii=False, indent=2) + "\n")
+        (args.out / "freeze_manifest.json").write_text(json.dumps(freeze, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {len(rows)} complete-algorithm records; verdict={summary['verdict']['verdict']}; zero provider calls")
     return 0
 

@@ -15,7 +15,7 @@ def config_hash(config: dict) -> str:
 
 
 def load_config(path: str | Path) -> dict:
-    config = json.loads(Path(path).read_text())
+    config = json.loads(Path(path).read_text(encoding="utf-8"))
     validate_config(config)
     return config
 

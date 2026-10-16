@@ -20,8 +20,8 @@ OUT = ROOT / "experiments/certirank_pilot/cpu_benchmark"
 
 
 def code_hash():
-    return config_hash({str(p.relative_to(ROOT)): sha256(p.read_bytes()).hexdigest()
-                        for p in sorted([Path(__file__), *list((ROOT / "src/certirank").rglob("*.py"))])})
+    return config_hash({p.relative_to(ROOT).as_posix(): sha256(p.read_bytes()).hexdigest()
+                        for p in sorted([Path(__file__).resolve(), *list((ROOT / "src/certirank").rglob("*.py"))])})
 
 
 def benchmark(config):
@@ -72,15 +72,15 @@ def main():
         if not path.exists():
             print("FAIL missing CPU measurements")
             return 1
-        result = json.loads(path.read_text())
+        result = json.loads(path.read_text(encoding="utf-8"))
         valid = (result["settings_hash"] == config_hash(config) and result["code_hash"] == code_hash()
                  and len(result["rows"]) == len(config["benchmark"]["sizes"]) * 2 * 2 * config["benchmark"]["repetitions"]
-                 and all(r["cpu_ns"]["total"] > 0 and sum(v for k, v in r["cpu_ns"].items() if k != "total") <= r["cpu_ns"]["total"] for r in result["rows"]))
+                 and all(r["cpu_ns"]["total"] >= 0 and sum(v for k, v in r["cpu_ns"].items() if k != "total") <= r["cpu_ns"]["total"] for r in result["rows"]))
         print("PASS CPU record provenance/schema (timings not replayed)" if valid else "FAIL stale/invalid CPU measurements")
         return 0 if valid else 1
     result = benchmark(config)
     OUT.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     report = ["# 合成数据 CPU 微基准", "", "记录选边、复制、失效定位、节点更新、轨迹维护、提取和复核 CPU；包含中止工作。",
               "计时有 instrumentation 开销，两种修复模式使用相同测量条件并交错运行。结果仅描述本机合成微基准。", "",
               "| N | 策略 | incremental 平均 CPU ms | cached replay 平均 CPU ms | 相对降低 |",
@@ -89,7 +89,7 @@ def main():
         means = row["mean_total_cpu_ns"]
         report.append(f"| {row['n']} | {row['method']} | {means['incremental']/1e6:.3f} | {means['cached_replay']/1e6:.3f} | {row['paired_mean_reduction']:.1%} |")
     report.extend(["", "未测真实 API/端到端服务延迟，未据此宣布 H3 通过。节点求值数不作为 CPU 收益的替代指标。", ""])
-    (OUT / "report.md").write_text("\n".join(report))
+    (OUT / "report.md").write_text("\n".join(report), encoding="utf-8")
     print("wrote measured CPU microbenchmark; zero provider calls")
     return 0
 

@@ -1,0 +1,110 @@
+[
+  {
+    "query_id": "PLAIN-101",
+    "query_group": "PLAIN-101",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-11",
+    "query_group": "PLAIN-11",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-142",
+    "query_group": "PLAIN-142",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2429",
+    "query_group": "PLAIN-2429",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2479",
+    "query_group": "PLAIN-2479",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2539",
+    "query_group": "PLAIN-2539",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-112",
+    "query_group": "PLAIN-112",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-165",
+    "query_group": "PLAIN-165",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-175",
+    "query_group": "PLAIN-175",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2",
+    "query_group": "PLAIN-2",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-23",
+    "query_group": "PLAIN-23",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2450",
+    "query_group": "PLAIN-2450",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2490",
+    "query_group": "PLAIN-2490",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2540",
+    "query_group": "PLAIN-2540",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2630",
+    "query_group": "PLAIN-2630",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2640",
+    "query_group": "PLAIN-2640",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2650",
+    "query_group": "PLAIN-2650",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2680",
+    "query_group": "PLAIN-2680",
+    "split": "heldout",
+    "label_source": "BEIR NFCorpus qrels"
+  }
+]

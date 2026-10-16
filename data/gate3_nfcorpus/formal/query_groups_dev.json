@@ -1,0 +1,38 @@
+[
+  {
+    "query_id": "PLAIN-101",
+    "query_group": "PLAIN-101",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-11",
+    "query_group": "PLAIN-11",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-142",
+    "query_group": "PLAIN-142",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2429",
+    "query_group": "PLAIN-2429",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2479",
+    "query_group": "PLAIN-2479",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  },
+  {
+    "query_id": "PLAIN-2539",
+    "query_group": "PLAIN-2539",
+    "split": "dev",
+    "label_source": "BEIR NFCorpus qrels"
+  }
+]

@@ -76,6 +76,29 @@ CONTRACT_REQUIRED_FIELDS: dict[str, str] = {
 }
 
 
+def parse_comparison_answer(text: str) -> tuple[bool | None, str]:
+    """Independent parse rule for pair answers.
+
+    Accepts optional reasoning; the verdict is the last standalone
+    ``Document 1`` / ``Document 2`` line, else the last mention.
+    Returns ``(verdict, status)`` where status is ``valid`` or ``invalid``.
+    """
+    if not isinstance(text, str) or not text.strip():
+        return None, "invalid"
+    stripped = text.strip()
+    lines = [ln.strip().rstrip(".").strip() for ln in stripped.splitlines() if ln.strip()]
+    for ln in reversed(lines):
+        if ln in ("Document 1", "Document 2"):
+            return ln == "Document 1", "valid"
+    last_1 = stripped.rfind("Document 1")
+    last_2 = stripped.rfind("Document 2")
+    if last_1 < 0 and last_2 < 0:
+        return None, "invalid"
+    if last_1 > last_2:
+        return True, "valid"
+    return False, "valid"
+
+
 def load_jsonl(path: str | Path) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     with open(path, encoding="utf-8") as handle:
@@ -104,15 +127,21 @@ def validate_pair_calls(
     *,
     expected_repetitions: int = 5,
     expected_identity: Mapping[str, Any] | None = None,
+    require_complete_enumeration: bool | None = None,
 ) -> dict[str, Any]:
     """Check C1–C8 without trusting a copied hash as proof of field consistency.
 
     Historical prompts are not included in the export, so their hashes cannot be
     independently rebuilt here. Endpoint provenance remains manifest-level evidence.
     An optional pinned identity prevents uniform model/config drift across the file.
+
+    ``require_complete_enumeration`` defaults to True (formal pools: all C(n,2) pairs).
+    Calibration subsets may set it False or mark workload ``pair_subset: true``.
     """
     if type(expected_repetitions) is not int or expected_repetitions < 1:
         raise ValueError("expected_repetitions must be a positive integer")
+    if require_complete_enumeration is None:
+        require_complete_enumeration = not bool(workload.get("pair_subset"))
     issues: list[str] = []
     query_ids = [str(q) for q in workload["query_ids"]]
     if not query_ids or len(set(query_ids)) != len(query_ids) or any(not q for q in query_ids):
@@ -133,14 +162,26 @@ def validate_pair_calls(
         if len(pairs) != expected_pairs or len(workload_pairs[q]) != expected_pairs:
             issues.append(f"C6 workload {q}: incorrect pair count or duplicate slots")
         expected_positions = [(i, j) for i in range(n) for j in range(i + 1, n)]
-        if len(expected_positions) != expected_pairs:
-            issues.append(f"C3 workload {q}: candidate/pair count mismatch")
-        for pos, (i, j) in enumerate(expected_positions):
-            slot = workload_pairs[q].get(pos, {})
-            if (slot.get("position_i"), slot.get("position_j")) != (i, j):
-                issues.append(f"C3 workload {q} slot {pos}: invalid pair positions")
-            if (slot.get("document_1_id"), slot.get("document_2_id")) != (entry["doc_ids"][i], entry["doc_ids"][j]):
-                issues.append(f"C3 workload {q} slot {pos}: candidate identity mismatch")
+        if require_complete_enumeration:
+            if len(expected_positions) != expected_pairs:
+                issues.append(f"C3 workload {q}: candidate/pair count mismatch")
+            for pos, (i, j) in enumerate(expected_positions):
+                slot = workload_pairs[q].get(pos, {})
+                if (slot.get("position_i"), slot.get("position_j")) != (i, j):
+                    issues.append(f"C3 workload {q} slot {pos}: invalid pair positions")
+                if (slot.get("document_1_id"), slot.get("document_2_id")) != (entry["doc_ids"][i], entry["doc_ids"][j]):
+                    issues.append(f"C3 workload {q} slot {pos}: candidate identity mismatch")
+        else:
+            allowed = set(expected_positions)
+            for pos, slot in workload_pairs[q].items():
+                ij = (slot.get("position_i"), slot.get("position_j"))
+                if ij not in allowed:
+                    issues.append(f"C3 workload {q} slot {pos}: invalid pair positions")
+                if (slot.get("document_1_id"), slot.get("document_2_id")) != (
+                    entry["doc_ids"][ij[0]] if ij[0] is not None and ij[0] < n else None,
+                    entry["doc_ids"][ij[1]] if ij[1] is not None and ij[1] < n else None,
+                ):
+                    issues.append(f"C3 workload {q} slot {pos}: candidate identity mismatch")
 
     identities: set[str] = set()
     by_slot: dict[tuple[str, int], dict[int, list[Mapping[str, Any]]]] = {}
@@ -195,8 +236,8 @@ def validate_pair_calls(
         if row.get("strict_parser_status") != "valid" or type(verdict) is not bool:
             issues.append(f"C5 {where}: not a strict-valid boolean verdict")
         raw = row.get("raw_response_content")
-        parsed = {"Document 1": True, "Document 2": False}.get(raw.strip()) if isinstance(raw, str) else None
-        if parsed is None or parsed is not verdict:
+        parsed, parse_status = parse_comparison_answer(raw) if isinstance(raw, str) else (None, "invalid")
+        if parse_status != "valid" or parsed is None or parsed is not verdict:
             issues.append(f"C5 {where}: raw answer does not independently parse to stored verdict")
         other = row.get("lotus_parsed_decision")
         if type(other) is not bool or other is not verdict:

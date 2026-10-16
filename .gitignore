@@ -3,11 +3,16 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
-# Environment / secrets — must never be committed
+# Environment / secrets - must never be committed
 .env
 .env.*
 *.key
+configs/api_config.json
+
+# Raw BEIR download (public; re-fetch via scripts/prepare_nfcorpus_gate3.py)
+data/nfcorpus/
 
 # OS
 Thumbs.db
 .DS_Store
+

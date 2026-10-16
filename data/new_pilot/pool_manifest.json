@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "dataset_id": "certirank-example",
+  "source_kind": "synthetic",
+  "query_groups": [
+    {
+      "query_id": "dev-example-q1",
+      "query_group": "dev-example-q1",
+      "split": "dev",
+      "label_source": "synthetic example qrels"
+    },
+    {
+      "query_id": "dev-example-q2",
+      "query_group": "dev-example-q2",
+      "split": "dev",
+      "label_source": "synthetic example qrels"
+    },
+    {
+      "query_id": "heldout-example-q1",
+      "query_group": "heldout-example-q1",
+      "split": "heldout",
+      "label_source": "synthetic example qrels"
+    },
+    {
+      "query_id": "heldout-example-q2",
+      "query_group": "heldout-example-q2",
+      "split": "heldout",
+      "label_source": "synthetic example qrels"
+    }
+  ],
+  "pools": {
+    "dev": {
+      "sha256": {
+        "workload": "cfb8d795584778c2541eb968d8c26e371c62a8f546980d561cdcdd471f01860b",
+        "pair_calls": "2e087586a08bc993ebc6e684f0396fac7dca3f14f8e6f01b4a4abfd7b5928222",
+        "identity": "74a70188038ecdd710368cce9e09a319aa96537750af2b287b32f28b796d9939"
+      },
+      "workload": "dev\\workload.json",
+      "pair_calls": "dev\\pair_calls.jsonl",
+      "identity": "dev\\identity.json"
+    },
+    "heldout": {
+      "sha256": {
+        "workload": "159760062bfafd27a5dd1ab85eb685a8d94f8039f20ce13e0e04394f761a8283",
+        "pair_calls": "061fca8cfae57adcf263805247bc35e7658eb0db3184b71fc32f20dde073afb7",
+        "identity": "e69f400eee944d195f987362e4f508f35cb53b45f9ef4566a6eda065aa0b790e"
+      },
+      "workload": "heldout\\workload.json",
+      "pair_calls": "heldout\\pair_calls.jsonl",
+      "identity": "heldout\\identity.json"
+    }
+  },
+  "acquisition": {
+    "response_slots": "repetition count must match config formal.response_count",
+    "request_order": "collection order is logged; time independence must be checked separately",
+    "time_independence": "disjoint slots alone do not prove independence"
+  }
+}

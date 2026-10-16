@@ -1,0 +1,26 @@
+[
+  {
+    "query_id": "dev-example-q1",
+    "query_group": "dev-example-q1",
+    "split": "dev",
+    "label_source": "synthetic example qrels"
+  },
+  {
+    "query_id": "dev-example-q2",
+    "query_group": "dev-example-q2",
+    "split": "dev",
+    "label_source": "synthetic example qrels"
+  },
+  {
+    "query_id": "heldout-example-q1",
+    "query_group": "heldout-example-q1",
+    "split": "heldout",
+    "label_source": "synthetic example qrels"
+  },
+  {
+    "query_id": "heldout-example-q2",
+    "query_group": "heldout-example-q2",
+    "split": "heldout",
+    "label_source": "synthetic example qrels"
+  }
+]

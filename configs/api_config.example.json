@@ -1,0 +1,18 @@
+{
+  "provider": "openai_compatible",
+  "base_url": "https://api.deepseek.com",
+  "api_key": "",
+  "api_key_env": "CERTIRANK_API_KEY",
+  "model": "deepseek-chat",
+  "temperature": 0.0,
+  "top_p": null,
+  "presence_penalty": null,
+  "frequency_penalty": null,
+  "max_tokens": 128,
+  "timeout_seconds": 120,
+  "max_retries": 3,
+  "thinking_mode": "low",
+  "experiment_id": "CertiRank|live",
+  "condition": "live",
+  "reasoning_effort": null
+}

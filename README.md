@@ -65,6 +65,35 @@ python scripts/analyze_offline.py
 - `experiments/certirank_pilot/`：现象分析、策略说明、正确性覆盖和成本情景。
 
 密钥与 `.env` 不入库。当前全部命令不访问 provider。
+真实 API 只改 [configs/api_config.json](configs/api_config.example.json)（本地文件，已 git-ignore）：
+`base_url` / `model` / `api_key`（或 `api_key_env`）/ `temperature`（数字则发送，`null` 则不发送）。
+验证：`python scripts/check_api.py`；联网探针：`python scripts/check_api.py --probe`。
+
+### 真实采集与实验
+
+```bash
+# 1) 查询需含 doc_texts（正文），参考 configs/queries.example.json
+python scripts/collect_pair_responses.py --queries MY_QUERIES.json --split dev \
+  --out data/new_pilot/dev --repetitions 12 --query-prefix dev-
+
+python scripts/collect_pair_responses.py --queries MY_QUERIES.json --split heldout \
+  --out data/new_pilot/heldout --repetitions 12 --query-prefix heldout-
+
+# 2) 钉哈希生成 pool manifest（query_groups.json 每条含 query_id/query_group/split/label_source）
+python scripts/build_pool_manifest.py --dataset-id MY_SET --source-kind real \
+  --dev-dir data/new_pilot/dev --heldout-dir data/new_pilot/heldout \
+  --groups data/new_pilot/query_groups.json --out data/new_pilot/pool_manifest.json
+
+# 3) 开发 → 冻结 → 留出
+python scripts/run_experiment.py --config configs/experiment.json \
+  --manifest data/new_pilot/pool_manifest.json --split dev --out DEV_OUT \
+  --create-freeze --decision proceed
+python scripts/run_experiment.py --config configs/experiment.json \
+  --manifest data/new_pilot/pool_manifest.json --split heldout --out HELDOUT_OUT \
+  --model DEV_OUT/value_model.json --freeze DEV_OUT/freeze_manifest.json
+```
+
+正式协议默认 N=8/K=3、每对 12 次响应。示例跑通见 `data/new_pilot/`（2 查询×3 文档的 synthetic smoke）。
 
 ## 研究实验协议 v0.3
 

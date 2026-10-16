@@ -1,0 +1,2035 @@
+{
+  "schema_version": 1,
+  "target": "one_step_agreement_with_other_baseline_groups",
+  "samples": {
+    "[8,3,\"conditional_safe\",2]": [
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      }
+    ],
+    "[8,3,\"unresolved\",1]": [
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.33333333333333337,
+        "quality_delta": 0.0,
+        "cost": 3,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": -0.16666666666666669,
+        "cost": 4,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": -1.0,
+        "quality_delta": 0.0,
+        "cost": 5,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 4,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.25,
+        "cost": 5,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      }
+    ],
+    "[8,3,\"unresolved\",0]": [
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.33333333333333337,
+        "quality_delta": 0.0,
+        "cost": 4,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 4,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      }
+    ],
+    "[8,3,\"unresolved\",2]": [
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 3,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": true
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      }
+    ],
+    "[8,3,\"conditional_impact\",0]": [
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": -1.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.25,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": true,
+        "new_branch_needed": false
+      }
+    ]
+  },
+  "training_query_groups": [
+    "PLAIN-101",
+    "PLAIN-11",
+    "PLAIN-142",
+    "PLAIN-2429",
+    "PLAIN-2479",
+    "PLAIN-2539"
+  ],
+  "training_source_ids": [
+    "2b7bb8cd2e8af777b5651581eed07ddd152109834f0f7fbe99fa52cb4581517d",
+    "74c2f5643dd39ab0b1f7eb6e024066026c7047c59432024580998a0527547ff0",
+    "96db4f71647af75f926f02dba1540d4a1d6820f3c10b4c06671b88743cbddba1",
+    "9dbc04f2ea995c93afced0d0108108d20ea486ce6beac8e626a1edbf54cf9860",
+    "a32b7b5edf6648afb4e5935e54a97e151421be18b774c07bc94af472c69c8ccf",
+    "eeb59af77d623e6b23651db71727f9f2cc4c9b3c70c5741d83d442f7fe46649e"
+  ],
+  "settings_hash": "f5bafaed2e21d231220e840b8032ef5b2e81948582cb20a1a7cf77a102dd95a3",
+  "minimum_samples": 3,
+  "limitations": "empirical dev-only surrogate; unavailable features stop selection; complete-policy benefit unverified"
+}

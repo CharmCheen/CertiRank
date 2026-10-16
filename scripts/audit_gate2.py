@@ -170,7 +170,7 @@ def step_contract() -> tuple[list[dict[str, Any]], dict[str, Any], dict[str, Any
 
     validation = validate_pair_calls(
         pair_calls, workload, expected_repetitions=5,
-        expected_identity=json.loads((REPO_ROOT / "configs" / "gate2_identity.json").read_text()),
+        expected_identity=json.loads((REPO_ROOT / "configs" / "gate2_identity.json").read_text(encoding="utf-8")),
     )
     if not validation["contract_ok"]:
         raise ValueError(f"data contract failed: {validation['issues'][:8]}")

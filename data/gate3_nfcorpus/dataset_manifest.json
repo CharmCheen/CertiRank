@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "dataset_id": "beir/nfcorpus",
+  "dataset_version": "BEIR official zip (public.ukp.informatik.tu-darmstadt.de)",
+  "source_url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/nfcorpus.zip",
+  "source_kind": "real",
+  "retriever": "deterministic BM25",
+  "script": "scripts/prepare_nfcorpus_gate3.py",
+  "files": {
+    "zip": {
+      "path": "data\\nfcorpus\\nfcorpus.zip",
+      "sha256": "efe5be03f8c5b86a5870102d0599d227c8c6e2484328e68c6522560385671b0b",
+      "bytes": 2448432
+    },
+    "corpus": {
+      "path": "data\\nfcorpus\\nfcorpus\\corpus.jsonl",
+      "sha256": "10cc83ef1826b1425e6a87090b5140b39b27755d5a27e48215a88611c899991f",
+      "bytes": 6219364
+    },
+    "queries": {
+      "path": "data\\nfcorpus\\nfcorpus\\queries.jsonl",
+      "sha256": "d024e6621b84925d485ae473d316a0c3af31c62c8068a59fb29d22f7613aef2a",
+      "bytes": 441466
+    },
+    "qrels_dev": {
+      "path": "data\\nfcorpus\\nfcorpus\\qrels\\dev.tsv",
+      "sha256": "b1d38b5e8f78c4a5820bce2b7ec2db54911d7690dc601e76811846b211180bd8",
+      "bytes": 258218
+    },
+    "qrels_test": {
+      "path": "data\\nfcorpus\\nfcorpus\\qrels\\test.tsv",
+      "sha256": "f8fba6ef3d4dd9c3a242a8ba4ae38276fc3622fce7dcbae764766d564542fd2a",
+      "bytes": 279572
+    }
+  },
+  "historical_exposed_queries": [
+    "327",
+    "51",
+    "636"
+  ],
+  "note": "Unlabeled candidates are evaluation-as-zero by BEIR convention, not human confirmed negatives.",
+  "qrels_grades": {
+    "1": "possibly relevant",
+    "2": "perfectly relevant"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "status": "CALIBRATION_COMPLETE",
+  "planned_calls": 320,
+  "completed_calls": 320,
+  "note": "A crash mid-B lost ~26 unsaved calls and B was recollected; physical billed calls may exceed 320.",
+  "lines": {
+    "A_null": {
+      "line": "A_null",
+      "records": 160,
+      "invalid_records": 0,
+      "invalid_rate": 0.0,
+      "pairs_observed": 32,
+      "ever_flipped_pairs": 3,
+      "ever_flipped_pair_ratio": 0.09375,
+      "mean_pairwise_run_disagreement": 0.04375,
+      "pairs_with_any_disagreement": 3,
+      "flip_details": [
+        {
+          "query_id": "PLAIN-142",
+          "pair_id": "PLAIN-142|MED-3609|MED-2940",
+          "n": 5,
+          "true": 4,
+          "false": 1,
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "query_id": "PLAIN-142",
+          "pair_id": "PLAIN-142|MED-3609|MED-3619",
+          "n": 5,
+          "true": 3,
+          "false": 2,
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "query_id": "PLAIN-142",
+          "pair_id": "PLAIN-142|MED-3609|MED-3620",
+          "n": 5,
+          "true": 4,
+          "false": 1,
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "verdict_counts": {
+        "true": 111,
+        "false": 49
+      }
+    },
+    "B_zero": {
+      "line": "B_zero",
+      "records": 160,
+      "invalid_records": 0,
+      "invalid_rate": 0.0,
+      "pairs_observed": 32,
+      "ever_flipped_pairs": 6,
+      "ever_flipped_pair_ratio": 0.1875,
+      "mean_pairwise_run_disagreement": 0.08125,
+      "pairs_with_any_disagreement": 6,
+      "flip_details": [
+        {
+          "query_id": "PLAIN-11",
+          "pair_id": "PLAIN-11|MED-2121|MED-2126",
+          "n": 5,
+          "true": 1,
+          "false": 4,
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "query_id": "PLAIN-142",
+          "pair_id": "PLAIN-142|MED-3609|MED-2940",
+          "n": 5,
+          "true": 2,
+          "false": 3,
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "query_id": "PLAIN-142",
+          "pair_id": "PLAIN-142|MED-3609|MED-3608",
+          "n": 5,
+          "true": 1,
+          "false": 4,
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "query_id": "PLAIN-142",
+          "pair_id": "PLAIN-142|MED-3609|MED-3620",
+          "n": 5,
+          "true": 4,
+          "false": 1,
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "query_id": "PLAIN-142",
+          "pair_id": "PLAIN-142|MED-3618|MED-2940",
+          "n": 5,
+          "true": 1,
+          "false": 4,
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "query_id": "PLAIN-2429",
+          "pair_id": "PLAIN-2429|MED-2292|MED-977",
+          "n": 5,
+          "true": 4,
+          "false": 1,
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "verdict_counts": {
+        "true": 113,
+        "false": 47
+      }
+    }
+  },
+  "cross_line": {
+    "common_pairs": 32,
+    "majority_verdict_differs": 1,
+    "majority_differs_ratio": 0.03125,
+    "aligned_rep_comparisons": 160,
+    "aligned_rep_differs": 8,
+    "aligned_differs_ratio": 0.05,
+    "differing_pairs": [
+      "PLAIN-142|PLAIN-142|MED-3609|MED-2940"
+    ]
+  },
+  "interpretation_limits": [
+    "5 repeats cannot certify determinism or a single-run flip probability",
+    "zero flips would not prove strict determinism",
+    "ever-flipped fraction is not a per-call flip probability"
+  ]
+}

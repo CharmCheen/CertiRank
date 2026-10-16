@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "target": "one_step_agreement_with_other_baseline_groups",
+  "samples": {
+    "[3,1,\"unresolved\",1]": [
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      }
+    ],
+    "[3,1,\"conditional_impact\",0]": [
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      },
+      {
+        "gain": 0.0,
+        "quality_delta": 0.0,
+        "cost": 2,
+        "complete": true,
+        "decision_changed": false,
+        "new_branch_needed": false
+      }
+    ]
+  },
+  "training_query_groups": [
+    "dev-example-q1",
+    "dev-example-q2"
+  ],
+  "training_source_ids": [
+    "91a8d325ccb6dd79df47a3fef14cd7a0bac2b85fe8cec5a75baa38b8b3f088ca",
+    "c9b69c650a470599260f838ef29b96b775f7b82cb9179990d4e4017a07903c96"
+  ],
+  "settings_hash": "6b1e75df66dedeac0cae2579c9858d67e1d001ea0ef046c51cddc89ad62f4e02",
+  "minimum_samples": 3,
+  "limitations": "empirical dev-only surrogate; unavailable features stop selection; complete-policy benefit unverified"
+}

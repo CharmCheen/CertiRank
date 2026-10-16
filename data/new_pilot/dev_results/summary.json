@@ -1,0 +1,118 @@
+{
+  "settings_hash": "6b1e75df66dedeac0cae2579c9858d67e1d001ea0ef046c51cddc89ad62f4e02",
+  "split": "dev",
+  "source_kind": "synthetic",
+  "comparator": "Random",
+  "comparator_status": "frozen",
+  "comparisons": {
+    "2": {
+      "status": "estimated",
+      "unit": "query-group; variants averaged within group first",
+      "groups": 2,
+      "queries": 2,
+      "point": {
+        "gain": 0,
+        "quality_delta": 0.0,
+        "baseline_d": 0,
+        "candidate_calls": 2,
+        "comparator_calls": 6
+      },
+      "bootstrap_95": {
+        "gain": [
+          0,
+          0
+        ],
+        "quality_delta": [
+          0.0,
+          0.0
+        ]
+      },
+      "relative_gain": null,
+      "positive_groups": 0,
+      "per_query_group": {
+        "dev-example-q1": [
+          {
+            "query_id": "dev-example-q1",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 2,
+            "comparator_calls": 6
+          }
+        ],
+        "dev-example-q2": [
+          {
+            "query_id": "dev-example-q2",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 2,
+            "comparator_calls": 6
+          }
+        ]
+      }
+    },
+    "4": {
+      "status": "estimated",
+      "unit": "query-group; variants averaged within group first",
+      "groups": 2,
+      "queries": 2,
+      "point": {
+        "gain": 0,
+        "quality_delta": 0.0,
+        "baseline_d": 0,
+        "candidate_calls": 2,
+        "comparator_calls": 6
+      },
+      "bootstrap_95": {
+        "gain": [
+          0,
+          0
+        ],
+        "quality_delta": [
+          0.0,
+          0.0
+        ]
+      },
+      "relative_gain": null,
+      "positive_groups": 0,
+      "per_query_group": {
+        "dev-example-q1": [
+          {
+            "query_id": "dev-example-q1",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 2,
+            "comparator_calls": 6
+          }
+        ],
+        "dev-example-q2": [
+          {
+            "query_id": "dev-example-q2",
+            "gain": 0,
+            "quality_delta": 0.0,
+            "baseline_d": 0,
+            "candidate_calls": 2,
+            "comparator_calls": 6
+          }
+        ]
+      }
+    }
+  },
+  "verdict": {
+    "verdict": "synthetic_only",
+    "point_gates_pass": false,
+    "intervals_support": false,
+    "enough_query_groups": true,
+    "claim_beyond_confidence": false,
+    "new_physical_calls": 0
+  },
+  "new_physical_calls": 0,
+  "quality": {
+    "metric": "Recall@K from supplied independent labels",
+    "confidence_signal": "unavailable",
+    "single_relevant_queries": 2,
+    "mean_recall_step_if_single_positive_no_variants": 0.25
+  }
+}

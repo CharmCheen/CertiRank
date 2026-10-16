@@ -1,0 +1,24 @@
+[
+  {
+    "query_id": "example-q1",
+    "query_text": "Which document describes the 2026 CertiRank offline pilot?",
+    "doc_ids": ["doc-a", "doc-b", "doc-c"],
+    "doc_texts": {
+      "doc-a": "In October 2026 the CertiRank team finished an offline pilot of fixed-semantic Top-K with 420 historical responses and zero live model calls.",
+      "doc-b": "The weather in Paris is usually mild in spring and rainy in autumn.",
+      "doc-c": "Tournament sorting uses a fixed leaf order and local repair after a comparison flips."
+    },
+    "qrels": {"doc-a": 1}
+  },
+  {
+    "query_id": "example-q2",
+    "query_text": "Which passage states the primary disagreement budget is 40%?",
+    "doc_ids": ["doc-x", "doc-y", "doc-z"],
+    "doc_texts": {
+      "doc-x": "Secondary budgets of 20 percent were used only for development diagnostics.",
+      "doc-y": "The primary review budget for the CertiRank experiment is 40 percent of baseline calls.",
+      "doc-z": "CPU microbenchmarks do not replace real service latency measurements."
+    },
+    "qrels": {"doc-y": 1}
+  }
+]

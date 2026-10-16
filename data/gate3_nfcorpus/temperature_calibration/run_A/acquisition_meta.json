@@ -1,0 +1,18 @@
+{
+  "collected_at_utc": "2026-10-15T08:14:50.902252+00:00",
+  "records": 160,
+  "prompt_version": "certirank.pair_compare.v1",
+  "requested_model": "GLM-5.3-Flash",
+  "temperature_requested": null,
+  "thinking_mode_requested": "low",
+  "reasoning_effort_requested": "low",
+  "new_physical_calls": 160,
+  "api_config": {
+    "base_url": "https://llmapi.paratera.com",
+    "model": "GLM-5.3-Flash",
+    "temperature": null,
+    "thinking_mode": "low",
+    "reasoning_effort": "low",
+    "max_tokens": 128
+  }
+}

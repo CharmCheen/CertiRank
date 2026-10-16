@@ -47,14 +47,14 @@ def analyze(config_path=None) -> dict[str, str]:
     repetitions = historical["response_count"]
     baseline_slots = historical["baseline_slots"]
     budgets, methods = config["budgets"], config["methods"]
-    manifest = json.loads((ROOT / "data/manifests/gate2_external_data.json").read_text())
+    manifest = json.loads((ROOT / "data/manifests/gate2_external_data.json").read_text(encoding="utf-8"))
     problems = verify(manifest)
     if problems:
         raise ValueError(problems)
     data = ROOT / "data/external/lotus_gate2"
     workload = load_workload(data / "gate2_workload.json")
     calls = load_jsonl(data / "gate2_live_pair_calls.jsonl")
-    identity = json.loads((ROOT / "configs/gate2_identity.json").read_text())
+    identity = json.loads((ROOT / "configs/gate2_identity.json").read_text(encoding="utf-8"))
     if workload["repetitions"] != repetitions or workload["k"] != config["k"]:
         raise ValueError("experiment config does not match the frozen historical workload")
     validation = validate_pair_calls(calls, workload, expected_repetitions=repetitions, expected_identity=identity)
@@ -217,7 +217,7 @@ def analyze(config_path=None) -> dict[str, str]:
         "schema_version": 2, "settings_hash": config_hash(config), "evidence_level": "historical_development_exploration",
         "operator": "fixed_leaf_tournament_v1", "primary_output": "unordered_top3_set",
         "new_physical_calls": 0,
-        "source_hashes": {(str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else str(p)): sha256(p.read_bytes()).hexdigest() for p in dependencies},
+        "source_hashes": {(p.relative_to(ROOT).as_posix() if p.is_relative_to(ROOT) else p.as_posix()): sha256(p.read_bytes()).hexdigest() for p in dependencies},
         "queries_exposed_to_development": workload["query_ids"],
         "independence_caveat": "distinct historical response slots; temporal independence not established; run pairs dependent",
         "replay_checks": {"complete_runs": len(runs), "repeat_outputs_equal": len(runs)},
@@ -295,7 +295,7 @@ def main() -> int:
     args = parser.parse_args()
     artifacts = analyze(args.config)
     if args.check:
-        failures = [name for name, value in artifacts.items() if not (OUT / name).exists() or (OUT / name).read_text() != value]
+        failures = [name for name, value in artifacts.items() if not (OUT / name).exists() or (OUT / name).read_text(encoding="utf-8") != value]
         if failures:
             print("FAIL stale/missing artifacts:", ", ".join(failures))
             return 1

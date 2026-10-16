@@ -54,7 +54,7 @@ def build_artifacts(config_path=None) -> dict[str, str]:
     blocks = [("开发集", collection["dev_query_groups"], n * (n - 1) // 2, formal["response_count"]),
               ("查询留出集", collection["heldout_query_groups"], n * (n - 1) // 2, formal["response_count"]),
               (f"N={extended} 扩展（可选）", collection["optional_query_groups"], extended * (extended - 1) // 2, formal["response_count"])]
-    manifest = json.loads((ROOT / "data/manifests/gate2_external_data.json").read_text())
+    manifest = json.loads((ROOT / "data/manifests/gate2_external_data.json").read_text(encoding="utf-8"))
     problems = verify(manifest, external_dir=DATA)
     if problems:
         raise ValueError(f"external data manifest verification failed: {problems[:5]}")
@@ -303,7 +303,7 @@ def main() -> int:
     args = parser.parse_args()
     artifacts = build_artifacts(args.config)
     if args.check:
-        failures = [name for name, text in artifacts.items() if not (OUT_DIR / name).exists() or (OUT_DIR / name).read_text() != text]
+        failures = [name for name, text in artifacts.items() if not (OUT_DIR / name).exists() or (OUT_DIR / name).read_text(encoding="utf-8") != text]
         if failures:
             print("FAIL stale/missing budget artifacts:", ", ".join(failures))
             return 1

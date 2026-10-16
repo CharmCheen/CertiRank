@@ -39,7 +39,7 @@ def implementation_hash():
     runner = Path(__file__).resolve().parents[2] / "scripts/run_experiment.py"
     if runner.exists():
         paths.append(runner)
-    return config_hash({str(path.relative_to(Path(__file__).resolve().parents[2])): sha256(path.read_bytes()).hexdigest() for path in paths})
+    return config_hash({path.relative_to(Path(__file__).resolve().parents[2]).as_posix(): sha256(path.read_bytes()).hexdigest() for path in paths})
 
 
 def validate_freeze(config, manifest, freeze, model):
@@ -67,7 +67,7 @@ def validate_freeze(config, manifest, freeze, model):
 def load_cases(manifest_path, config, split, *, freeze=None, model=None):
     """Only read the selected pool; heldout validation precedes any heldout file read."""
     manifest_path = Path(manifest_path)
-    manifest = json.loads(manifest_path.read_text())
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     validate_split_manifest(manifest)
     if split == "heldout":
         if freeze is None or model is None:
@@ -89,7 +89,7 @@ def load_cases(manifest_path, config, split, *, freeze=None, model=None):
         paths[name] = path
     workload = load_workload(paths["workload"])
     calls = load_jsonl(paths["pair_calls"])
-    identity = json.loads(paths["identity"].read_text())
+    identity = json.loads(paths["identity"].read_text(encoding="utf-8"))
     reps = config["formal"]["response_count"]
     validation = validate_pair_calls(calls, workload, expected_repetitions=reps, expected_identity=identity)
     if not validation["contract_ok"]:

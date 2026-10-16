@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "protocol_version": "0.3.0-research-pilot",
+  "primary_output": "unordered_topk_set",
+  "k": 3,
+  "budgets": [
+    "0.2",
+    "0.4"
+  ],
+  "primary_budget": "0.4",
+  "methods": [
+    "Base",
+    "Random",
+    "SimpleTopology",
+    "TraceSensitivity",
+    "Vote3"
+  ],
+  "candidate_method": "ReviewValue",
+  "seed": 17,
+  "historical": {
+    "response_count": 5,
+    "baseline_slots": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "smoke_group": [
+      0,
+      1,
+      2
+    ],
+    "balanced_sensitivity": true,
+    "dataset_id": "beir/scifact",
+    "exposed_queries": [
+      "636",
+      "327",
+      "51"
+    ]
+  },
+  "formal": {
+    "response_count": 12,
+    "slot_groups": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11
+      ]
+    ],
+    "minimum_dev_groups": 6,
+    "minimum_heldout_groups": 12,
+    "bootstrap_samples": 2000,
+    "method_freeze": null,
+    "strongest_comparator": null,
+    "n": 8
+  },
+  "gates": {
+    "absolute_disagreement_reduction": 0.05,
+    "relative_disagreement_reduction": 0.25,
+    "maximum_quality_drop": 0.02,
+    "minimum_incremental_cost_reduction": 0.25
+  },
+  "diagnostics": {
+    "absolute_budgets": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "oracle_state_cap": 3000,
+    "oracle_joint_cap": 200000,
+    "synthetic_sizes": [
+      8,
+      16
+    ],
+    "synthetic_seed": 20261015
+  },
+  "benchmark": {
+    "sizes": [
+      8,
+      16,
+      64
+    ],
+    "repetitions": 30,
+    "warmups": 3,
+    "seed": 20261015
+  },
+  "collection": {
+    "dev_query_groups": 6,
+    "heldout_query_groups": 12,
+    "optional_n": 16,
+    "optional_query_groups": 4
+  },
+  "policy_repair_mode": "cached_replay"
+}
